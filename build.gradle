@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'net.flectone'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.formdev:flatlaf:3.0'
+    implementation 'org.jsoup:jsoup:1.15.4'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,33 @@
+<component name="ArtifactManager">
+  <artifact name="Flectone Installer">
+    <output-path>$PROJECT_DIR$/out/artifacts/Flectone_Installer</output-path>
+    <root id="root">
+      <element id="archive" name="Flectone Installer.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/resources/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="FlectoneInstallerV2.main" />
+      </element>
+      <element id="directory" name="libs">
+        <element id="library" level="project" name="Gradle: com.formdev:flatlaf:3.0" />
+        <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.10.1" />
+        <element id="library" level="project" name="Gradle: org.apiguardian:apiguardian-api:1.1.2" />
+        <element id="library" level="project" name="Gradle: org.jsoup:jsoup:1.15.4" />
+        <element id="library" level="project" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.8.1" />
+        <element id="library" level="project" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.8.1" />
+        <element id="library" level="project" name="Gradle: org.junit.platform:junit-platform-commons:1.8.1" />
+        <element id="library" level="project" name="Gradle: org.junit.platform:junit-platform-engine:1.8.1" />
+        <element id="library" level="project" name="Gradle: org.opentest4j:opentest4j:1.2.0" />
+      </element>
+      <element id="directory" name="configs">
+        <element id="dir-copy" path="$PROJECT_DIR$/src/configs" />
+      </element>
+      <element id="directory" name="images">
+        <element id="dir-copy" path="$PROJECT_DIR$/src/images" />
+      </element>
+      <element id="directory" name="fonts">
+        <element id="dir-copy" path="$PROJECT_DIR$/src/fonts" />
+      </element>
+    </root>
+  </artifact>
+</component>

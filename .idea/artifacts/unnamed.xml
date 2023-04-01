@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/release</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="Flectone Installer" />
+      <element id="artifact" artifact-name="updater" />
+    </root>
+  </artifact>
+</component>

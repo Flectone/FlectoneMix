@@ -1,0 +1,3 @@
+rootProject.name = 'FlectoneInstallerV2'
+include 'Updater'
+

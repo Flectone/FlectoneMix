@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: net.flectone.Main
+Class-Path: libs/jsoup-1.15.4.jar libs/junit-jupiter-engine-5.8.1.jar li
+ bs/junit-jupiter-api-5.8.1.jar libs/junit-platform-commons-1.8.1.jar li
+ bs/junit-platform-engine-1.8.1.jar libs/opentest4j-1.2.0.jar libs/flatl
+ af-3.0.jar libs/gson-2.10.1.jar
+
