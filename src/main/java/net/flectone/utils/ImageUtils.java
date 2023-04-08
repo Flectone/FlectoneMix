@@ -27,7 +27,11 @@ public class ImageUtils {
 
 
     public static ImageIcon createImageIcon(String filePath) {
-        return new ImageIcon(createBufferedImage(filePath));
+        try {
+            return new ImageIcon(createBufferedImage(filePath));
+        } catch (NullPointerException e){
+            return null;
+        }
     }
 
     public static ImageIcon createExtraIcon(String filePath){

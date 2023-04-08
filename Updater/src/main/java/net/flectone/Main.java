@@ -24,7 +24,7 @@ public class Main {
 
     public static void down(){
         try {
-            URL url = new URL("https://flectone.net/components/last/components1.zip");
+            URL url = new URL("https://flectone.net/components/last/components.zip");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("User-Agent", "Mozilla/5.0");
             InputStream inputStream = connection.getInputStream();

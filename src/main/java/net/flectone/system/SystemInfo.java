@@ -87,8 +87,7 @@ public class SystemInfo {
     }
 
     private String getJarDirectory() {
-        return new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath())
-                .getParentFile().getAbsolutePath();
+        return new File("").getAbsolutePath();
     }
 
     private String getSystemLanguage() {

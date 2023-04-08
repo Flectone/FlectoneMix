@@ -108,6 +108,10 @@ label.numberedhotbar: "Literally just adds numbers to your hotbar. That's it. Th
 label.redstonetweaks: "Redstone Tweaks is a vanilla-style Resource Pack aimed at improving your redstone building experience"
 label.torchesreimagined: "This pack simply makes torches a lot more lively by adding in an animated fire sprite"
 label.voidomonenchanted: "The aim is to have enchanted books be visually unique [Need Optifine]"
+label.Gosha: "This resource pack puts your first person mode in that classic RPG style"
+label.Ocean: "Raise the water level in the world instead of telling the world to generate only water biomes"
+label.maid-allay: "This resource pack changes the models of the Allay and the Vex [Need Optifine]"
+label.mineanvil: "This is a resource pack that changes the texture of objects through renaming [Need Optifine]"
 
 #datapacks
 label.villagetrades: "This datapack gives villagers more levels for more trades"
@@ -120,6 +124,7 @@ label.craft: "This data pack adds several recipes to the game, and edits a coupl
 label.chainarmor: "This data pack simply adds chainmail armor recipes using the new chains"
 label.bettervanilla: "Vanilla Expansion is a mod-like data pack, that at the moment adds many new advancements, etc"
 label.alchemy: "Tetrajak's Alchemy is a magic data pack spanning several different fields of magical knowledge"
+label.mangrove: "A simple vanilla-style data pack that adds Mangrove Villages to the game"
 
 #plugins
 label.voicechat: "Plugin adds a voice chat to your Minecraft server. You need each player to install the mod of this plugin"
@@ -130,11 +135,12 @@ label.LuckPerms: "LuckPerms is a permissions plugin for Minecraft servers (Bukki
 label.GSit: "This is the ultimate Sit, Chair and Lay - Plugin which allows to sit on Stairs / Chairs"
 label.Geyser: "Geyser is a proxy, bridging the gap between Minecraft: Bedrock Edition and Minecraft: Java Edition servers"
 label.FlectoneChat: "FlectoneChat - best minecraft plugin for chat!"
-label.EssentialX: "EssentialsX is the essential plugin including over 130 commands and countless features for servers"
+label.EssentialsX: "EssentialsX is the essential plugin including over 130 commands and countless features for servers"
 label.CoreProtectTNT: "Now you will know who make explode everywhere"
 label.CoreProtect: "CoreProtect is a fast, efficient, data logging and anti-griefing tool"
 label.Chunky: "Pre-generates chunks, quickly, efficiently, and safely"
 label.BlueMap: "BlueMap is a program that reads your Minecraft world files and generates not only a map, but also 3D-models"
+label.FartherViewDistance: "Plugin allows players to view chunks from a farther distance regardless of loading"
 
 #mods
 label.Debugify: "Debugify is a project that fixes over 70 bugs found on the bug tracker in Minecraft"
@@ -249,6 +255,18 @@ label.OptiFine: "Mod up fps by changing the code"
 label.optifabric: "Mod allows to use optifine on fabric"
 label.saturn: "A performance mod designed to optimize Minecraft's memory usage"
 label.ItShallNotTick: "A performance mod focused on reducing the performance impact of ticking entities"
+label.stendhal: "Mod offering new and enhanced visual utilities for books, signs, anvil and the in-game chat"
+label.slotlock: "You only need to place your mouse above the slot you want to lock and press the slotlock keybind"
+label.shulkerboxtooltip: "Mod allows to see a preview window of a shulker box contents by pressing shift"
+label.bedrockify: "Mod that implements some useful Minecraft Bedrock Edition features into Minecraft Java Edition"
+label.spyglass-improvements: "Mod that add various functionality and improvements to the vanilla minecraft spyglass"
+label.held-item-info: "Mod that shows information (like enchantments) about the held item under its name"
+label.eating-animation: "Eating Animation a mod that adds sprite animations for edible and drinkable items"
+label.replanter: "Replanter is a simple client side mod that allows players to quickly replant their fully grown crops"
+label.playlist: "Control Minecraft's in-game music - In-game music player"
+label.itemscroller: "A client-side mod that adds several ways of moving items in inventory GUIs"
+label.skin-swapper: "A mod that lets you change your skin in game using a GUI"
+label.blur: "Adds a blur effect to all GUI backgrounds"
 
 AbstractButton.clickText: "click"
 AbstractDocument.additionText: "adding"

@@ -308,11 +308,11 @@ public class Installation {
     public static void checkUpdates(){
         try {
 
-            double currentVersion = Double.parseDouble(Configuration.getValue("version"));
+            String currentVersion = Configuration.getValue("version");
             Document doc = Jsoup.connect("https://flectone.net/components/last/").get();
-            double lastVersion = Double.parseDouble(doc.select("a[href^='v']").get(0).text().replaceFirst("v", ""));
+            String lastVersion = doc.select("a[href^='v']").get(0).text().replaceFirst("v", "");
 
-            if(lastVersion <= currentVersion) return;
+            if(lastVersion.equals(currentVersion)) return;
 
             if(Dialog.showYesOrNo(Configuration.getValue("label.update_program")) != JOptionPane.YES_OPTION) return;
 
