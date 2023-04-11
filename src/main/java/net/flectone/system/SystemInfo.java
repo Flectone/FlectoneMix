@@ -20,6 +20,8 @@ public class SystemInfo {
         //get working directory
         this.path = getJarDirectory() + File.separator;
 
+        System.out.println(path);
+
         this.minecraftDirectory = getDefaultMinecraftDirectory();
     }
 
