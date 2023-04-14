@@ -88,6 +88,7 @@ label.wood: "A tree farm on azaleas that allows for the automation of the tree f
 label.guard: "One of the best experience and prismarine farms in Minecraft on the underwater temple"
 label.squid: "The best squid farm for obtaining ink"
 label.ender: "The simplest enderman farm in the End at y-level zero"
+label.bestsheep: "The best sheep farm in terms of resources and efficiency"
 
 #resourcepacks
 label.bossbars: "This pack makes the boss bars themed more towards what boss they are for"
@@ -267,6 +268,11 @@ label.playlist: "Control Minecraft's in-game music - In-game music player"
 label.itemscroller: "A client-side mod that adds several ways of moving items in inventory GUIs"
 label.skin-swapper: "A mod that lets you change your skin in game using a GUI"
 label.blur: "Adds a blur effect to all GUI backgrounds"
+label.viafabric: "Allows to connect to older servers with older versions"
+label.durabilityviewer: "Shows the durability of your items and armor"
+label.deathlog: "Keeps track of the many embarrassing times you died"
+label.logical_zoom: "A simple zoom key for Minecraft like in Optifine"
+label.isometric-renders: "Creates high-resolution isometric screenshots of game objects"
 
 AbstractButton.clickText: "click"
 AbstractDocument.additionText: "adding"

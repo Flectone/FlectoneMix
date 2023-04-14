@@ -20,7 +20,7 @@ public class ImageUtils {
             //get image from "images/"
             image = ImageIO.read(new File(SystemInfo.getInstance().getPath() + "images" + File.separator + filePath));
         } catch (IOException e) {
-            Dialog.showException(e);
+//            Dialog.showException(e);
         }
         return image;
     }
