@@ -30,7 +30,7 @@ public class Main {
             configuration.load("flectone.installer");
 
         String lastColor = Configuration.getValue("last_color");
-        System.out.println(1 + lastColor);
+
         SwingUtils.setColors(lastColor != null ? Color.decode(lastColor) : ColorUtils.decode("color.black"));
 
         // Set the system language and color
