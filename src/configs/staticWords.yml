@@ -11,6 +11,7 @@ shader.Complementary: "Complementary v4"
 shader.ComplementaryReimagined: "Complementary Reimagined"
 
 #farms
+farm.witherrose: "Wither rose farm"
 farm.trident: "Drowned farm"
 farm.cobblestone: "Cobblestone farm"
 farm.besttree: "Tree farm"
@@ -36,6 +37,7 @@ farm.squid: "Squid farm"
 farm.ender: "Enderman farm"
 farm.bestsheep: "Sheep farm"
 
+farm.witherrose.version: "1.16+"
 farm.bee.version: "1.15+"
 farm.trident.version: "1.18+"
 farm.cobblestone.version: "1.18+"
