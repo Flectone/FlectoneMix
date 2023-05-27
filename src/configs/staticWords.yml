@@ -11,6 +11,7 @@ shader.Complementary: "Complementary v4"
 shader.ComplementaryReimagined: "Complementary Reimagined"
 
 #farms
+farm.debris: "Ancient debris farm"
 farm.witherrose: "Wither rose farm"
 farm.trident: "Drowned farm"
 farm.cobblestone: "Cobblestone farm"
@@ -37,6 +38,7 @@ farm.squid: "Squid farm"
 farm.ender: "Enderman farm"
 farm.bestsheep: "Sheep farm"
 
+farm.debris.version: "1.16+"
 farm.witherrose.version: "1.16+"
 farm.bee.version: "1.15+"
 farm.trident.version: "1.18+"
@@ -64,6 +66,7 @@ farm.ender.version: "1.16-1.19+"
 farm.bestsheep.version: "1.16-1.19+"
 
 #resourcepacks
+resourcepack.bluedebris: "Blue ancient debris"
 resourcepack.bossbars: "Boss Bars Plus"
 resourcepack.discs: "Alternate Discs"
 resourcepack.doors: "Flush Doors"

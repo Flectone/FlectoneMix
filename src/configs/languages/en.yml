@@ -16,7 +16,7 @@ textfield.search: "Search..."
 button.select_all.true: "Select all"
 button.select_all.false: "Unselect all"
 
-checkbox.install: "Install "
+checkbox.install: ""
 
 checkbox.create_profile: "Create profile"
 checkbox.unstable_mods: "Install unstable mods"
@@ -64,7 +64,8 @@ label.Complementary: "The goal of Complementary v4 is being good at everything"
 label.ComplementaryReimagined: "Complementary Reimagined it is meant to be the best"
 
 #farms
-label.litematic: "litematic"
+label.litematic: "Litematic"
+label.debris: "Best way to find ancient debris in minecraft"
 label.witherrose: "Easiest wither rose farm (2900 roses per hour)"
 label.bee: "The fastest and best honey and honeycomb farm"
 label.trident: "A productive river farm for obtaining tridents and shells"
@@ -92,6 +93,7 @@ label.ender: "The simplest enderman farm in the End at y-level zero"
 label.bestsheep: "The best sheep farm in terms of resources and efficiency"
 
 #resourcepacks
+label.bluedebris: "Resource pack changes texture of ancient debris to its blue version"
 label.bossbars: "This pack makes the boss bars themed more towards what boss they are for"
 label.discs: "Retextured the item textures of all current discs in Minecraft to be more visually distinct from each other"
 label.doors: "Resource pack fixes texture problems [Need OptiFine]"
