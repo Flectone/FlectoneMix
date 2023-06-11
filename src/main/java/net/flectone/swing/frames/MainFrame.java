@@ -10,10 +10,9 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class MainFrame extends CustomFrame {
 
@@ -26,7 +25,6 @@ public class MainFrame extends CustomFrame {
 
         setIconImage(ImageUtils.createBufferedImage("flectone.png"));
         setTitle(Configuration.getValue("frame.main") + Configuration.getValue("version"));
-
 
         SwingUtils.setFont(FontUtils.createFont("Roboto-Medium.ttf", 12));
 
@@ -43,15 +41,18 @@ public class MainFrame extends CustomFrame {
             @Override
             public void windowClosing(WindowEvent e) {
 
-                SystemInfo systemInfo = SystemInfo.getInstance();
 
                 try {
-                    BufferedWriter fileWriter = new BufferedWriter(new FileWriter(systemInfo.getPath() + "flectone.installer"));
+
+                    BufferedWriter fileWriter = Files.newBufferedWriter(Paths.get(SystemInfo.getConfigPath() + SystemInfo.settingsFileName));
 
                     fileWriter.write("last_color: " + ColorUtils.toHEX(SwingUtils.getColor(0)));
                     fileWriter.newLine();
 
-                    fileWriter.write("last_language: " + systemInfo.getLanguage());
+                    fileWriter.write("last_language: " + SystemInfo.getLanguage());
+                    fileWriter.newLine();
+
+                    fileWriter.write("last_minecraft_path: " + SystemInfo.getMinecraftPath());
                     fileWriter.newLine();
 
                     fileWriter.close();

@@ -1,7 +1,5 @@
 package net.flectone.utils;
 
-import net.flectone.system.SystemInfo;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -9,6 +7,8 @@ import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,11 +18,28 @@ public class ImageUtils {
         BufferedImage image = null;
         try {
             //get image from "images/"
-            image = ImageIO.read(new File(SystemInfo.getInstance().getPath() + "images" + File.separator + filePath));
+            image = ImageIO.read(new File("images" + File.separator + filePath));
         } catch (IOException e) {
 //            Dialog.showException(e);
         }
         return image;
+    }
+
+    public static ImageIcon getWebImage(String filePath) {
+
+        try {
+            URL url = new URL("https://flectone.net/xyeta.jpg");
+            URLConnection connection = url.openConnection();
+            connection.setRequestProperty("User-Agent", "Mozilla/5.0");
+            BufferedImage image = ImageIO.read(connection.getInputStream());
+
+            return new ImageIcon(image);
+
+        } catch (IOException e){
+            Dialog.showException(e);
+            return null;
+        }
+
     }
 
 
@@ -35,7 +52,7 @@ public class ImageUtils {
     }
 
     public static ImageIcon createExtraIcon(String filePath){
-        return new ImageIcon(SystemInfo.getInstance().getPath() + "images" + File.separator + filePath);
+        return new ImageIcon("images" + File.separator + filePath);
     }
 
     private static final Map<String, BufferedImage> mapThemeIcons = new HashMap<>();

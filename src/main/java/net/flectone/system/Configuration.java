@@ -12,10 +12,10 @@ public class Configuration {
     private static final Map<String, String> configMap = new HashMap<>();
 
     //load file from folder configs/
-    public void load(String path) {
+    public static void load(String path) {
 
         //read file
-        try(Scanner scanner = new Scanner(new File(SystemInfo.getInstance().getPath() + path), "UTF-8")) {
+        try(Scanner scanner = new Scanner(new File(path), "UTF-8")) {
             //if next line exist
             while(scanner.hasNextLine()) {
                 //get line
@@ -33,13 +33,21 @@ public class Configuration {
         }
     }
 
-    public void loadConfig(String configPath) {
+    public static void loadConfig(String configPath) {
         load("configs" + File.separator + configPath);
     }
 
     //get message
     public static String getValue(String key) {
         return configMap.get(key);
+    }
+
+    public static void checkSettingsFile(){
+
+        String path = SystemInfo.getConfigPath();
+        if(!new File(path + SystemInfo.settingsFileName).exists()) return;
+
+        load(path + SystemInfo.settingsFileName);
     }
 
     //get message and split

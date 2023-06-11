@@ -79,6 +79,9 @@ public class CustomPanel extends JPanel {
                     .forEach(component -> {
                         BuilderComponent builderComponent = new BuilderComponent(tabName);
                         builderInterface.build(builderComponent, component);
+
+
+
                         componentsPanel.add(builderComponent.buildComponent());
                     });
 

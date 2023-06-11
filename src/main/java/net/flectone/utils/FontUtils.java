@@ -1,7 +1,5 @@
 package net.flectone.utils;
 
-import net.flectone.system.SystemInfo;
-
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +11,7 @@ public class FontUtils {
         Font font = null;
 
         try {
-            font = Font.createFont(Font.TRUETYPE_FONT, new File(SystemInfo.getInstance().getPath() + "fonts" + File.separator + fontName))
+            font = Font.createFont(Font.TRUETYPE_FONT, new File("fonts" + File.separator + fontName))
                     .deriveFont(size);
         } catch (IOException | FontFormatException exception){
             Dialog.showException(exception);

@@ -1,41 +1,26 @@
 package net.flectone.system;
 
-import net.flectone.Main;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import net.flectone.utils.Dialog;
-import net.flectone.utils.ImageUtils;
-import net.flectone.utils.SwingUtils;
+import net.flectone.utils.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.Timer;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.lang.reflect.Type;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.nio.channels.Channels;
-import java.nio.channels.FileChannel;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
-
-import static java.nio.file.StandardOpenOption.CREATE;
-import static java.nio.file.StandardOpenOption.WRITE;
 
 public class Installation {
 
@@ -66,7 +51,7 @@ public class Installation {
         this.tabName = tabName;
         this.componentType = componentType;
         this.urlDirectory = "https://flectone.net/" + urlDirectory;
-        this.destinationDirectory = SystemInfo.getInstance().getMinecraftDirectory() + destinationDirectory;
+        this.destinationDirectory = SystemInfo.getMinecraftPath() + destinationDirectory;
         this.progressPanel = progressPanel;
         this.componentsForInstallation = new ArrayList<>();
 
@@ -89,7 +74,7 @@ public class Installation {
             String unzipDestinationDirectory = destinationDirectory + component.split("\\.")[0];
 
             if(tabName.equals("farms") && component.contains("litematic")){
-                downloadDestinationDirectory = SystemInfo.getInstance().getMinecraftDirectory() + "schematics" + File.separator;
+                downloadDestinationDirectory = SystemInfo.getMinecraftPath() + "schematics" + File.separator;
                 unzipDestinationDirectory = downloadDestinationDirectory;
             }
 
@@ -183,21 +168,21 @@ public class Installation {
     public void addCustomProfile(String loaderType, String minecraftVersion){
         Gson gson = new Gson();
         Type type = new TypeToken<Map<String, Object>>(){}.getType();
-        String path = SystemInfo.getInstance().getPath();
-        String mcDir = SystemInfo.getInstance().getMinecraftDirectory();
+
+        String mcDir = SystemInfo.getMinecraftPath();
 
         String url = urlFlectone + loaderType.toLowerCase() + ".jar";
         String fileName = loaderType.toLowerCase() + "-installer.jar";
         String command = String.format("java -jar %s%s client -dir %s -noprofile -mcversion %s",
-                path, fileName, mcDir, minecraftVersion);
+                "", fileName, mcDir, minecraftVersion);
         if (loaderType.equalsIgnoreCase("quilt")) {
             command = String.format("java -jar %s%s install client %s --install-dir=%s --no-profile",
-                    path, fileName, minecraftVersion, mcDir);
+                    "", fileName, minecraftVersion, mcDir);
         }
 
         try {
 
-            downloadFile(url, path + fileName, fileName);
+            downloadFile(url, fileName, fileName);
             Process process = Runtime.getRuntime().exec(command);
             process.waitFor();
 
@@ -238,7 +223,7 @@ public class Installation {
             profiles.put("Flectone " + loaderType + " " + minecraftVersion, customProfile);
             json.put("selectedProfile", "Flectone " + loaderType + " " + minecraftVersion);
 
-            FileWriter writer = new FileWriter(Paths.get(SystemInfo.getInstance().getMinecraftDirectory() + "launcher_profiles.json").toString());
+            FileWriter writer = new FileWriter(Paths.get(SystemInfo.getMinecraftPath() + "launcher_profiles.json").toString());
             gson.toJson(json, writer);
             writer.close();
 
@@ -308,18 +293,21 @@ public class Installation {
     public static void checkUpdates(){
         try {
 
-            String currentVersion = Configuration.getValue("version");
             Document doc = Jsoup.connect("https://flectone.net/components/last/").get();
             String lastVersion = doc.select("a[href^='v']").get(0).text().replaceFirst("v", "");
+
+            String currentVersion = Configuration.getValue("version");
 
             if(lastVersion.equals(currentVersion)) return;
 
             if(Dialog.showYesOrNo(Configuration.getValue("label.update_program")) != JOptionPane.YES_OPTION) return;
 
-            String jarFilePath = SystemInfo.getInstance().getPath() + "updater.jar";
-            ProcessBuilder processBuilder = new ProcessBuilder("java", "-jar", jarFilePath);
-            processBuilder.inheritIO();
-            processBuilder.start();
+            IOUtils.downloadFile(SystemInfo.siteUrl + "components/last/updater.jar", SystemInfo.getConfigPath() + "updater.jar");
+
+            IOUtils.getJarProcess(new String[]{SystemInfo.getConfigPath() + "updater.jar ", SystemInfo.currentPath})
+                    .inheritIO()
+                    .start();
+
             System.exit(-1);
 
 

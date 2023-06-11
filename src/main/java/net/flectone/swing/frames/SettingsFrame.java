@@ -7,7 +7,6 @@ package net.flectone.swing.frames;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import net.flectone.Main;
-import net.flectone.swing.filechooser.JFileChooserExtend;
 import net.flectone.swing.panels.installations.MainPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.SystemInfo;
@@ -16,9 +15,6 @@ import net.flectone.utils.SwingUtils;
 
 import javax.swing.*;
 import javax.swing.colorchooser.AbstractColorChooserPanel;
-import java.io.File;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -36,11 +32,11 @@ public class SettingsFrame extends CustomFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        jTextField1.setText(SystemInfo.getInstance().getMinecraftDirectory());
+        jTextField1.setText(SystemInfo.getMinecraftPath());
 
         dialogButton.addActionListener(e -> {
             Dialog.showSelectMinecraftFolder();
-            jTextField1.setText(SystemInfo.getInstance().getMinecraftDirectory());
+            jTextField1.setText(SystemInfo.getMinecraftPath());
         });
 
         jTextField1.setEditable(false);
@@ -64,11 +60,11 @@ public class SettingsFrame extends CustomFrame {
         }
 
         jComboBox1.setModel(new DefaultComboBoxModel<>(languages));
-        jComboBox1.setSelectedItem(Configuration.getValue("language." + SystemInfo.getInstance().getLanguage()));
+        jComboBox1.setSelectedItem(Configuration.getValue("language." + SystemInfo.getLanguage()));
 
         jComboBox1.addActionListener(e -> {
             String language = languageMap.get(jComboBox1.getSelectedItem());
-            SystemInfo.getInstance().setLanguage(language);
+            SystemInfo.setLanguage(language);
 
             Main.frame.getContentPane().removeAll();
             Main.frame.getContentPane().add(new MainPanel());

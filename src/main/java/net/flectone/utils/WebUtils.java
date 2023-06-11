@@ -5,9 +5,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.awt.*;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.io.InputStream;
+import java.net.*;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.util.HashSet;
 import java.util.Set;
 

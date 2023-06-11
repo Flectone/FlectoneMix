@@ -4,17 +4,12 @@
  */
 package net.flectone.swing.panels.installations;
 
-import net.flectone.swing.panels.tabs.BuilderComponent;
 import net.flectone.swing.panels.test.CustomPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.utils.Dialog;
-import net.flectone.utils.WebUtils;
 
-import javax.swing.*;
 import java.io.File;
-import java.util.HashMap;
-import java.util.Set;
 
 /**
  *

@@ -4,19 +4,14 @@
  */
 package net.flectone.swing.panels.installations;
 
-import net.flectone.swing.panels.tabs.BuilderComponent;
-import net.flectone.swing.panels.test.BuilderInterface;
 import net.flectone.swing.panels.test.CustomPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.system.SystemInfo;
 import net.flectone.utils.Dialog;
-import net.flectone.utils.WebUtils;
 
 import javax.swing.*;
 import java.io.File;
-import java.util.HashMap;
-import java.util.Set;
 
 /**
  *
@@ -61,7 +56,7 @@ public class PluginsPanel extends JPanel {
             if(installCoreCheckBox3.isSelected()){
                 String fileName = "bestcore-" + jComboBox4.getSelectedItem() + ".jar";
                 installation.downloadFile("https://flectone.net/components/servers/" + fileName,
-                        SystemInfo.getInstance().getMinecraftDirectory() + "server" + File.separator + fileName,
+                        SystemInfo.getMinecraftPath() + "server" + File.separator + fileName,
                         fileName);
             }
 

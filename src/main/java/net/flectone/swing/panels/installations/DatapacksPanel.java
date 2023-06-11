@@ -5,18 +5,12 @@
 package net.flectone.swing.panels.installations;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
-import net.flectone.swing.panels.tabs.BuilderComponent;
 import net.flectone.swing.panels.test.CustomPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
-import net.flectone.system.SystemInfo;
 import net.flectone.utils.Dialog;
-import net.flectone.utils.WebUtils;
 
-import javax.swing.*;
 import java.io.File;
-import java.util.HashMap;
-import java.util.Set;
 
 /**
  *
@@ -47,6 +41,7 @@ public class DatapacksPanel extends javax.swing.JPanel {
                     .addLine();
         });
 
+
         installButton.addActionListener(e -> new Thread(() -> {
 
             installButton.setEnabled(false);
@@ -62,6 +57,8 @@ public class DatapacksPanel extends javax.swing.JPanel {
 
             installButton.setEnabled(true);
         }).start());
+
+
 
         jButton2.addActionListener(e -> Dialog.showSelectMinecraftFolder());
     }

@@ -33,7 +33,7 @@ public class Dialog {
 
     public static void showSelectMinecraftFolder(){
 
-        JFileChooser fileChooserExtend = new JFileChooser(SystemInfo.getInstance().getMinecraftDirectory());
+        JFileChooser fileChooserExtend = new JFileChooser(SystemInfo.getMinecraftPath());
 
         fileChooserExtend.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
@@ -41,6 +41,6 @@ public class Dialog {
 
         if(returnValue != JFileChooserExtend.APPROVE_OPTION) return;
 
-        SystemInfo.getInstance().setMinecraftDirectory(fileChooserExtend.getSelectedFile().getPath() + File.separator);
+        SystemInfo.setMinecraftPath(fileChooserExtend.getSelectedFile().getPath() + File.separator);
     }
 }

@@ -66,7 +66,7 @@ public class OptimizationPanel extends JPanel {
             if(settingCheckBox.isSelected()){
                 installation.downloadFiles(new ArrayList<>(WebUtils.getWebNames("components/mods/configs/", "")),
                         "https://flectone.net/components/mods/configs/",
-                        SystemInfo.getInstance().getMinecraftDirectory() + "config" + File.separator);
+                        SystemInfo.getMinecraftPath() + "config" + File.separator);
             }
 
             if(profileCheckBox.isSelected()){

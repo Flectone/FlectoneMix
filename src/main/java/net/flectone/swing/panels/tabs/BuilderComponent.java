@@ -25,6 +25,13 @@ public class BuilderComponent extends JPanel {
         JLabel label = new JLabel();
         label.setBorder(new FlatButtonBorder());
         label.setIcon(ImageUtils.createImageIcon(configValue));
+
+//        new Thread(() -> {
+//
+//            label.setIcon(ImageUtils.getWebImage(""));
+//
+//        }).start();
+
         add(label);
         componentList.add(label);
         return this;

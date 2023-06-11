@@ -1,7 +1,5 @@
 package net.flectone;
 
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatLaf;
 import net.flectone.system.Installation;
 import net.flectone.utils.SwingUtils;
 import net.flectone.swing.frames.MainFrame;
@@ -19,25 +17,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //create configuration object
-        Configuration configuration = new Configuration();
         //load "configs/config.yml"
-        configuration.loadConfig("config.yml");
+        Configuration.loadConfig("config.yml");
         //load "configs/staticWords.yml"
-        configuration.loadConfig("staticWords.yml");
+        Configuration.loadConfig("staticWords.yml");
 
-        if(new File(SystemInfo.getInstance().getPath() + "flectone.installer").exists())
-            configuration.load("flectone.installer");
+        Configuration.checkSettingsFile();
 
         String lastColor = Configuration.getValue("last_color");
-
         SwingUtils.setColors(lastColor != null ? Color.decode(lastColor) : ColorUtils.decode("color.black"));
 
         // Set the system language and color
-        SystemInfo.getInstance().loadLanguage();
+        SystemInfo.loadLanguage();
 
         //load "configs/languages/ .yml"
-        configuration.loadConfig("languages" + File.separator + SystemInfo.getInstance().getLanguage() + ".yml");
+        Configuration.loadConfig("languages" + File.separator + SystemInfo.getLanguage() + ".yml");
 
         Installation.checkUpdates();
 
