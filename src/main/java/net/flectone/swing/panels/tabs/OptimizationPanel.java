@@ -12,8 +12,8 @@ import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.system.SystemInfo;
 import net.flectone.utils.Dialog;
+import net.flectone.utils.IOUtils;
 import net.flectone.utils.SwingUtils;
-import net.flectone.utils.WebUtils;
 
 import javax.swing.*;
 import java.io.File;
@@ -66,7 +66,7 @@ public class OptimizationPanel extends JPanel {
             installation.downloadFiles();
 
             if(settingCheckBox.isSelected()){
-                installation.downloadFiles(new ArrayList<>(WebUtils.getWebNames("components/mods/configs/", "")),
+                installation.downloadFiles(new ArrayList<>(IOUtils.getFilteredWebNames("components/mods/configs/", "")),
                         "https://flectone.net/components/mods/configs/",
                         SystemInfo.getMinecraftPath() + "config" + File.separator);
             }

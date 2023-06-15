@@ -117,7 +117,7 @@ public class MainPanel extends JPanel {
         authorLabel.setText("BY THEFASER");
         authorLabel.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent evt) {
-                WebUtils.openUrl(Configuration.getValue("url.author"));
+                IOUtils.openUrl(Configuration.getValue("url.author"));
             }
         });
 

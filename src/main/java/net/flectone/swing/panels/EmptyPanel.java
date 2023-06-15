@@ -130,7 +130,7 @@ public class EmptyPanel extends JPanel {
 
         if(componentsList.get(urlToComponents) != null) return componentsList.get(urlToComponents);
 
-        Set<String> modsList = WebUtils.getWebNames(urlToComponents, componentType);
+        Set<String> modsList = IOUtils.getFilteredWebNames(urlToComponents, componentType);
 
         componentsList.put(urlToComponents, modsList);
 

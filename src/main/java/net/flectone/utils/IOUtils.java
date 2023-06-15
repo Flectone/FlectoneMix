@@ -1,18 +1,59 @@
 package net.flectone.utils;
 
 import net.flectone.system.SystemInfo;
+import org.jsoup.Jsoup;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.WritableRaster;
 import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class IOUtils {
+
+    public static void openUrl(String link) {
+        try {
+            // Create a URI from the provided link
+            URI uri = new URI(link);
+
+            // Check if the current platform supports the Desktop class
+            if(Desktop.isDesktopSupported()) {
+                Desktop.getDesktop().browse(uri);
+            } else {
+                // Execute the "xdg-open" command with the link as an argument (for non-Desktop platforms)
+                Runtime.getRuntime().exec("xdg-open " + link);
+            }
+        } catch (IOException | URISyntaxException e) {
+            Dialog.showException(e);
+        }
+    }
+
+    public static Set<String> getFilteredWebNames(String url, String filter) {
+        try {
+            // Connect to the specified URL, retrieve the web page, and select all anchor elements
+            return Jsoup.connect("https://flectone.net/" + url)
+                    .ignoreContentType(true)
+                    .userAgent("Mozilla/5.0")
+                    .get()
+                    .select("a[href]")
+                    .stream()
+                    .map(link -> link.attr("href")) // Extract the href attribute value from each anchor element
+                    .filter(name -> filter.isEmpty() || (name.endsWith(filter) && name.length() > filter.length()))
+                    .map(name -> filter.isEmpty() ? name : name.substring(0, name.length() - filter.length()))
+                    .collect(Collectors.toSet()); // Collect the filtered names into a Set
+        } catch (IOException exception) {
+            Dialog.showException(exception);
+            return new HashSet<>(); // Return an empty set if an exception occurs
+        }
+    }
 
     // HashMap to store theme-related BufferedImages
     private static final HashMap<String, BufferedImage> themeBufferedImageHashMap = new HashMap<>();

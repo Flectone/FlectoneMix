@@ -9,18 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="add new loading icons">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/frames/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/frames/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/labels/BottomLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/labels/BottomLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/BuilderComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/BuilderComponents.java" afterDir="false" />
+    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="remove ImageUtils.java">
       <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/EmptyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/EmptyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/tabs/OptimizationPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/tabs/OptimizationPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/ImageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/SwingUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/utils/SwingUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686856993954</updated>
-      <workItem from="1686856994992" duration="7507000" />
+      <workItem from="1686856994992" duration="7827000" />
     </task>
     <task id="LOCAL-00001" summary="2.0.7">
       <created>1686857301793</created>
@@ -145,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686860478743</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove ImageUtils.java">
+      <created>1686864642319</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686864642319</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.0.7" />
     <MESSAGE value="add new loading icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new loading icons" />
+    <MESSAGE value="remove ImageUtils.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove ImageUtils.java" />
   </component>
 </project>

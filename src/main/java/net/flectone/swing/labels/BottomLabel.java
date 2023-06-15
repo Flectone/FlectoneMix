@@ -2,7 +2,6 @@ package net.flectone.swing.labels;
 
 import net.flectone.system.Configuration;
 import net.flectone.utils.IOUtils;
-import net.flectone.utils.WebUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +23,7 @@ public class BottomLabel extends JLabel {
         addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                WebUtils.openUrl(Configuration.getValue("url." + filePath.replace(".png", "")));
+                IOUtils.openUrl(Configuration.getValue("url." + filePath.replace(".png", "")));
             }
         });
     }
