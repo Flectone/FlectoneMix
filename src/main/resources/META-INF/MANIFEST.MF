@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: net.flectone.Main
+Class-Path: jsoup-1.15.4.jar junit-jupiter-engine-5.8.1.jar junit-jupite
+ r-api-5.8.1.jar junit-platform-commons-1.8.1.jar junit-platform-engine-
+ 1.8.1.jar opentest4j-1.2.0.jar flatlaf-3.0.jar gson-2.10.1.jar
+
