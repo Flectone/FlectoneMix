@@ -7,7 +7,7 @@ package net.flectone.swing.frames;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import net.flectone.Main;
-import net.flectone.swing.panels.installations.MainPanel;
+import net.flectone.swing.panels.MainPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.SystemInfo;
 import net.flectone.utils.Dialog;
@@ -21,7 +21,7 @@ import java.util.HashMap;
  *
  * @author TheFaser
  */
-public class SettingsFrame extends CustomFrame {
+public class SettingsFrame extends EmptyFrame {
 
     /** Creates new form SettingsFrame */
 

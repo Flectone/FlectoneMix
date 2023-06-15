@@ -3,8 +3,8 @@ package net.flectone.utils;
 import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.ui.FlatButtonBorder;
-import net.flectone.swing.frames.CustomFrame;
-import net.flectone.swing.panels.CustomScrollPanel;
+import net.flectone.swing.frames.EmptyFrame;
+import net.flectone.swing.panels.EmptyScrollPanel;
 import net.flectone.system.Configuration;
 
 import javax.swing.*;
@@ -50,8 +50,8 @@ public class SwingUtils {
 
         FlatLaf.setGlobalExtraDefaults(themeChangeMap);
         FlatLightLaf.setup();
-        CustomFrame.updateAllFrames();
-        CustomScrollPanel.update();
+        EmptyFrame.updateAllFrames();
+        EmptyScrollPanel.update();
         updateIconBorders();
 
         System.setProperty("file.encoding", "UTF-8");

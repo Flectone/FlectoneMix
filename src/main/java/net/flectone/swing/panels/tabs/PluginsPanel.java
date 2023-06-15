@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package net.flectone.swing.panels.installations;
+package net.flectone.swing.panels.tabs;
 
-import net.flectone.swing.panels.test.CustomPanel;
+import net.flectone.swing.panels.EmptyPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.system.SystemInfo;
@@ -20,12 +20,12 @@ import java.io.File;
 public class PluginsPanel extends JPanel {
 
 
-    public CustomPanel panel;
+    public EmptyPanel panel;
     /**
      * Creates new form PluginsPanel
      */
     public PluginsPanel() {
-        panel = new CustomPanel("plugins", ".jar");
+        panel = new EmptyPanel("plugins", ".jar");
         initComponents();
 
         jComboBox4.setModel(new DefaultComboBoxModel<>(Configuration.getValues("support.server_cores.versions")));

@@ -4,6 +4,7 @@ import net.flectone.utils.Dialog;
 import net.flectone.utils.IOUtils;
 
 import java.io.*;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,10 +38,31 @@ public class Configuration {
         }
     }
 
-    public static void loadLocal(String path){
+    public static void loadLocal(String file){
 
         //read file
-        try(Scanner scanner = new Scanner(new File(path), "UTF-8")) {
+        try(Scanner scanner = new Scanner(new File(file), "UTF-8")) {
+            //if next line exist
+            while(scanner.hasNextLine()) {
+                //get line
+                String line = scanner.nextLine();
+                if(line == null || line.startsWith("#") || !line.contains(": ")) continue;
+
+                String[] words = line.split(": ");
+
+                //put to map with key
+                configMap.put(words[0], words[1].replaceAll("\"", ""));
+            }
+
+        } catch (Exception e) {
+            Dialog.showException(e);
+        }
+    }
+
+    public static void loadLocal(URL url){
+
+        //read file
+        try(Scanner scanner = new Scanner(url.openStream(), "UTF-8")) {
             //if next line exist
             while(scanner.hasNextLine()) {
                 //get line

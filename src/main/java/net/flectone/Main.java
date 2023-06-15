@@ -5,12 +5,14 @@ import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.system.SystemInfo;
 import net.flectone.utils.ColorUtils;
+import net.flectone.utils.IOUtils;
 import net.flectone.utils.ImageUtils;
 import net.flectone.utils.SwingUtils;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class Main {
 
@@ -18,9 +20,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //load "configs/config.yml"
-        Configuration.loadConfig("config.yml");
-        //load "configs/staticWords.yml"
+        Configuration.loadLocal(IOUtils.getResourceURL("config.yml"));
+
         Configuration.loadConfig("staticWords.yml");
 
         Configuration.checkSettingsFile();
@@ -31,7 +32,6 @@ public class Main {
         // Set the system language and color
         SystemInfo.loadLanguage();
 
-        //load "configs/languages/ .yml"
         Configuration.loadConfig("languages/"+ SystemInfo.getLanguage() + ".yml");
 
         Installation.checkUpdates();

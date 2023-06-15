@@ -1,7 +1,8 @@
-package net.flectone.swing.panels.tabs;
+package net.flectone.swing.panels;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import net.flectone.system.Configuration;
+import net.flectone.utils.IOUtils;
 import net.flectone.utils.ImageUtils;
 import net.flectone.utils.SwingUtils;
 
@@ -9,21 +10,26 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class BuilderComponent extends JPanel {
+public class BuilderComponents extends JPanel {
     private Box rightComponents = Box.createVerticalBox();
     private final ArrayList<JComponent> componentList = new ArrayList<>();
     private String tab;
 
-    public BuilderComponent(String tab) {
+    public BuilderComponents(String tab) {
         setLayout(new FlowLayout(FlowLayout.LEFT));
         add(Box.createRigidArea(new Dimension(3, 0)));
         this.tab = tab;
         componentList.add(this);
     }
 
-    public BuilderComponent addIcon(String configValue) {
+    public BuilderComponents addIcon(String configValue) {
         JLabel label = new JLabel();
         label.setBorder(new FlatButtonBorder());
+
+        boolean isBigTab = tab.equals("farms") || tab.equals("datapacks") || tab.equals("shaders");
+        String typeLoading = isBigTab ? "big" : "small";
+
+        label.setIcon(new ImageIcon(IOUtils.getResourceURL("images/" + typeLoading + "-null-icon.png")));
 
         new Thread(() -> {
             label.setIcon(ImageUtils.createImageIcon(configValue));
@@ -35,7 +41,7 @@ public class BuilderComponent extends JPanel {
     }
 
 
-    public BuilderComponent addText(String configValue) {
+    public BuilderComponents addText(String configValue) {
 
 
         JLabel label = new JLabel(Configuration.getValue(configValue));
@@ -47,12 +53,12 @@ public class BuilderComponent extends JPanel {
         return this;
     }
 
-    public BuilderComponent addLine() {
+    public BuilderComponents addLine() {
         rightComponents.add(new JSeparator());
         return this;
     }
 
-    public BuilderComponent addCheckBox(String configValue) {
+    public BuilderComponents addCheckBox(String configValue) {
         JCheckBox checkBox = new JCheckBox(configValue);
         checkBox.setFont(checkBox.getFont().deriveFont(15f));
         rightComponents.add(checkBox);
@@ -60,7 +66,7 @@ public class BuilderComponent extends JPanel {
         return this;
     }
 
-    public BuilderComponent addCheckBox(String text, String name) {
+    public BuilderComponents addCheckBox(String text, String name) {
         JCheckBox checkBox = new JCheckBox(text);
         checkBox.setFont(checkBox.getFont().deriveFont(15f));
         checkBox.setName(name);
@@ -69,7 +75,7 @@ public class BuilderComponent extends JPanel {
         return this;
     }
 
-    public BuilderComponent addCheckBox(String text, String name, boolean enable, ArrayList<JCheckBox> unstableList){
+    public BuilderComponents addCheckBox(String text, String name, boolean enable, ArrayList<JCheckBox> unstableList){
         JCheckBox checkBox = new JCheckBox(text);
         checkBox.setFont(checkBox.getFont().deriveFont(15f));
         checkBox.setSelected(enable);
@@ -81,7 +87,7 @@ public class BuilderComponent extends JPanel {
         return this;
     }
 
-    public BuilderComponent buildComponent() {
+    public BuilderComponents buildComponent() {
         add(rightComponents);
         SwingUtils.addTabsComponents(tab, componentList);
         return this;

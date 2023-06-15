@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package net.flectone.swing.panels.installations;
+package net.flectone.swing.panels.tabs;
 
 import net.flectone.swing.checkboxes.CustomCheckBox;
 import net.flectone.swing.comboboxes.CustomCombobox;
 import net.flectone.swing.labels.CustomLabel;
-import net.flectone.swing.panels.test.CustomPanel;
+import net.flectone.swing.panels.EmptyPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.system.SystemInfo;
@@ -33,10 +33,10 @@ public class OptimizationPanel extends JPanel {
 
     private ArrayList<JCheckBox> unstableList = new ArrayList<>();
 
-    public CustomPanel panel;
+    public EmptyPanel panel;
 
     public OptimizationPanel() {
-        panel = new CustomPanel("optimization", ".jar");
+        panel = new EmptyPanel("optimization", ".jar");
 
         initComponents();
 

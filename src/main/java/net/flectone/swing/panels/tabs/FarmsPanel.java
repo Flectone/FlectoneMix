@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package net.flectone.swing.panels.installations;
+package net.flectone.swing.panels.tabs;
 
-import net.flectone.swing.panels.test.CustomPanel;
+import net.flectone.swing.panels.EmptyPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.utils.Dialog;
@@ -15,51 +15,51 @@ import java.io.File;
  *
  * @author TheFaser
  */
-public class ResourcepacksPanel extends javax.swing.JPanel {
+public class FarmsPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ResourcepacksPanel
+     * Creates new form FarmsPanel
      */
-    public CustomPanel panel = null;
 
-    public ResourcepacksPanel() {
+    public EmptyPanel panel;
 
-        panel = new CustomPanel("resourcepacks", ".zip");
+    public FarmsPanel() {
+        panel = new EmptyPanel("farms", ".zip");
         initComponents();
 
-        panel.setUrlToComponents("components/resourcepacks");
+        panel.setUrlToComponents("components/farms");
 
         panel.addComponentsToInstallPanel(this);
 
-        new Thread(() -> {
-            panel.updateComponents((builder, component) -> {
-                builder.addIcon(component + ".png")
-                        .addCheckBox(Configuration.getValue("checkbox.install") + Configuration.getValue("resourcepack." + component), component)
-                        .addText("label." + component)
-                        .addLine();
-            });
-        }).start();
+        panel.updateComponents((builder, component) -> {
 
-        installButton.addActionListener(e -> new Thread(() -> {
+            builder.addIcon(component + ".png")
+                    .addText("farm." + component + ".version")
+                    .addCheckBox(Configuration.getValue("checkbox.install") + Configuration.getValue("farm." + component), component)
+                    .addCheckBox(Configuration.getValue("checkbox.install") + Configuration.getValue("label.litematic"), component + "litematic")
+                    .addText("label." + component)
+                    .addLine();
+        });
+
+        installButton.addActionListener(e -> new Thread(() ->  {
 
             installButton.setEnabled(false);
 
-            Installation installation = new Installation("resourcepacks",
+            Installation installation = new Installation("farms",
                     ".zip",
                     panel.getUrlToComponents() + "/",
-                    "resourcepacks" + File.separator,
+                    "saves" + File.separator,
                     panel.getProgressPanel());
 
-            installation.downloadFiles();
+            installation.downloadAndUnzipFiles();
+
             installation.close();
 
             installButton.setEnabled(true);
-
         }).start());
 
         jButton2.addActionListener(e -> Dialog.showSelectMinecraftFolder());
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,7 +79,6 @@ public class ResourcepacksPanel extends javax.swing.JPanel {
         jPanel2.setOpaque(false);
 
         installButton.setText(Configuration.getValue("label.install"));
-
         jButton2.setText("...");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -114,7 +113,7 @@ public class ResourcepacksPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))

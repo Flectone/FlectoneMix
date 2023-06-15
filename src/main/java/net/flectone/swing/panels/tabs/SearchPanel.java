@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package net.flectone.swing.panels.installations;
+package net.flectone.swing.panels.tabs;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import net.flectone.system.Configuration;

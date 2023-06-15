@@ -3,11 +3,11 @@ package net.flectone.swing.frames;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class CustomFrame extends JFrame {
+public class EmptyFrame extends JFrame {
 
     private static final ArrayList<JFrame> listFrames = new ArrayList<>();
 
-    public CustomFrame(){
+    public EmptyFrame(){
         listFrames.add(this);
     }
 

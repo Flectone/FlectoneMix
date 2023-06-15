@@ -22,6 +22,8 @@
       <element id="directory" name="images">
         <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources/images" />
       </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
     </root>
   </artifact>
 </component>

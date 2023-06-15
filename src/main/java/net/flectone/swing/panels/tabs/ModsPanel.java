@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package net.flectone.swing.panels.installations;
+package net.flectone.swing.panels.tabs;
 
-import net.flectone.swing.panels.test.CustomPanel;
+import net.flectone.swing.panels.EmptyPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.Installation;
 import net.flectone.utils.Dialog;
@@ -23,11 +23,11 @@ public class ModsPanel extends JPanel {
      * Creates new form ModsPanel
      */
 
-    public CustomPanel panel;
+    public EmptyPanel panel;
 
     public ModsPanel() {
 
-        panel = new CustomPanel("mods", ".jar");
+        panel = new EmptyPanel("mods", ".jar");
 
         initComponents();
 

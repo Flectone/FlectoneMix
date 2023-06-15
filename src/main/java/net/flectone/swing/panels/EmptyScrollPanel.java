@@ -3,11 +3,11 @@ package net.flectone.swing.panels;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class CustomScrollPanel extends JScrollPane {
+public class EmptyScrollPanel extends JScrollPane {
 
-    private static final ArrayList<CustomScrollPanel> listScrollPanels = new ArrayList<>();
+    private static final ArrayList<EmptyScrollPanel> listScrollPanels = new ArrayList<>();
 
-    public CustomScrollPanel(){
+    public EmptyScrollPanel(){
 
         getVerticalScrollBar().setUnitIncrement(8);
 
@@ -20,7 +20,7 @@ public class CustomScrollPanel extends JScrollPane {
     }
 
     public static void update(){
-        for(CustomScrollPanel panel : listScrollPanels){
+        for(EmptyScrollPanel panel : listScrollPanels){
             panel.setBorder(null);
         }
     }

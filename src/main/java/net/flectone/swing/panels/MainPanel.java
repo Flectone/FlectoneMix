@@ -2,13 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package net.flectone.swing.panels.installations;
+package net.flectone.swing.panels;
 
 import net.flectone.swing.comboboxes.CustomCombobox;
 import net.flectone.swing.frames.SettingsFrame;
 import net.flectone.swing.labels.BottomLabel;
-import net.flectone.swing.panels.CustomScrollPanel;
-import net.flectone.swing.panels.test.CustomPanel;
+import net.flectone.swing.panels.tabs.*;
 import net.flectone.system.Configuration;
 import net.flectone.utils.*;
 
@@ -38,7 +37,7 @@ public class MainPanel extends JPanel {
         initComponents();
         updateUI();
 
-        CustomPanel panel = new OptimizationPanel().panel;
+        EmptyPanel panel = new OptimizationPanel().panel;
         listPanels.put(0, panel);
         componentsPanel.add(panel);
     }
@@ -233,7 +232,7 @@ public class MainPanel extends JPanel {
 
             componentsPanel.add(panel);
 
-            CustomScrollPanel.update();
+            EmptyScrollPanel.update();
 
             updateUI();
         });
