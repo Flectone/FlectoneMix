@@ -29,7 +29,7 @@ public class SwingUtils {
     public static void setColors(Color color) {
         SwingUtils.colors = new Color[]{color, ColorUtils.makeBrighterOrDarker(color, 15), ColorUtils.getComponentColor(color)};
 
-        ImageUtils.changeIconsColor(colors[2]);
+        IOUtils.changeThemeIconsColor(colors[2]);
 
         Map<String, String> themeChangeMap = new HashMap();
         themeChangeMap.put("@background", ColorUtils.toHEX(colors[0]));

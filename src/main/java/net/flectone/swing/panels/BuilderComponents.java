@@ -3,7 +3,6 @@ package net.flectone.swing.panels;
 import com.formdev.flatlaf.ui.FlatButtonBorder;
 import net.flectone.system.Configuration;
 import net.flectone.utils.IOUtils;
-import net.flectone.utils.ImageUtils;
 import net.flectone.utils.SwingUtils;
 
 import javax.swing.*;
@@ -32,7 +31,7 @@ public class BuilderComponents extends JPanel {
         label.setIcon(new ImageIcon(IOUtils.getResourceURL("images/" + typeLoading + "-null-icon.png")));
 
         new Thread(() -> {
-            label.setIcon(ImageUtils.createImageIcon(configValue));
+            label.setIcon(IOUtils.getWebImageIcon(configValue));
         }).start();
 
         add(label);

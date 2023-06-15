@@ -6,13 +6,10 @@ import net.flectone.system.Installation;
 import net.flectone.system.SystemInfo;
 import net.flectone.utils.ColorUtils;
 import net.flectone.utils.IOUtils;
-import net.flectone.utils.ImageUtils;
 import net.flectone.utils.SwingUtils;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 
 public class Main {
 
@@ -37,9 +34,6 @@ public class Main {
         Installation.checkUpdates();
 
         frame = new MainFrame();
-
-
-
     }
 
 }

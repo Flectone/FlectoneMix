@@ -9,230 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="2.0.7">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FlectoneMix_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FlectoneMix_jar.xml" afterDir="false" />
+    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="add new loading icons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/frames/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/frames/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/tabs/BuilderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/tabs/BuilderComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/test/CustomPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/test/CustomPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/system/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/system/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/labels/BottomLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/labels/BottomLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/BuilderComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/BuilderComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/EmptyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/EmptyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/swing/panels/MainPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/3dskinlayers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/AmbientEnvironment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/BBOutlineReloaded.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/BSL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/BetterF3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/BetterThirdPerson.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/BlueMap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/CITResewn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Chunky.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ColouredTooltips.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Complementary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ComplementaryReimagined.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Controlling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/CoreProtect.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/CoreProtectTNT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/CullLessLeaves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/DCCH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Debugify.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/DisableCustomWorldsAdvice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/DistantHorizons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/DripSounds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/EnchantmentDescriptions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Entity_Collision_FPS_Fix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/EssentialsX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/FartherViewDistance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Fastload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/FlectoneChat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/GSit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Geyser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Gosha.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ImmediatelyFast.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ItShallNotTick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ItemBorders.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Ksyxis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/LegendaryTooltips.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/LuckPerms.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/MakeUp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Methane.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/MiniEffects.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/MouseTweaks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Ocean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/OptiFine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/PlaceholderAPI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/PresenceFootsteps.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Recipe-Unlocker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/RoughlyEnoughItems.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Sildur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/SkinsRestorer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/TipTheScales.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/VulkanMod.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/WI-Zoom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/Xaeros_Minimap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/accurate-block-placement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/advancementinfo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/afkfish.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/alchemy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/anakus_status_bars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/appleskin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bedrockify.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bedrodium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bestsheep.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/besttree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/betterbeds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/betterbiomeblend.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/betterfpsdist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bettermounthud.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bettervanilla.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bicons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bigbraingui.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bluedebris.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/blur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bobby.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/borderless-mining.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bossbars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/bounding box outline.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/c2me.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/camerautils.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/cauldron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/cem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/chainarmor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/chat_heads.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/chime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/clickthrough.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/cobblestone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/colormatic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/craft.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/cullclouds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/cullleaves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/customfov.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/dashloader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/deathlog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/debris.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/defaultdarkmode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/discs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/doors.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/durabilityviewer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/dynamic-fps.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/eating-animation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/effective.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/elytra.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/emotecraft.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/enchant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ender.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/enhanced_attack_indicator.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/entity-view-distance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/entity_texture_features.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/entityculling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/exordium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/extrasounds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/fabric-api.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/fabrishot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/fallingleaves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/fast-chest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ferritecore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/feytweaks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/firstperson.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/forgetmechunk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/github.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/gold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/guard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/held-item-info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ingamebrewingguide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/interactic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/invhud.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/iris.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/iron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/isometric-renders.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/item-model-fix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/itemscroller.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/krypton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/lambdabettergrass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/lambdynamiclights.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/language-reload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/lazydfu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/litematica.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/lithium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/logical_zoom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/loot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/lunade-fastanim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/lygyxa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/maid-allay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/malilib.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/mangrove.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/memoryleakfix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/mineanvil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/minihud.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/mixintrace.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/modmenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/morechathistory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/moreculling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/mousewheelie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/newporox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/newslime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/nofade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/notenoughanimations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/notenoughcrashes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/noxesium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/numberedhotbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/obsidian.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/oldporox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/oneblock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/optifabric.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/ores.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/pinglist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/plasmovoice-server.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/plasmovoice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/playlist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/pling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/portalporox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/potion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/raid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/raised.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/redstonetweaks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/reeses_sodium_options.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/replanter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/replaymod.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/saturn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/seaborgium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/seamless-loading-screen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/shears.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/sheepconsistency.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/shulkerboxtooltip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/skin-swapper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/slotlock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/smoke-suppression.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/smoothboot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/sodium-extra.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/sodium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/soulorb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/soundphysics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/spyglass-improvements.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/squid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/starlight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/stendhal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/tools.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/tooltipfix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/torch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/torchesreimagined.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/trident.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/turtle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/viafabric.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/village.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/villagetrades.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/visuality.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/voicechat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/voidomonenchanted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/witcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/wither.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/witherrose.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/wood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/components/worldedit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/ImageUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/SwingUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/utils/SwingUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,6 +80,10 @@
       <recent name="C:\Users\TheFaser\IdeaProjects\FlectoneMix\src\main\resources" />
       <recent name="C:\Users\TheFaser\IdeaProjects\FlectoneMix\src\main\java\net\flectone" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TheFaser\IdeaProjects\FlectoneMix\src\main\java\net\flectone\swing\panels\tabs" />
+      <recent name="C:\Users\TheFaser\IdeaProjects\FlectoneMix\src\main\java\net\flectone\swing\panels" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="FlectoneMix" type="JarApplication">
@@ -316,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686856993954</updated>
-      <workItem from="1686856994992" duration="3046000" />
+      <workItem from="1686856994992" duration="7507000" />
     </task>
     <task id="LOCAL-00001" summary="2.0.7">
       <created>1686857301793</created>
@@ -332,7 +124,28 @@
       <option name="project" value="LOCAL" />
       <updated>1686857647410</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2.0.7">
+      <created>1686860328374</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686860328374</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2.0.7">
+      <created>1686860399955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686860399955</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add new loading icons">
+      <created>1686860478743</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686860478743</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +176,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.0.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.0.7" />
+    <MESSAGE value="add new loading icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new loading icons" />
   </component>
 </project>

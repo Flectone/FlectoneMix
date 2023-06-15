@@ -1,7 +1,7 @@
 package net.flectone.swing.labels;
 
 import net.flectone.system.Configuration;
-import net.flectone.utils.ImageUtils;
+import net.flectone.utils.IOUtils;
 import net.flectone.utils.WebUtils;
 
 import javax.swing.*;
@@ -12,7 +12,7 @@ import java.awt.event.MouseEvent;
 public class BottomLabel extends JLabel {
 
     public BottomLabel(String filePath){
-        setIcon(ImageUtils.createThemeImageIcon(filePath));
+        setIcon(IOUtils.getThemeImageIcon(filePath));
         setBorder(null);
 
         setCursor(new Cursor(Cursor.HAND_CURSOR));

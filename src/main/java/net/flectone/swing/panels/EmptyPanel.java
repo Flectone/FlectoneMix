@@ -48,7 +48,7 @@ public class EmptyPanel extends JPanel {
         progressLabel.setText(Configuration.getValue("label.waiting"));
 
         new Thread(() -> {
-            previewLabel.setIcon(ImageUtils.createExtraIcon("preview-" + tabName + ".png"));
+            previewLabel.setIcon(IOUtils.getResourceImageIcon("preview-" + tabName + ".png"));
             previewLabel.setBorder(new FlatButtonBorder());
         }).start();
 
@@ -107,7 +107,10 @@ public class EmptyPanel extends JPanel {
 
             JPanel panel = new JPanel();
             panel.add(Box.createRigidArea(new Dimension(3, 0)));
-            panel.add(new JLabel(new ImageIcon(IOUtils.getResourceURL("images/loading-" + typeLoading + ".gif"))));
+
+            ImageIcon imageIcon = new ImageIcon(IOUtils.getResourceURL("images/loading-" + typeLoading + ".gif"));
+
+            panel.add(new JLabel(imageIcon));
 
             loadingPanel.add(panel);
         }
@@ -152,9 +155,10 @@ public class EmptyPanel extends JPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                BufferedImage backgroundImage = ImageUtils.createBufferedImageTheme(tabName + "-background.png",
-                    ColorUtils.makeBrighterOrDarker(SwingUtils.getColor(0), 20));
+                BufferedImage backgroundImage = IOUtils.getThemeBufferedImage(tabName + "-background.png",
+                        ColorUtils.makeBrighterOrDarker(SwingUtils.getColor(0), 20));
                 backgroundImage.setAccelerationPriority(1.0f);
+                IOUtils.putThemeBufferedImage(tabName + "-background.png", backgroundImage);
 
                 int width = Math.min(backgroundImage.getWidth(), getWidth());
                 int height = Math.min(backgroundImage.getHeight(), getHeight());
@@ -168,7 +172,7 @@ public class EmptyPanel extends JPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                Image backgroundImage = IOUtils.getResourceBufferedImage("shadow.png");
+                Image backgroundImage = IOUtils.getResourceImageIcon("shadow.png").getImage();
                 g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), null);
             }
         };

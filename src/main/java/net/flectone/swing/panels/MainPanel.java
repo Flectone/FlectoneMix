@@ -29,10 +29,8 @@ public class MainPanel extends JPanel {
      */
     private final Map<Integer, JPanel> listPanels = new HashMap<>();
 
-    private static JPanel thisPanel;
 
     public MainPanel() {
-        thisPanel = this;
 
         initComponents();
         updateUI();
@@ -64,7 +62,8 @@ public class MainPanel extends JPanel {
             @Override
             public void mousePressed(MouseEvent e){
                 SwingUtils.theme = (SwingUtils.theme.equals("black")) ? "white" : "black";
-                themeLabel.setIcon(ImageUtils.createThemeImageIcon("theme_" + SwingUtils.theme + ".png"));
+                // DON'T REMOVE IMAGEICON
+                themeLabel.setIcon(new ImageIcon(IOUtils.getThemeBufferedImage("theme_" + SwingUtils.theme + ".png", SwingUtils.getColor(2))));
                 SwingUtils.setColors(ColorUtils.decode("color." + SwingUtils.theme));
             }
         });
@@ -202,7 +201,8 @@ public class MainPanel extends JPanel {
         for(String tab : Configuration.getValues("menu.list")){
             comboBox.addItem(Configuration.getValue("menu." + tab));
 
-            icons.put(Configuration.getValue("menu." + tab), ImageUtils.createThemeImageIcon(tab + ".png"));
+            // DON'T REMOVE IMAGEICON
+            icons.put(Configuration.getValue("menu." + tab), new ImageIcon(IOUtils.getThemeBufferedImage(tab + ".png", SwingUtils.getColor(2))));
         }
 
         comboBox.setIconListRenderer(icons);

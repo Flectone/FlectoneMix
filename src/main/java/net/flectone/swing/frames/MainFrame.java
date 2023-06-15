@@ -23,7 +23,7 @@ public class MainFrame extends EmptyFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        setIconImage(IOUtils.getResourceBufferedImage("flectone.png"));
+        setIconImage(IOUtils.getResourceImageIcon("flectone.png").getImage());
         setTitle(Configuration.getValue("frame.main") + Configuration.getValue("version"));
 
         SwingUtils.setFont(IOUtils.getResourceFont("Roboto-Medium.ttf", 12));

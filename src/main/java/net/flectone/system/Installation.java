@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import net.flectone.utils.Dialog;
 import net.flectone.utils.IOUtils;
-import net.flectone.utils.ImageUtils;
 import net.flectone.utils.SwingUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
