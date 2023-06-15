@@ -1,0 +1,33 @@
+version: 2.0.7
+
+support.languages: ru en
+default.language: en
+
+language.ru: "Русский"
+language.en: "English"
+
+color.black: "#171717"
+color.white: "#e8e8e8"
+
+menu.list: optimization farms plugins mods datapacks resourcepacks shaders
+
+support.loaders_type: Quilt Fabric Forge
+support.mods_type: Sodium Optifine Vulkan
+
+support.Fabric.Sodium.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.18.1 1.17.1 1.16.5 "
+support.Quilt.Sodium.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.18.1 1.17.1 1.16.5 "
+support.Forge.Sodium.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.18.1 1.17.1 1.16.5 "
+
+support.Fabric.Optifine.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.18.1 1.17.1 1.16.5 "
+support.Quilt.Optifine.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.18.1 1.17.1 1.16.5 "
+support.Forge.Optifine.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.18.1 1.17.1 1.16.5 "
+
+support.Fabric.Vulkan.versions: "1.19.4 1.19.3 1.19.2 1.19 1.18.2 "
+support.Quilt.Vulkan.versions: "1.19.4 1.19.3 1.19.2 1.19 1.18.2 "
+
+support.server_cores.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.17.1 1.16.5 "
+
+support.user_mods.versions: "1.19.4 1.19.3 1.19.2 1.18.2 "
+
+support.shaders.versions: "1.19.3 1.19.2 1.19.1 1.18.2 1.18.1 "
+
