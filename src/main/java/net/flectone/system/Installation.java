@@ -215,7 +215,7 @@ public class Installation {
             customProfile.put("lastUsed", LocalDateTime.now().toString());
 
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            ImageIO.write(ImageUtils.createBufferedImage("flectone.png"), "png", outputStream);
+            ImageIO.write(IOUtils.getResourceBufferedImage("flectone.png"), "png", outputStream);
             String icon = Base64.getEncoder().encodeToString(outputStream.toByteArray());
             customProfile.put("icon", "data:image/png;base64," + icon);
 

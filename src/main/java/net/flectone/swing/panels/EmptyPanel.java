@@ -2,17 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package net.flectone.swing.panels.test;
+package net.flectone.swing.panels;
 
 import com.formdev.flatlaf.ui.FlatButtonBorder;
-import net.flectone.swing.panels.CustomScrollPanel;
-import net.flectone.swing.panels.installations.SearchPanel;
-import net.flectone.swing.panels.tabs.BuilderComponent;
+import net.flectone.swing.panels.tabs.SearchPanel;
 import net.flectone.system.Configuration;
-import net.flectone.utils.ColorUtils;
-import net.flectone.utils.ImageUtils;
-import net.flectone.utils.SwingUtils;
-import net.flectone.utils.WebUtils;
+import net.flectone.utils.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,7 +20,7 @@ import java.util.Set;
  *
  * @author TheFaser
  */
-public class CustomPanel extends JPanel {
+public class EmptyPanel extends JPanel {
 
     private String tabName;
 
@@ -33,7 +28,7 @@ public class CustomPanel extends JPanel {
 
     private String urlToComponents;
 
-    public CustomPanel(String tabName, String componentType) {
+    public EmptyPanel(String tabName, String componentType) {
         this.tabName = tabName;
         this.componentType = componentType;
 
@@ -80,7 +75,7 @@ public class CustomPanel extends JPanel {
             getComponentsList().stream()
                     .filter(component -> !component.endsWith("litematic"))
                     .forEach(component -> {
-                        BuilderComponent builderComponent = new BuilderComponent(tabName);
+                        BuilderComponents builderComponent = new BuilderComponents(tabName);
                         builderInterface.build(builderComponent, component);
 
                         componentsPanel.add(builderComponent.buildComponent());
@@ -112,7 +107,7 @@ public class CustomPanel extends JPanel {
 
             JPanel panel = new JPanel();
             panel.add(Box.createRigidArea(new Dimension(3, 0)));
-            panel.add(new JLabel(ImageUtils.createExtraIcon("loading-" + typeLoading + ".gif")));
+            panel.add(new JLabel(new ImageIcon(IOUtils.getResourceURL("images/loading-" + typeLoading + ".gif"))));
 
             loadingPanel.add(panel);
         }
@@ -148,7 +143,7 @@ public class CustomPanel extends JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        scrollPanel = new CustomScrollPanel();
+        scrollPanel = new EmptyScrollPanel();
         jPanel1 = new JPanel();
         searchPanel = new JPanel();
         searchPanel.add(new SearchPanel(tabName));
@@ -173,7 +168,7 @@ public class CustomPanel extends JPanel {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                Image backgroundImage = ImageUtils.createBufferedImage("shadow.png");
+                Image backgroundImage = IOUtils.getResourceBufferedImage("shadow.png");
                 g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), null);
             }
         };

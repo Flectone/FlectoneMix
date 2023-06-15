@@ -1,6 +1,6 @@
 package net.flectone.swing.frames;
 
-import net.flectone.swing.panels.installations.MainPanel;
+import net.flectone.swing.panels.MainPanel;
 import net.flectone.system.Configuration;
 import net.flectone.system.SystemInfo;
 import net.flectone.utils.Dialog;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class MainFrame extends CustomFrame {
+public class MainFrame extends EmptyFrame {
 
     public MainFrame(){
 
@@ -23,7 +23,7 @@ public class MainFrame extends CustomFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        setIconImage(ImageUtils.createBufferedImage("flectone.png"));
+        setIconImage(IOUtils.getResourceBufferedImage("flectone.png"));
         setTitle(Configuration.getValue("frame.main") + Configuration.getValue("version"));
 
         SwingUtils.setFont(IOUtils.getResourceFont("Roboto-Medium.ttf", 12));

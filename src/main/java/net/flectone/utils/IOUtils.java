@@ -1,12 +1,9 @@
 package net.flectone.utils;
 
-import net.flectone.system.SystemInfo;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -31,6 +28,7 @@ public class IOUtils {
         try {
             return ImageIO.read(getResourceURL("images/" + file));
         } catch (IOException exception){
+
             exception.printStackTrace();
             Dialog.showException(exception);
 
