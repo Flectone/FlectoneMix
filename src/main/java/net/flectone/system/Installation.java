@@ -2,6 +2,7 @@ package net.flectone.system;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import net.flectone.utils.ColorUtils;
 import net.flectone.utils.Dialog;
 import net.flectone.utils.IOUtils;
 import net.flectone.utils.SwingUtils;
@@ -294,10 +295,9 @@ public class Installation {
     public static void checkUpdates(){
         try {
 
-            Document doc = Jsoup.connect("https://flectone.net/components/last/").get();
-            String lastVersion = doc.select("a[href^='v']").get(0).text().replaceFirst("v", "");
 
             String currentVersion = Configuration.getValue("version");
+            String lastVersion = Configuration.getValue("last.version");
 
             if(lastVersion.equals(currentVersion)) return;
 

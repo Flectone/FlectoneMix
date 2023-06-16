@@ -27,16 +27,21 @@ public class SystemInfo {
 
     private static final String systemLanguage = System.getProperty("user.language").toLowerCase();
 
-    private static String minecraftPath =
-            Configuration.getValue("last_minecraft_path") != null  ?
-            Configuration.getValue("last_minecraft_path") :
-            getDefaultFolderPath("minecraft");
+    private static String minecraftPath;
+
+    public static void setMinecraftPath(){
+        minecraftPath = Configuration.getValue("last_minecraft_path") != null  ?
+                Configuration.getValue("last_minecraft_path") :
+                getDefaultFolderPath("minecraft");
+    }
 
     private static String configPath = getDefaultFolderPath("flectonemix");
 
     private static String language;
 
     private static String getDefaultFolderPath(String folder){
+
+        System.out.println(1);
 
         String mcDirectory;
         if (os.contains("win")) {

@@ -22,6 +22,8 @@ public class Main {
         Configuration.loadConfig("staticWords.yml");
 
         Configuration.checkSettingsFile();
+        SystemInfo.setMinecraftPath();
+
 
         String lastColor = Configuration.getValue("last_color");
         SwingUtils.setColors(lastColor != null ? Color.decode(lastColor) : ColorUtils.decode("color.black"));
