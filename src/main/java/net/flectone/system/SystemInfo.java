@@ -41,8 +41,6 @@ public class SystemInfo {
 
     private static String getDefaultFolderPath(String folder){
 
-        System.out.println(1);
-
         String mcDirectory;
         if (os.contains("win")) {
             mcDirectory = System.getenv("APPDATA") +  "\\." + folder + "\\";

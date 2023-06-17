@@ -195,8 +195,6 @@ public class IOUtils {
 
     // Download a file from a URL
     public static void downloadFile(String urlString, String file) throws IOException {
-        System.out.println(urlString);
-        System.out.println(file);
 
         BufferedInputStream bis = new BufferedInputStream(openConnection(urlString).getInputStream());
         FileOutputStream fis = new FileOutputStream(file);
