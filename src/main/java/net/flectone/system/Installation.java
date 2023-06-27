@@ -305,7 +305,7 @@ public class Installation {
 
             IOUtils.downloadFile(SystemInfo.siteUrl + "components/last/updater.jar", SystemInfo.getConfigPath() + "updater.jar");
 
-            IOUtils.getJarProcess(new String[]{SystemInfo.getConfigPath() + "updater.jar ", SystemInfo.currentPath})
+            IOUtils.getJarProcess(new String[]{SystemInfo.getConfigPath() + "updater.jar", SystemInfo.currentPath})
                     .inheritIO()
                     .start();
 

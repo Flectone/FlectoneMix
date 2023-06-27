@@ -224,6 +224,6 @@ public class IOUtils {
 
     // Get a ProcessBuilder for running a JAR file with multiple arguments
     public static ProcessBuilder getJarProcess(String[] args) {
-        return getJarProcess("\"" + String.join("\"", args));
+        return getJarProcess("\"" + String.join(" ", args));
     }
 }

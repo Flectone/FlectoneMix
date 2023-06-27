@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="fix saved minecraft path">
+    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="added optimization 1.20+ for sodium and vulkan&#10;fixed defaultMinecraftPath">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/system/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/system/SystemInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
@@ -24,6 +24,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FlectoneMix" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,7 +124,9 @@
       <workItem from="1686856994992" duration="11603000" />
       <workItem from="1686913743890" duration="2259000" />
       <workItem from="1686937917630" duration="1198000" />
-      <workItem from="1687012361415" duration="2159000" />
+      <workItem from="1687012361415" duration="2575000" />
+      <workItem from="1687147969531" duration="6000" />
+      <workItem from="1687880783514" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="2.0.7">
       <created>1686857301793</created>
@@ -172,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686914144835</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added optimization 1.20+ for sodium and vulkan&#10;fixed defaultMinecraftPath">
+      <created>1687015724713</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687015724713</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +234,7 @@
     <MESSAGE value="remove WebUtils.java" />
     <MESSAGE value="add module updater.jar" />
     <MESSAGE value="fix saved minecraft path" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix saved minecraft path" />
+    <MESSAGE value="added optimization 1.20+ for sodium and vulkan&#10;fixed defaultMinecraftPath" />
+    <option name="LAST_COMMIT_MESSAGE" value="added optimization 1.20+ for sodium and vulkan&#10;fixed defaultMinecraftPath" />
   </component>
 </project>
