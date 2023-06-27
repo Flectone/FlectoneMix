@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="added optimization 1.20+ for sodium and vulkan&#10;fixed defaultMinecraftPath">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/system/Installation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/flectone/utils/IOUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-    </list>
+    <list default="true" id="14fc0477-21ba-498f-b00a-cd50eed779f8" name="Changes" comment="fixed issue &quot;Failed to update on *nix system&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +121,7 @@
       <workItem from="1686937917630" duration="1198000" />
       <workItem from="1687012361415" duration="2575000" />
       <workItem from="1687147969531" duration="6000" />
-      <workItem from="1687880783514" duration="627000" />
+      <workItem from="1687880783514" duration="1480000" />
     </task>
     <task id="LOCAL-00001" summary="2.0.7">
       <created>1686857301793</created>
@@ -198,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687015724713</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed issue &quot;Failed to update on *nix system&quot;">
+      <created>1687881499137</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687881499137</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +237,7 @@
     <MESSAGE value="add module updater.jar" />
     <MESSAGE value="fix saved minecraft path" />
     <MESSAGE value="added optimization 1.20+ for sodium and vulkan&#10;fixed defaultMinecraftPath" />
-    <option name="LAST_COMMIT_MESSAGE" value="added optimization 1.20+ for sodium and vulkan&#10;fixed defaultMinecraftPath" />
+    <MESSAGE value="fixed issue &quot;Failed to update on *nix system&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed issue &quot;Failed to update on *nix system&quot;" />
   </component>
 </project>
