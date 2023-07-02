@@ -46,7 +46,7 @@ public class IOUtils {
                     .select("a[href]")
                     .stream()
                     .map(link -> link.attr("href")) // Extract the href attribute value from each anchor element
-                    .filter(name -> filter.isEmpty() || (name.endsWith(filter) && name.length() > filter.length()))
+                    .filter(name -> (filter.isEmpty() || (name.endsWith(filter) && name.length() > filter.length())) && name.contains("."))
                     .map(name -> filter.isEmpty() ? name : name.substring(0, name.length() - filter.length()))
                     .collect(Collectors.toSet()); // Collect the filtered names into a Set
         } catch (IOException exception) {
