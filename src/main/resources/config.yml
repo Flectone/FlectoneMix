@@ -25,7 +25,7 @@ support.Forge.Optifine.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.18.1
 support.Fabric.Vulkan.versions: "1.20.1 1.20 1.19.4 1.19.3 1.19.2 1.19 1.18.2 "
 support.Quilt.Vulkan.versions: "1.20.1 1.20 1.19.4 1.19.3 1.19.2 1.19 1.18.2 "
 
-support.server_cores.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.17.1 1.16.5 "
+support.server_cores.versions: "1.20.1 1.20 1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.18.2 1.17.1 1.16.5 "
 
 support.user_mods.versions: "1.19.4 1.19.3 1.19.2 1.18.2 "
 
