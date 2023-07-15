@@ -1,4 +1,4 @@
-version: 2.1.1
+version: 2.1.2
 
 support.languages: ru en
 default.language: en
@@ -29,5 +29,5 @@ support.server_cores.versions: "1.20.1 1.20 1.19.4 1.19.3 1.19.2 1.19.1 1.19 1.1
 
 support.user_mods.versions: "1.19.4 1.19.3 1.19.2 1.18.2 "
 
-support.shaders.versions: "1.19.4 1.19.3 1.19.2 1.19.1 1.18.2 1.18.1 "
+support.shaders.versions: "1.20.1 1.20 1.19.4 1.19.3 1.19.2 1.19.1 1.18.2 1.18.1 "
 
