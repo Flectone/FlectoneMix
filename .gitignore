@@ -36,3 +36,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+/out/
+/out/artifacts/
+/out/artifacts/FlectoneMix_jar/
+/out/artifacts/FlectoneMix_jar/FlectoneMix.jar
