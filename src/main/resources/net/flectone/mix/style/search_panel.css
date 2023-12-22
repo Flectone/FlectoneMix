@@ -1,0 +1,21 @@
+@import "base.css";
+
+#searchPanel {
+    -fx-background-color: -fx-color-main;
+}
+
+.text-field {
+    -fx-background-color: -fx-color-combobox;
+    -fx-background-image: url("../images/black_search.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-padding: 0 0 0 20;
+    -fx-prompt-text-fill: -fx-color-gray;
+    -fx-text-fill: -fx-color-font_;
+    -fx-font-size: 15;
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-color-combobox;
+    -fx-font-size: 15;
+}

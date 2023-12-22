@@ -1,0 +1,30 @@
+.root {
+    -fx-effect-shadow: dropshadow(three-pass-box, rgba(0, 0, 0, 0.25), 25, 0.5, 0, 0);
+    -fx-effect-small-shadow: dropshadow(three-pass-box, rgb(20, 20, 20), 10, 0.2, 2, 0);
+
+    -fx-color-dark: #1F1F1F;
+    -fx-color-main: #171717;
+    -fx-color-gray: #777777;
+    -fx-color-separate: rgba(57, 57, 57);
+    -fx-color-combobox: rgb(35, 35, 35);
+
+    -fx-color-transperent-combobox: rgba(35, 35, 35, 0.7);
+    -fx-color-transperent-separate: rgba(57, 57, 57, 0.7);
+
+
+    -fx-color-green: #00B934;
+    -fx-color-blue: #0079CF;
+
+    -fx-color-font_: #D4D4D4;
+    -fx-color-font2_: white;
+
+    -fx-image-setting: url("../images/black_setting.png");
+    -fx-image-shader: url("../images/black_shader.png");
+    -fx-image-resourcepack: url("../images/black_resourcepack.png");
+    -fx-image-datapack: url("../images/black_datapack.png");
+    -fx-image-mod: url("../images/black_mod.png");
+    -fx-image-plugin: url("../images/black_plugin.png");
+    -fx-image-farm: url("../images/black_farm.png");
+    -fx-image-optimization: url("../images/black_optimization.png");
+    -fx-image-search: url("../images/black_search.png");
+}

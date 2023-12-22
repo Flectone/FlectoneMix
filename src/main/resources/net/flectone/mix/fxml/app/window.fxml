@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="windowPanel" prefHeight="605.0" prefWidth="1203.0" stylesheets="@../../style/app.css" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.WindowController">
+   <children>
+      <AnchorPane fx:id="contentPanel" layoutX="1.0" layoutY="32.0" prefHeight="468.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0" />
+      <AnchorPane fx:id="topBarPanel" layoutX="1.0" layoutY="1.0" prefHeight="32.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

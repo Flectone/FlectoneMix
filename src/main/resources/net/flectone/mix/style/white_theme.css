@@ -1,0 +1,29 @@
+.root {
+    -fx-effect-shadow: dropshadow(three-pass-box, rgba(0, 0, 0, 0.25), 25, 0.5, 0, 0);
+    -fx-effect-small-shadow: dropshadow(three-pass-box, rgb(220, 220, 220), 10, 0.2, 2, 0);
+
+    -fx-color-dark: #E0E0E0;
+    -fx-color-main: #E8E8E8;
+    -fx-color-gray: #888888;
+    -fx-color-separate: rgba(232, 232, 232);
+    -fx-color-combobox: rgb(220, 220, 220);
+
+    -fx-color-transperent-combobox: rgba(220, 220, 220, 0.7);
+    -fx-color-transperent-separate: rgba(232, 232, 232, 0.7);
+
+    -fx-color-green: #00B934;
+    -fx-color-blue: #0079CF;
+
+    -fx-color-font_: #171717;
+    -fx-color-font2_: #171717;
+
+    -fx-image-setting: url("../images/white_setting.png");
+    -fx-image-shader: url("../images/white_shader.png");
+    -fx-image-resourcepack: url("../images/white_resourcepack.png");
+    -fx-image-datapack: url("../images/white_datapack.png");
+    -fx-image-mod: url("../images/white_mod.png");
+    -fx-image-plugin: url("../images/white_plugin.png");
+    -fx-image-farm: url("../images/white_farm.png");
+    -fx-image-optimization: url("../images/white_optimization.png");
+    -fx-image-search: url("../images/white_search.png");
+}

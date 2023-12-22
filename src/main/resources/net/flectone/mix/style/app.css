@@ -1,0 +1,9 @@
+@import "base.css";
+
+#windowPanel {
+    -fx-background-color: -fx-color-main;
+}
+
+#topBarPanel {
+    -fx-background-color: -fx-color-main;
+}

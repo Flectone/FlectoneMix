@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="leftPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="70.0" style="-fx-background-color: -fx-color-main;" stylesheets="@../../style/left_panel.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.LeftPanelController">
+   <children>
+      <Rectangle fx:id="settingRectangle" fill="DODGERBLUE" height="44.0" layoutX="13.0" layoutY="447.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="44.0" AnchorPane.bottomAnchor="9.0" />
+      <ImageView fx:id="settingImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="452.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" AnchorPane.bottomAnchor="12.0" />
+      <VBox alignment="CENTER" layoutX="-1.0" layoutY="68.0" prefHeight="320.0" prefWidth="70.0" AnchorPane.topAnchor="68.0">
+         <children>
+            <AnchorPane fx:id="imagePane" prefHeight="318.0" prefWidth="70.0">
+               <children>
+                  <Rectangle fx:id="tabsRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="327.0" layoutX="15.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" />
+                  <ImageView fx:id="shaderImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="309.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" />
+                  <Line endX="-70.0" layoutX="120.0" layoutY="302.0" startX="-100.0" style="-fx-stroke: -fx-color-separate;" visible="false" />
+                  <ImageView fx:id="resourcepackImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="261.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" />
+                  <Line endX="-70.0" layoutX="120.0" layoutY="256.0" startX="-100.0" style="-fx-stroke: -fx-color-separate;" visible="false" />
+                  <ImageView fx:id="datapackImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="214.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" />
+                  <Line endX="-70.0" layoutX="120.0" layoutY="208.0" startX="-100.0" style="-fx-stroke: -fx-color-separate;" visible="false" />
+                  <ImageView fx:id="modImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="165.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" />
+                  <Line endX="-70.0" layoutX="120.0" layoutY="159.0" startX="-100.0" style="-fx-stroke: -fx-color-separate;" visible="false" />
+                  <ImageView fx:id="pluginImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="119.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" />
+                  <Line endX="-70.0" layoutX="120.0" layoutY="110.0" startX="-100.0" style="-fx-stroke: -fx-color-separate;" visible="false" />
+                  <ImageView fx:id="farmImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="70.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" />
+                  <Line endX="-70.0" layoutX="120.0" layoutY="61.0" startX="-100.0" style="-fx-stroke: -fx-color-separate;" visible="false" />
+                  <ImageView fx:id="optimizationImage" fitHeight="36.0" fitWidth="36.0" layoutX="17.0" layoutY="23.0" onMousePressed="#tabImageClickEvent" pickOnBounds="true" preserveRatio="true" styleClass="images" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label fx:id="discordLabel" alignment="TOP_CENTER" layoutX="3.0" layoutY="54.0" prefHeight="35.0" prefWidth="62.0" text="FlectoneMix" textAlignment="CENTER" wrapText="true" />
+      <Rectangle fx:id="avatarRectangle" fill="DODGERBLUE" height="44.0" layoutX="13.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="images" width="44.0" />
+   </children>
+</AnchorPane>

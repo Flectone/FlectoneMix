@@ -1,0 +1,53 @@
+@import "base.css";
+
+#avatarRectangle, #settingRectangle, #tabsRectangle  {
+    -fx-arc-height: 24;
+    -fx-arc-width: 24;
+}
+
+#settingRectangle, #tabsRectangle {
+    -fx-fill: -fx-color-dark;
+}
+
+.images {
+    -fx-cursor: hand;
+}
+
+#settingImage {
+    -fx-image: -fx-image-setting;
+}
+
+#shaderImage {
+    -fx-image: -fx-image-shader;
+}
+
+#resourcepackImage {
+    -fx-image: -fx-image-resourcepack;
+}
+#datapackImage {
+    -fx-image: -fx-image-datapack;
+}
+
+#modImage {
+    -fx-image: -fx-image-mod;
+}
+
+#pluginImage {
+    -fx-image: -fx-image-plugin;
+}
+
+#farmImage {
+    -fx-image: -fx-image-farm;
+}
+
+#optimizationImage {
+    -fx-image: -fx-image-optimization;
+}
+
+#discordLabel {
+    -fx-font-size: 10;
+}
+
+#leftPanel {
+    -fx-effect: -fx-effect-small-shadow;
+}

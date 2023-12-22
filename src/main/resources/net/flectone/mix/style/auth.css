@@ -1,0 +1,38 @@
+@import "base.css";
+
+.label {
+    -fx-text-fill: -fx-color-font2_;
+}
+
+.button {
+    -fx-text-fill: white;
+}
+
+#mainPane {
+    -fx-background-image: url("../images/pattern.png");
+    -fx-background-size: 1350;
+}
+
+#authPane {
+    -fx-background-color: -fx-color-main;
+    -fx-background-radius: 25;
+    -fx-effect: -fx-effect-shadow;
+}
+
+#authButton {
+    -fx-font-size: 20;
+
+    -fx-background-color: -fx-color-blue;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 2;
+}
+
+#userLogo {
+    -fx-arc-height: 24;
+    -fx-arc-width: 24;
+}
+
+#logo {
+    -fx-effect: -fx-effect-shadow;
+}

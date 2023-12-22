@@ -1,0 +1,61 @@
+@import "base.css";
+
+#settingPanel {
+    -fx-background-color: -fx-color-main;
+}
+
+#tabLabel {
+    -fx-font-size: 13;
+}
+
+#tabRectangle {
+    -fx-arc-height: 30;
+    -fx-arc-width: 30;
+    /*-fx-fill: rgba(217, 217, 217, 0.19);*/
+}
+
+#installButton, #updateButton, #quitButton, #pathButton, #saveButton {
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-background-radius: 8;
+    -fx-background-color: -fx-color-blue;
+    -fx-padding: 1;
+}
+
+#pathButton {
+    -fx-background-color: -fx-color-combobox;
+    -fx-background-radius: 3;
+    -fx-font-size: 10;
+}
+
+#quitButton {
+    -fx-background-color: #d92731;
+}
+
+#pathArea .viewport{
+    -fx-background-color: transparent;
+}
+
+#pathArea .content {
+    -fx-background-color: -fx-color-combobox;
+}
+
+#pathArea {
+    -fx-background-color: -fx-color-combobox;
+    -fx-background-radius: 4;
+}
+
+
+
+.progress-bar > .bar {
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: -fx-color-blue;
+    -fx-background-radius: 8;
+}
+
+.progress-bar .track {
+    -fx-background-color: white;
+    -fx-background-radius: 9;
+}
+

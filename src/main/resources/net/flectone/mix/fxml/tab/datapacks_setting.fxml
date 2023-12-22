@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="settingPanel" prefHeight="500.0" prefWidth="220.0" stylesheets="@../../style/optimization_setting.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.tab.DatapacksController">
+   <children>
+      <Label fx:id="tabLabel" alignment="TOP_CENTER" layoutX="16.0" layoutY="6.0" prefHeight="46.0" prefWidth="188.0" stylesheets="@../style/optimization_setting.css" text="Вкладка Датапаки" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
+      <Rectangle fx:id="tabRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="105.0" layoutX="17.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="186.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="35.0" />
+      <Label fx:id="versionLabel" layoutX="17.0" layoutY="153.0" text="Версия майнкрафта" wrapText="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <JFXComboBox fx:id="versionComboBox" focusColor="#405aa800" layoutX="17.0" layoutY="174.0" prefWidth="182.0" unFocusColor="#a3a3a300" viewOrder="1.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0" />
+      <AnchorPane layoutX="29.0" layoutY="259.0" prefHeight="63.0" prefWidth="161.0" AnchorPane.bottomAnchor="178.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="259.0">
+         <children>
+            <JFXButton fx:id="installButton" layoutX="8.0" layoutY="1.0" prefHeight="27.0" prefWidth="145.0" text="Установить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <ProgressBar fx:id="progressBar" prefHeight="27.0" prefWidth="145.0" progress="0.0" visible="false" />
+            <Label fx:id="progressLabel" alignment="CENTER" prefHeight="27.0" prefWidth="145.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="worldField" layoutX="19.0" layoutY="226.0" prefHeight="21.0" prefWidth="182.0" promptText="Поиск..." AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0" />
+      <Label fx:id="worldLabel" layoutX="17.0" layoutY="204.0" text="Название мира" wrapText="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

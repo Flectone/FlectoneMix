@@ -1,0 +1,48 @@
+@import "base.css";
+
+/** {*/
+/*    -fx-background-color: red;*/
+/*}*/
+
+.pane {
+    -fx-background-color: -fx-color-main;
+}
+
+.text-area, .text-area .content {
+    -fx-background-color: -fx-color-combobox;
+    -fx-background-radius: 8;
+}
+
+#errorImage {
+    -fx-image: url("../images/error.png");
+}
+
+#warnImage {
+    -fx-image: url("../images/warn.png");
+}
+
+#infoImage {
+    -fx-image: url("../images/info.png");
+}
+
+#errorLabel {
+    -fx-font-size: 13;
+}
+
+#textArea {
+    -fx-effect: -fx-effect-shadow;
+}
+
+#skipButton {
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-background-radius: 8;
+    -fx-background-color: -fx-color-blue;
+    -fx-padding: 1;
+}
+
+#problemLabel {
+    -fx-font-size: 12;
+    -fx-underline: true;
+    -fx-text-fill: -fx-color-separate;
+}

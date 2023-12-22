@@ -1,0 +1,293 @@
+version: 3.0.0
+
+minecraft-folder.selected: ""
+
+decorated: true
+
+language.support:
+        - "en"
+        - "ru"
+
+language.selected: ""
+
+language.ru.alert.error: "Ошибка в приложении"
+language.ru.alert.error.label.title: "Название ошибки"
+language.ru.alert.error.button.skip: "Окей"
+language.ru.alert.error.label.problem: "Сообщить о проблеме"
+language.ru.alert.info: "Информация"
+language.ru.alert.info.button.skip: "Окей"
+language.ru.alert.info.message.successful: "Всё готово! Файлы установлены в папке <installation_path>"
+language.ru.alert.warn: "Предупреждение"
+language.ru.alert.warn.button.skip: "Окей"
+language.ru.alert.warn.message.empty: "Для установки ничего не выбрано"
+language.ru.alert.warn.message.null-world: "Название мира должно быть обязательно"
+language.ru.alert.warn.message.restart-for-decorations: "Чтобы изменения декорация вступили в силу, нужно перезапустить приложение"
+language.ru.alert.warn.message.null-profiles: "В вашей папке майнкрафт не было найдено файла для настройки профилей запуска, поэтому установить его невозможно"
+
+language.ru.auth.label.welcome: "Привет!"
+language.ru.auth.button.authorize: "Авторизация"
+language.ru.auth.button.continue: "Продолжить"
+
+language.ru.search.prompt: "Поиск..."
+language.ru.search.checkbox.select-all: "Выбрать всё"
+
+language.ru.components.author: "Автор "
+
+language.ru.tab: "Вкладка "
+
+language.ru.tab.optimization: "Вкладка Оптимизации"
+language.ru.tab.optimization.label.version: "Версия майнкрафта"
+language.ru.tab.optimization.label.loader: "Вид загрузчика"
+language.ru.tab.optimization.label.mode-type: "Тип модов"
+language.ru.tab.optimization.label.progress: "Установка..."
+language.ru.tab.optimization.checkbox.profile: "Создать профиль запуска"
+language.ru.tab.optimization.checkbox.unstable: "Установить нестабильность"
+language.ru.tab.optimization.checkbox.clear: "Очистить папку установки"
+language.ru.tab.optimization.checkbox.setting: "Настроить майнкрафт"
+language.ru.tab.optimization.button.install: "Установить"
+language.ru.tab.optimization.button.update: "Обновить"
+
+language.ru.tab.farms: "Вкладка Ферм"
+language.ru.tab.farms.label.version: "Версия майнкрафта"
+language.ru.tab.farms.label.progress: "Установка..."
+language.ru.tab.farms.button.install: "Установить"
+
+language.ru.tab.plugins: "Вкладка Плагинов"
+language.ru.tab.plugins.label.version: "Версия майнкрафта"
+language.ru.tab.plugins.label.progress: "Установка..."
+language.ru.tab.plugins.checkbox.server-software: "Установить лучшее ядро"
+language.ru.tab.plugins.checkbox.setting-server: "Настроить сервер"
+language.ru.tab.plugins.button.install: "Установить"
+
+language.ru.tab.mods: "Вкладка Модов"
+language.ru.tab.mods.label.version: "Версия майнкрафта"
+language.ru.tab.mods.label.loader: "Вид загрузчика"
+language.ru.tab.mods.label.progress: "Установка..."
+language.ru.tab.mods.checkbox.profile: "Создать профиль запуска"
+language.ru.tab.mods.checkbox.clear: "Очистить папку установки"
+language.ru.tab.mods.button.install: "Установить"
+language.ru.tab.mods.button.update: "Обновить"
+
+language.ru.tab.datapacks: "Вкладка Датапаков"
+language.ru.tab.datapacks.label.version: "Версия майнкрафта"
+language.ru.tab.datapacks.label.world: "Название мира"
+language.ru.tab.datapacks.label.progress: "Установка..."
+language.ru.tab.datapacks.prompt: "Новый мир..."
+language.ru.tab.datapacks.button.install: "Установить"
+
+language.ru.tab.resourcepacks: "Вкладка Ресурспаков"
+language.ru.tab.resourcepacks.label.version: "Версия майнкрафта"
+language.ru.tab.resourcepacks.label.progress: "Установка..."
+language.ru.tab.resourcepacks.button.install: "Установить"
+
+language.ru.tab.shaders: "Вкладка Шейдеров"
+language.ru.tab.shaders.label.version: "Версия майнкрафта"
+language.ru.tab.shaders.label.progress: "Установка..."
+language.ru.tab.shaders.button.install: "Установить"
+
+language.ru.tab.setting: "Вкладка Настроек"
+language.ru.tab.setting.label.language: "Язык приложения"
+language.ru.tab.setting.label.theme: "Тема приложения"
+language.ru.tab.setting.label.path: "Путь к .minecraft"
+language.ru.tab.setting.checkbox.decoration: "Использовать декорации"
+language.ru.tab.setting.button.save: "Сохранить"
+language.ru.tab.setting.button.quit: "Выйти"
+
+language.ru.tooltip.tab.optimization: "Оптимизация"
+language.ru.tooltip.tab.optimization.checkbox.profile: "Будет установлен выбранный загрузчик в ваш майнкрафт, например как fabric-installer. Работает только в официальном майнкрафт лаунчере"
+language.ru.tooltip.tab.optimization.checkbox.unstable: "Будут выбраны все моды, которые могут вызвать проблемы"
+language.ru.tooltip.tab.optimization.checkbox.clear: "В папке mods будут удалены все файлы с расширением .jar"
+language.ru.tooltip.tab.optimization.checkbox.setting: "Будут установлены заранее настроенные конфигурации модов"
+language.ru.tooltip.tab.farms: "Фермы"
+language.ru.tooltip.tab.plugins: "Плагины"
+language.ru.tooltip.tab.plugins.checkbox.setting-server: "Будут установлены оптимизированные файлы конфигурации для сервера"
+language.ru.tooltip.tab.plugins.checkbox.server-software: "Будет установлено лучшее ядро в отдельную папку server для выбранной версии"
+language.ru.tooltip.tab.mods: "Моды"
+language.ru.tooltip.tab.mods.checkbox.profile: "Будет установлен выбранный загрузчик в ваш майнкрафт, например как fabric-installer. Работает только в официальном майнкрафт лаунчере"
+language.ru.tooltip.tab.mods.checkbox.clear: "В папке mods будут удалены все файлы с расширением .jar"
+language.ru.tooltip.tab.datapacks: "Датапаки"
+language.ru.tooltip.tab.resourcepacks: "Ресурспаки"
+language.ru.tooltip.tab.shaders: "Шейдеры"
+language.ru.tooltip.tab.setting: "Настройки"
+language.ru.tooltip.tab.setting.checkbox.decoration: "Декорации окон - это визуальное изменение верхней части окна приложения, для полной настройки темы приложения"
+
+
+language.en.alert.error: "Application Error"
+language.en.alert.error.label.title: "Error Title"
+language.en.alert.error.button.skip: "Okay"
+language.en.alert.error.label.problem: "Report Problem"
+language.en.alert.info: "Information"
+language.en.alert.info.button.skip: "Okay"
+language.en.alert.info.message.successful: "Everything is ready! Files installed in \"<installation_path>\" folder "
+language.en.alert.warn: "Warning"
+language.en.alert.warn.button.skip: "Okay"
+language.en.alert.warn.message.empty: "Nothing is selected for installation"
+language.en.alert.warn.message.null-world: "The name of the world is a must"
+language.en.alert.warn.message.restart-for-decorations: "You must restart the application for decorations changes to take effect"
+language.en.alert.warn.message.null-profiles: "The file to customize startup profiles was not found in your minecraft folder, so it cannot be installed"
+
+language.en.auth.label.welcome: "Hello!"
+language.en.auth.button.authorize: "Authorization"
+language.en.auth.button.continue: "Continue"
+
+language.en.search.prompt: "Search..."
+language.en.search.checkbox.select-all: "Select All"
+
+language.en.components.author: "Author "
+
+language.en.tab: "Tab "
+
+language.en.tab.optimization: "Optimization Tab"
+language.en.tab.optimization.label.version: "Minecraft Version"
+language.en.tab.optimization.label.loader: "Loader Type"
+language.en.tab.optimization.label.mode-type: "Mod Type"
+language.en.tab.optimization.label.progress: "Installation..."
+language.en.tab.optimization.checkbox.profile: "Create Launch Profile"
+language.en.tab.optimization.checkbox.unstable: "Set Unstable"
+language.en.tab.optimization.checkbox.clear: "Clear Installation Folder"
+language.en.tab.optimization.checkbox.setting: "Configure Minecraft"
+language.en.tab.optimization.button.install: "Install"
+language.en.tab.optimization.button.update: "Update"
+language.en.tab.farms: "Farms Tab"
+language.en.tab.farms.label.version: "Minecraft Version"
+language.en.tab.farms.label.progress: "Installation..."
+language.en.tab.farms.button.install: "Install"
+
+language.en.tab.plugins: "Plugins Tab"
+language.en.tab.plugins.label.version: "Minecraft Version"
+language.en.tab.plugins.label.progress: "Installation..."
+language.en.tab.plugins.checkbox.server-software: "Install Best Server Core"
+language.en.tab.plugins.checkbox.setting-server: "Configure Server"
+language.en.tab.plugins.button.install: "Install"
+
+language.en.tab.mods: "Mods Tab"
+language.en.tab.mods.label.version: "Minecraft Version"
+language.en.tab.mods.label.loader: "Loader Type"
+language.en.tab.mods.label.progress: "Installation..."
+language.en.tab.mods.checkbox.profile: "Create Launch Profile"
+language.en.tab.mods.checkbox.clear: "Clear Installation Folder"
+language.en.tab.mods.button.install: "Install"
+language.en.tab.mods.button.update: "Update"
+
+language.en.tab.datapacks: "Datapacks Tab"
+language.en.tab.datapacks.label.version: "Minecraft Version"
+language.en.tab.datapacks.label.world: "World Name"
+language.en.tab.datapacks.label.progress: "Installation..."
+language.en.tab.datapacks.prompt: "New World..."
+language.en.tab.datapacks.button.install: "Install"
+
+language.en.tab.resourcepacks: "Resourcepacks Tab"
+language.en.tab.resourcepacks.label.version: "Minecraft Version"
+language.en.tab.resourcepacks.label.progress: "Installation..."
+language.en.tab.resourcepacks.button.install: "Install"
+
+language.en.tab.shaders: "Shaders Tab"
+language.en.tab.shaders.label.version: "Minecraft Version"
+language.en.tab.shaders.label.progress: "Installation..."
+language.en.tab.shaders.button.install: "Install"
+
+language.en.tab.setting: "Setting Tab"
+language.en.tab.setting.label.language: "Application Language"
+language.en.tab.setting.label.theme: "Application Theme"
+language.en.tab.setting.label.path: ".minecraft Path"
+language.en.tab.setting.checkbox.decoration: "Use Decorations"
+language.en.tab.setting.button.save: "Save"
+language.en.tab.setting.button.quit: "Quit"
+
+language.en.tooltip.tab.optimization: "Optimization"
+language.en.tooltip.tab.optimization.checkbox.profile: "Will install the selected downloader into your minecraft, for example as fabric-installer. Works only in the official minecraft launcher"
+language.en.tooltip.tab.optimization.checkbox.unstable: "Any mods that may cause problems will be selected"
+language.en.tooltip.tab.optimization.checkbox.clear: "All files with the .jar extension will be deleted in the mods folder"
+language.en.tooltip.tab.optimization.checkbox.setting: "Preconfigured mod configurations will be installed"
+language.en.tooltip.tab.farms: "Farms"
+language.en.tooltip.tab.plugins: "Plugins"
+language.en.tooltip.tab.plugins.checkbox.setting-server: "Optimized configuration files for the server will be installed"
+language.en.tooltip.tab.plugins.checkbox.server-software: "The best server software will be installed in a server folder for the selected version"
+language.en.tooltip.tab.mods: "Mods"
+language.en.tooltip.tab.mods.checkbox.profile: "Will install the selected downloader into your minecraft, for example as fabric-installer. Works only in the official minecraft launcher"
+language.en.tooltip.tab.mods.checkbox.clear: "All files with the .jar extension will be deleted in the mods folder"
+language.en.tooltip.tab.datapacks: "DataPacks"
+language.en.tooltip.tab.resourcepacks: "ResourcePacks"
+language.en.tooltip.tab.shaders: "Shaders"
+language.en.tooltip.tab.setting: "Setting"
+language.en.tooltip.tab.setting.checkbox.decoration: "Window decorations are visual changes to the top of the app window, to fully customize the application's theme"
+
+
+theme.list:
+        - "black"
+        - "white"
+
+theme.selected: ""
+
+minecraft.version.list:
+        - "1.20.4"
+        - "1.20.3"
+        - "1.20.2"
+        - "1.20.1"
+        - "1.20"
+        - "1.19.4"
+        - "1.19.3"
+        - "1.19.2"
+        - "1.19.1"
+        - "1.19"
+        - "1.18.2"
+        - "1.18.1"
+        - "1.18"
+        - "1.17.1"
+        - "1.17"
+        - "1.16.5"
+
+minecraft.loader.list:
+        - "Fabric"
+        - "Quilt"
+        - "Forge"
+
+minecraft.mode-type.list:
+        - "Sodium"
+        - "Optifine"
+        - "Vulkan"
+
+blacklist.optimization:
+        - "Debugify"
+        - "DashLoader"
+        - "FastChest"
+        - "Methane"
+        - "FeyTweaks"
+
+minecraft.config.list:
+        - "https://mix.flectone.net/files/c2me.toml"
+        - "https://mix.flectone.net/files/enhanced_bes.properties"
+        - "https://mix.flectone.net/files/entityculling.json"
+        - "https://mix.flectone.net/files/ferritecore.mixin.properties"
+        - "https://mix.flectone.net/files/immediatelyfast.json"
+        - "https://mix.flectone.net/files/modernfix-mixins.properties"
+        - "https://mix.flectone.net/files/moreculling.toml"
+        - "https://mix.flectone.net/files/sodium-options.json"
+        - "https://mix.flectone.net/files/threadtweak.json"
+        - "https://mix.flectone.net/files/vmp.properties"
+
+profile.javaArgs: "-Xmx2G 
+-XX:+UnlockExperimentalVMOptions 
+-XX:+UnlockDiagnosticVMOptions 
+-XX:+AlwaysActAsServerClassMachine 
+-XX:+AlwaysPreTouch 
+-XX:+DisableExplicitGC 
+-XX:+UseNUMA 
+-XX:NmethodSweepActivity=1 
+-XX:ReservedCodeCacheSize=400M 
+-XX:NonNMethodCodeHeapSize=12M 
+-XX:ProfiledCodeHeapSize=194M 
+-XX:NonProfiledCodeHeapSize=194M 
+-XX:-DontCompileHugeMethods 
+-XX:MaxNodeLimit=240000 
+-XX:NodeLimitFudgeFactor=8000 
+-XX:+UseVectorCmov 
+-XX:+PerfDisableSharedMem 
+-XX:+UseFastUnorderedTimeStamps 
+-XX:+UseCriticalJavaThreadPriority 
+-XX:ThreadPriorityPolicy=1 
+-XX:+UseShenandoahGC 
+-XX:ShenandoahGCMode=iu 
+-XX:ShenandoahGuaranteedGCInterval=1000000 
+-XX:AllocatePrefetchStyle=1 
+-XX:ConcGCThreads=2"

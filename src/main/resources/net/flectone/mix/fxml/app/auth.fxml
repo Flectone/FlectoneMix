@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../../style/auth.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.AuthController">
+   <children>
+      <HBox alignment="CENTER" layoutX="259.0" layoutY="69.0" prefHeight="384.0" prefWidth="460.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="384.0" prefWidth="277.0">
+               <children>
+                  <AnchorPane fx:id="authPane" maxHeight="363.0" maxWidth="412.0" minHeight="262.0" minWidth="0.0" prefHeight="363.0" prefWidth="304.0">
+                     <children>
+                        <Label fx:id="userName" alignment="CENTER" contentDisplay="TOP" layoutX="75.0" layoutY="196.0" prefHeight="30.0" prefWidth="128.0" text="Привет!" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="authButton" layoutX="36.0" layoutY="262.0" onMouseClicked="#authButtonClickEvent" prefHeight="44.0" prefWidth="206.0" text="Авторизация" />
+                        <Rectangle fx:id="userLogo" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="112.0" layoutX="83.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="112.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
