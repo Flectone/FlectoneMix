@@ -53,6 +53,10 @@ public class FAlert {
     }
 
     public static void showWarn(String text) {
+        showWarn(text, null);
+    }
+
+    public static void showWarn(String text, Runnable clickTextEvent) {
         PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
 
         FXMLLoader fxmlLoader = paneManager.addPane(PaneType.WARN);
@@ -60,6 +64,8 @@ public class FAlert {
 
         AlertWarnController paneController = fxmlLoader.getController();
         paneController.getTextLabel().setText(text);
+
+        if (clickTextEvent != null) paneController.getTextLabel().setOnMouseClicked(e -> clickTextEvent.run());
 
         Scene scene = new Scene(pane, 420, Region.USE_COMPUTED_SIZE);
         scene.getStylesheets().add(FlectoneMix.getApp().getConfig().getThemePath());

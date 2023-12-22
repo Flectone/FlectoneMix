@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
+import javafx.application.Platform;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.PaneType;
 import net.flectone.mix.javafx.component.FAlert;
 import net.flectone.mix.javafx.controller.AuthController;
 import net.flectone.mix.model.DiscordUser;
 import net.flectone.mix.util.JavaFXUtil;
+import net.flectone.mix.util.WebUtil;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -85,7 +87,8 @@ public class AuthHandler implements HttpHandler {
             try {
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
                 if (response.statusCode() != 200) {
-                    System.out.println("bb1");
+                    Platform.runLater(() ->
+                            FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-response")));
                     runnable.run();
                     return;
                 }
@@ -94,7 +97,19 @@ public class AuthHandler implements HttpHandler {
 
                 DiscordUser responceUser = g.fromJson(response.body(), DiscordUser.class);
                 if (responceUser == null) {
-                    System.out.println("bb2");
+                    Platform.runLater(() ->
+                            FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-user")));
+                    runnable.run();
+                    return;
+                }
+
+                if (!responceUser.isInGuild()) {
+                    Platform.runLater(() ->
+                            FAlert.showWarn(
+                                    FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.not-in-guild"),
+                                    () -> WebUtil.openUrl("https://discord.flectone.net")
+                            )
+                    );
                     runnable.run();
                     return;
                 }
