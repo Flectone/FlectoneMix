@@ -17,6 +17,7 @@ import net.flectone.mix.util.WebUtil;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Getter
 public class ComponentController implements Initializable {
@@ -42,6 +43,8 @@ public class ComponentController implements Initializable {
     @FXML
     private JFXCheckBox checkBox;
 
+    private static final ConcurrentHashMap<String, ImagePattern> IMAGES_MAP = new ConcurrentHashMap<>();
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -51,15 +54,18 @@ public class ComponentController implements Initializable {
     public void initComponent() {
         FlectoneMix.getApp().getThreadPool().execute(() -> {
             try {
-                Image image = new Image(component.icon());
-                if (!image.isError()) {
-                    ImagePattern imagePattern = new ImagePattern(image);
+                ImagePattern imagePattern = IMAGES_MAP.computeIfAbsent(component.icon(), key -> {
+                    Image image = new Image(component.icon());
+                    return (!image.isError()) ? new ImagePattern(image) : null;
+                });
 
+                if (imagePattern != null) {
                     Platform.runLater(() -> {
                         rectangleIcon.setFill(imagePattern);
                         rectangleIcon.setVisible(true);
                     });
                 }
+
             } catch (IllegalArgumentException ignored) {}
         });
 
