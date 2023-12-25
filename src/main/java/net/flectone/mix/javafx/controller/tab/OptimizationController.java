@@ -98,7 +98,7 @@ public class OptimizationController extends TabSetting {
         tabRectangle.setFill(new ImagePattern(new Image("/net/flectone/mix/images/preview-optimization.png")));
         setFilterAction(() -> FlectoneMix.getApp().getThreadPool().execute(() -> {
             ComponentPanelController controller = FlectoneMix.getApp().getPaneManager().getLoader(PaneType.COMPONENTS).getController();
-            controller.getComponentBuilder().build("" + loaderComboBox.getSelectionModel().getSelectedItem()
+            controller.getComponentBuilder().build(loaderComboBox.getSelectionModel().getSelectedItem()
                     + modComboBox.getSelectionModel().getSelectedItem(), String.valueOf(versionComboBox.getSelectionModel().getSelectedItem()));
         }));
 
@@ -115,12 +115,10 @@ public class OptimizationController extends TabSetting {
             updateComponents(updateButton);
         });
 
-        unstableCheckBox.selectedProperty().addListener(e -> {
-            FlectoneMix.getApp().getThreadPool().execute(() -> {
-                ComponentPanelController controller = FlectoneMix.getApp().getPaneManager().getLoader(PaneType.COMPONENTS).getController();
-                controller.getComponentBuilder().selectAll(FlectoneMix.getApp().getConfig().getStringList("blacklist.optimization"), unstableCheckBox.isSelected());
-            });
-        });
+        unstableCheckBox.selectedProperty().addListener(e -> FlectoneMix.getApp().getThreadPool().execute(() -> {
+            ComponentPanelController controller = FlectoneMix.getApp().getPaneManager().getLoader(PaneType.COMPONENTS).getController();
+            controller.getComponentBuilder().selectAll(FlectoneMix.getApp().getConfig().getStringList("blacklist.optimization"), unstableCheckBox.isSelected());
+        }));
 
         Platform.runLater(this::updateFilter);
     }

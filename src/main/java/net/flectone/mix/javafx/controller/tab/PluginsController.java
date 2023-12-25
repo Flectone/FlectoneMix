@@ -27,7 +27,7 @@ public class PluginsController extends TabSetting {
     private Rectangle tabRectangle;
 
     @FXML
-    private ComboBox versionComboBox;
+    private ComboBox<String> versionComboBox;
 
     @FXML
     private CheckBox installServerSoftwareCheckBox;

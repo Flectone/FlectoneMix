@@ -22,7 +22,7 @@ public class SmoothScrolling {
         customScrolling(scrollPane, scrollPane.vvalueProperty(), Bounds::getHeight);
     }
 
-    public SmoothScrolling(@NonNull ComboBox comboBox) {
+    public SmoothScrolling(@NonNull ComboBox<String> comboBox) {
         customScrolling(comboBox,  new SimpleDoubleProperty(comboBox, "vvalue"), Bounds::getHeight);
     }
 
@@ -31,9 +31,7 @@ public class SmoothScrolling {
         double[] pushes = new double[]{1.0};
         double[] derivatives = new double[frictions.length];
         Timeline timeline = new Timeline();
-        EventHandler<MouseEvent> dragHandler = (event) -> {
-            timeline.stop();
-        };
+        EventHandler<MouseEvent> dragHandler = (event) -> timeline.stop();
         EventHandler<ScrollEvent> scrollHandler = (event) -> {
             if (event.getEventType() == ScrollEvent.SCROLL) {
                 int direction = event.getDeltaY() > 0.0 ? -1 : 1;
@@ -92,14 +90,12 @@ public class SmoothScrolling {
         timeline.setCycleCount(-1);
     }
 
-    private void customScrolling(ComboBox comboBox, DoubleProperty scrollDriection, Function<Bounds, Double> sizeFunc) {
+    private void customScrolling(ComboBox<String> comboBox, DoubleProperty scrollDriection, Function<Bounds, Double> sizeFunc) {
         double[] frictions = new double[]{0.99, 0.1, 0.05, 0.04, 0.03, 0.02, 0.01, 0.04, 0.01, 0.008, 0.008, 0.008, 0.008, 6.0E-4, 5.0E-4, 3.0E-5, 1.0E-5};
         double[] pushes = new double[]{1.0};
         double[] derivatives = new double[frictions.length];
         Timeline timeline = new Timeline();
-        EventHandler<MouseEvent> dragHandler = (event) -> {
-            timeline.stop();
-        };
+        EventHandler<MouseEvent> dragHandler = (event) -> timeline.stop();
         EventHandler<ScrollEvent> scrollHandler = (event) -> {
             System.out.println(1);
             if (event.getEventType() == ScrollEvent.SCROLL) {

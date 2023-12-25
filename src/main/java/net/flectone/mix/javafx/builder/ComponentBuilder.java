@@ -73,26 +73,24 @@ public class ComponentBuilder {
         paneMap.values().forEach(pane -> pane.setVisible(false));
         Platform.runLater(node::clear);
 
-        BUILD_POOL.execute(() -> {
-            componentList.forEach(component -> {
+        BUILD_POOL.execute(() -> componentList.forEach(component -> {
+            if (paneMap.get(component.id()) == null) return;
+
+            boolean isIt = component.description().toLowerCase().contains(finalText)
+                    || component.name().toLowerCase().contains(finalText)
+                    || component.version().toLowerCase().contains(finalText)
+                    || component.type().toLowerCase().contains(finalText);
+
+            paneMap.get(component.id()).setVisible(isIt);
+
+            if (!isIt) return;
+
+            Platform.runLater(() -> {
                 if (paneMap.get(component.id()) == null) return;
-
-                boolean isIt = component.description().toLowerCase().contains(finalText)
-                        || component.name().toLowerCase().contains(finalText)
-                        || component.version().toLowerCase().contains(finalText)
-                        || component.type().toLowerCase().contains(finalText);
-
-                paneMap.get(component.id()).setVisible(isIt);
-
-                if (!isIt) return;
-
-                Platform.runLater(() -> {
-                    if (paneMap.get(component.id()) == null) return;
-                    if (node.contains(paneMap.get(component.id()))) return;
-                    node.add(paneMap.get(component.id()));
-                });
+                if (node.contains(paneMap.get(component.id()))) return;
+                node.add(paneMap.get(component.id()));
             });
-        });
+        }));
 
         updateSelectAllCheckBox();
     }
@@ -134,7 +132,7 @@ public class ComponentBuilder {
                 ((CheckBox) ((Pane) paneMap.get(component.id()).getChildren().get(0)).getChildren().get(4)).setSelected(selected));
     }
 
-    public boolean fill() {
+    public void fill() {
         if (!BUILD_POOL.getRunnableQueue().isEmpty()) {
             BUILD_POOL.getRunnableQueue().clear();
             paneMap.values().forEach(pane -> pane.setVisible(false));
@@ -179,8 +177,6 @@ public class ComponentBuilder {
 
             updateSelectAllCheckBox();
         });
-
-        return true;
     }
 
     public List<Component> parseJsonResponse(String jsonResponse) {

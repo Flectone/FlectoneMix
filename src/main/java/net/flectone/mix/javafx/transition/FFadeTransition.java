@@ -11,15 +11,11 @@ public class FFadeTransition {
         final FadeTransition fadeIn = new FadeTransition(Duration.millis(100));
         fadeIn.setNode(mfxButton);
         fadeIn.setToValue(1);
-        mfxButton.setOnMouseExited(e -> {
-            fadeIn.playFromStart();
-        });
+        mfxButton.setOnMouseExited(e -> fadeIn.playFromStart());
 
         final FadeTransition fadeOut = new FadeTransition(Duration.millis(100));
         fadeOut.setNode(mfxButton);
         fadeOut.setToValue(0.7);
-        mfxButton.setOnMouseEntered(e -> {
-            fadeOut.playFromStart();
-        });
+        mfxButton.setOnMouseEntered(e -> fadeOut.playFromStart());
     }
 }

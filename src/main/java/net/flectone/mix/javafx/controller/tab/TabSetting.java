@@ -292,9 +292,8 @@ public abstract class TabSetting implements Initializable {
                 }
             });
 
-            voidTask.setOnSucceeded(event -> Platform.runLater(() -> {
-                checkDownloadProgress(completedTasks);
-            }));
+            voidTask.setOnSucceeded(event -> Platform.runLater(() ->
+                    checkDownloadProgress(completedTasks)));
         });
     }
 

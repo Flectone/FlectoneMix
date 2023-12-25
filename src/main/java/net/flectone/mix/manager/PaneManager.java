@@ -19,7 +19,7 @@ public class PaneManager {
     private final HashMap<PaneType, FXMLLoader> fxmlLoaderHashMap = new HashMap<>();
 
     @Getter
-    private Scene scene;
+    private final Scene scene;
 
     public PaneManager(int width, int height) {
         addPane(PaneType.WINDOW);
@@ -32,9 +32,8 @@ public class PaneManager {
     }
 
     public void reloadPanes() {
-        fxmlLoaderHashMap.values().forEach(fxmlLoader ->{
-            ((Initializable) fxmlLoader.getController()).initialize(null, null);
-        });
+        fxmlLoaderHashMap.values().forEach(fxmlLoader ->
+                ((Initializable) fxmlLoader.getController()).initialize(null, null));
     }
 
     public FXMLLoader getLoader(PaneType paneType) {

@@ -59,7 +59,7 @@ public class LeftPanelController implements Initializable {
         avatarRectangle.setFill(new ImagePattern(discordUser.getAvatar()));
 
         TABS.put(optimizationImage, new Options(optimizationImage, PaneType.OPTIMIZATION, "tab.optimization"));
-        TABS.put(farmImage, new Options(farmImage, PaneType.FARMS,"tab.farms"));
+        TABS.put(farmImage, new Options(farmImage, PaneType.FARMS, "tab.farms"));
         TABS.put(pluginImage, new Options(pluginImage, PaneType.PLUGINS, "tab.plugins"));
         TABS.put(modImage, new Options(modImage, PaneType.MODS, "tab.mods"));
         TABS.put(datapackImage, new Options(datapackImage, PaneType.DATAPACKS, "tab.datapacks"));
@@ -107,7 +107,7 @@ public class LeftPanelController implements Initializable {
     }
 
     @Getter
-    private class Options {
+    private static class Options {
 
         private final PaneType paneType;
         private final ImageView imageView;
