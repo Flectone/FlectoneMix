@@ -43,24 +43,34 @@ public class FlectoneMix extends Application {
         paneManager = new PaneManager(1000, 500);
         authHandler = new AuthHandler();
 
+        configureStage();
+        configureAuthHandler();
+
+        JavaFXUtil.focusApp();
+    }
+
+    private void configureStage() {
         stage = new FStage();
         stage.setMinWidth(1000);
         stage.setMinHeight(530);
         stage.setScene(paneManager.getScene());
         stage.setOnCloseRequest(this::exit);
-        stage.fullScreenExitHintProperty().addListener(e -> System.out.println(2));
         stage.setTitle("FlectoneMix 3.0.0");
         stage.getIcons().add(new Image("/net/flectone/mix/images/flectone.png"));
         stage.customShow();
-
-        authHandler.authorize(config.getString("id"), config.getString("token"),
-                () -> Platform.runLater(() -> ((AuthController) paneManager.getLoader(PaneType.AUTH)
-                        .getController())
-                        .getAuthButton()
-                        .setDisable(false)));
-
-        JavaFXUtil.focusApp();
     }
+
+    private void configureAuthHandler() {
+        authHandler.authorize(
+                config.getString("id"),
+                config.getString("token"),
+                () -> Platform.runLater(() -> {
+                    AuthController authController = paneManager.getLoader(PaneType.AUTH).getController();
+                    authController.getAuthButton().setDisable(false);
+                })
+        );
+    }
+
 
     public void exit(WindowEvent event) {
         config.save();
