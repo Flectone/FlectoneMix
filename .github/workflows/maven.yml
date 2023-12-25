@@ -29,3 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Publish artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: FlectoneMix
+        path: build/libs
