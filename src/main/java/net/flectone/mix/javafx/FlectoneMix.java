@@ -52,7 +52,7 @@ public class FlectoneMix extends Application {
     private void configureStage() {
         stage = new FStage();
         stage.setMinWidth(1000);
-        stage.setMinHeight(530);
+        stage.setMinHeight(500);
         stage.setScene(paneManager.getScene());
         stage.setOnCloseRequest(this::exit);
         stage.setTitle("FlectoneMix 3.0.0");
