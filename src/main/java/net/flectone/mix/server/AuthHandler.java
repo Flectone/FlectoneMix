@@ -48,7 +48,7 @@ public class AuthHandler implements HttpHandler {
 
         String uri = exchange.getRequestURI().getQuery();
         if (uri.isEmpty()) {
-            System.out.println("no in discord");
+            showWarnGuild();
             return;
         }
 
@@ -136,12 +136,7 @@ public class AuthHandler implements HttpHandler {
         }
 
         if (!responseUser.isInGuild()) {
-            Platform.runLater(() ->
-                    FAlert.showWarn(
-                            FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.not-in-guild"),
-                            () -> WebUtil.openUrl("https://discord.flectone.net")
-                    )
-            );
+            showWarnGuild();
             runnable.run();
             return;
         }
@@ -151,5 +146,14 @@ public class AuthHandler implements HttpHandler {
         AuthController authController = app.getPaneManager().getLoader(PaneType.AUTH).getController();
         Platform.runLater(() -> authController.updateData(true));
         System.out.println(responseUser.username());
+    }
+
+    private void showWarnGuild() {
+        Platform.runLater(() ->
+                FAlert.showWarn(
+                        FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.not-in-guild"),
+                        () -> WebUtil.openUrl("https://discord.flectone.net")
+                )
+        );
     }
 }
