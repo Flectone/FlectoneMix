@@ -33,6 +33,7 @@ language.ru.auth.button.continue: "Продолжить"
 
 language.ru.search.prompt: "Поиск..."
 language.ru.search.checkbox.select-all: "Выбрать всё"
+language.ru.search.ad.title: "FlectoneChat плагин для сервера"
 
 language.ru.components.author: "Автор "
 
@@ -138,6 +139,7 @@ language.en.auth.button.continue: "Continue"
 
 language.en.search.prompt: "Search..."
 language.en.search.checkbox.select-all: "Select All"
+language.en.search.ad.title: "FlectoneChat plugin server!"
 
 language.en.components.author: "Author "
 

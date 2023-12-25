@@ -14,6 +14,8 @@
     -fx-color-green: #00B934;
     -fx-color-blue: #0079CF;
 
+    -fx-color-ad-background: rgba(0, 145, 255, 0.65);
+
     -fx-color-font_: #171717;
     -fx-color-font2_: #171717;
 
@@ -26,4 +28,5 @@
     -fx-image-farm: url("../images/white_farm.png");
     -fx-image-optimization: url("../images/white_optimization.png");
     -fx-image-search: url("../images/white_search.png");
+    -fx-image-ad: url("../images/ad.png");
 }

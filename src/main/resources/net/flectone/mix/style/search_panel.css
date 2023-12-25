@@ -4,6 +4,20 @@
     -fx-background-color: -fx-color-main;
 }
 
+#adPanelResize {
+    -fx-background-color: -fx-color-ad-background;
+
+    -fx-background-radius: 5;
+}
+
+#adImage {
+    -fx-image: -fx-image-ad;
+}
+
+#adTitle {
+    -fx-text-fill: -fx-color-font2_;
+}
+
 .text-field {
     -fx-background-color: -fx-color-combobox;
     -fx-background-image: url("../images/black_search.png");

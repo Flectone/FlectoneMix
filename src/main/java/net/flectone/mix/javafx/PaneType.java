@@ -25,7 +25,8 @@ public enum PaneType {
     EXCEPTION("alert/alert_exception"),
     INFO("alert/alert_info"),
     WARN("alert/alert_warn"),
-    LEFT("app/left_panel");
+    LEFT("app/left_panel"),
+    AD("app/ad");
 
     public final String name;
 
