@@ -78,6 +78,11 @@ public class AuthHandler implements HttpHandler {
 
     public void authorize(String id, String token, Runnable runnable) {
         FlectoneMix.getApp().getThreadPool().execute(() -> {
+            if (id == null || token == null) {
+                runnable.run();
+                return;
+            }
+
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create("https://mix.flectone.net/api/discord/login?id=" + id + "&token=" + token))
