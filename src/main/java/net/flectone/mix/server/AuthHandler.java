@@ -21,13 +21,17 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
+import java.util.Map;
 
 public class AuthHandler implements HttpHandler {
 
-    private final FlectoneMix app;
+    private static final String AUTHORIZE_REQUEST_URL = "https://mix.flectone.net/api/discord/login?id=<id>&token=<token>";
 
     public AuthHandler() {
-        app = FlectoneMix.getApp();
+        startHttpServer();
+    }
+
+    private void startHttpServer() {
         try {
             HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
             server.createContext("/", this);
@@ -40,39 +44,51 @@ public class AuthHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-
-        String response = "OK";
-
-        exchange.sendResponseHeaders(200, response.length());
-        OutputStream os = exchange.getResponseBody();
-        os.write(response.getBytes());
-        os.close();
-
+        handleExchange(exchange);
         String uri = exchange.getRequestURI().getQuery();
-
         if (uri.isEmpty()) {
             System.out.println("no in discord");
             return;
         }
+        Map<String, String> userMap = extractUserMap(uri);
+        DiscordUser discordUser = createDiscordUser(userMap);
+        updateAppState(discordUser);
+    }
 
-        HashMap<String, String> userMap = new HashMap<>();
+    private void handleExchange(HttpExchange exchange) throws IOException {
+        String response = "OK";
+        exchange.sendResponseHeaders(200, response.length());
+        try (OutputStream os = exchange.getResponseBody()) {
+            os.write(response.getBytes());
+        }
+    }
 
+    private Map<String, String> extractUserMap(String uri) {
+        Map<String, String> userMap = new HashMap<>();
         for (String part : uri.split("&")) {
             String[] parts = part.split("=");
             userMap.put(parts[0], parts[1]);
         }
+        return userMap;
+    }
 
-        DiscordUser discordUser = new DiscordUser(userMap.get("id"),
+    private DiscordUser createDiscordUser(Map<String, String> userMap) {
+        return new DiscordUser(
+                userMap.get("id"),
                 userMap.get("username"),
                 userMap.get("avatar"),
                 userMap.get("token"),
-                Boolean.parseBoolean(userMap.get("isInGuild")));
+                Boolean.parseBoolean(userMap.get("isInGuild"))
+        );
+    }
 
+    private void updateAppState(DiscordUser discordUser) {
+        FlectoneMix app = FlectoneMix.getApp();
         app.setDiscordUser(discordUser);
         app.getConfig().put("id", discordUser.id());
         app.getConfig().put("token", discordUser.token());
-
-        ((AuthController) app.getPaneManager().getLoader(PaneType.AUTH).getController()).updateData(true);
+        AuthController authController = app.getPaneManager().getLoader(PaneType.AUTH).getController();
+        Platform.runLater(() -> authController.updateData(true));
         JavaFXUtil.focusApp();
     }
 
@@ -85,50 +101,52 @@ public class AuthHandler implements HttpHandler {
 
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://mix.flectone.net/api/discord/login?id=" + id + "&token=" + token))
+                    .uri(URI.create(AUTHORIZE_REQUEST_URL.replace("<id>", id).replace("<token>", token)))
                     .GET()
                     .build();
 
             try {
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-                if (response.statusCode() != 200) {
-                    Platform.runLater(() ->
-                            FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-response")));
-                    runnable.run();
-                    return;
-                }
-
-                Gson g = new Gson();
-
-                DiscordUser responceUser = g.fromJson(response.body(), DiscordUser.class);
-                if (responceUser == null) {
-                    Platform.runLater(() ->
-                            FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-user")));
-                    runnable.run();
-                    return;
-                }
-
-                if (!responceUser.isInGuild()) {
-                    Platform.runLater(() ->
-                            FAlert.showWarn(
-                                    FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.not-in-guild"),
-                                    () -> WebUtil.openUrl("https://discord.flectone.net")
-                            )
-                    );
-                    runnable.run();
-                    return;
-                }
-
-                app.setDiscordUser(responceUser);
-                ((AuthController) app.getPaneManager().getLoader(PaneType.AUTH).getController()).updateData(true);
-
-                System.out.println(responceUser.username());
-
+                handleAuthorizeResponse(response, runnable);
             } catch (IOException | InterruptedException e) {
                 FAlert.showException(e, e.getLocalizedMessage());
             }
 
             runnable.run();
         });
+    }
+
+    private void handleAuthorizeResponse(HttpResponse<String> response, Runnable runnable) {
+        if (response.statusCode() != 200) {
+            Platform.runLater(() -> FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-response")));
+            runnable.run();
+            return;
+        }
+
+        Gson g = new Gson();
+        DiscordUser responseUser = g.fromJson(response.body(), DiscordUser.class);
+
+        if (responseUser == null) {
+            Platform.runLater(() -> FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-user")));
+            runnable.run();
+            return;
+        }
+
+        if (!responseUser.isInGuild()) {
+            Platform.runLater(() ->
+                    FAlert.showWarn(
+                            FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.not-in-guild"),
+                            () -> WebUtil.openUrl("https://discord.flectone.net")
+                    )
+            );
+            runnable.run();
+            return;
+        }
+
+        FlectoneMix app = FlectoneMix.getApp();
+        app.setDiscordUser(responseUser);
+        AuthController authController = app.getPaneManager().getLoader(PaneType.AUTH).getController();
+        Platform.runLater(() -> authController.updateData(true));
+        System.out.println(responseUser.username());
     }
 }
