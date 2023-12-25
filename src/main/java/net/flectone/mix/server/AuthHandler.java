@@ -45,21 +45,24 @@ public class AuthHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         handleExchange(exchange);
+
         String uri = exchange.getRequestURI().getQuery();
         if (uri.isEmpty()) {
             System.out.println("no in discord");
             return;
         }
+
         Map<String, String> userMap = extractUserMap(uri);
         DiscordUser discordUser = createDiscordUser(userMap);
         updateAppState(discordUser);
     }
 
     private void handleExchange(HttpExchange exchange) throws IOException {
-        String response = "OK";
-        exchange.sendResponseHeaders(200, response.length());
+        byte[] bytes = FlectoneMix.class.getResource("/net/flectone/mix/auth.html").openStream().readAllBytes();
+
+        exchange.sendResponseHeaders(200, bytes.length);
         try (OutputStream os = exchange.getResponseBody()) {
-            os.write(response.getBytes());
+            os.write(bytes);
         }
     }
 
