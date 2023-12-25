@@ -40,35 +40,50 @@ public class FileManager {
 
 
     public void init() {
-        flectonemixFolder = getDefaultFolderPath("flectonemix");
+        initFlectonemixFolder();
+        loadConfig();
+        initMinecraftFolder();
+        initTheme();
+        initLanguage();
+        initDecoratedFlag();
+    }
 
+    private void initFlectonemixFolder() {
+        flectonemixFolder = getDefaultFolderPath("flectonemix");
+    }
+
+    private void loadConfig() {
         var config = getResourceAsMap("config.yml");
         if (config != null) properties.putAll(config);
 
-        getDefaultResourceAsMap("config.yml").forEach((key, value) -> {
-            if (properties.get(key) != null) return;
-            properties.put(key, value);
-        });
+        getDefaultResourceAsMap("config.yml").forEach(properties::putIfAbsent);
+    }
 
+    private void initMinecraftFolder() {
         minecraftFolder = getString("minecraft-folder.selected");
         if (minecraftFolder.isEmpty()) {
             minecraftFolder = getDefaultFolderPath("minecraft");
         }
 
         setMinecraftFolder(minecraftFolder);
+    }
 
+    private void initTheme() {
         theme = getString("theme.selected");
         if (theme.isEmpty()) {
             theme = getStringList("theme.list").get(0);
         }
+    }
 
+    private void initLanguage() {
         language = getString("language.selected");
         if (language.isEmpty()) {
             List<String> languageList = getStringList("language.support");
-            if (languageList.contains(SYSTEM_LANGUAGE)) language = SYSTEM_LANGUAGE;
-            else language = languageList.get(0);
+            language = languageList.contains(SYSTEM_LANGUAGE) ? SYSTEM_LANGUAGE : languageList.get(0);
         }
+    }
 
+    private void initDecoratedFlag() {
         Boolean decorated = getBoolean("decorated");
         isPossiblyDecorated = decorated == null || decorated;
     }
