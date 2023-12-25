@@ -6,20 +6,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="componentPanel" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="500.0" stylesheets="@../style/component.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.ComponentController">
-   <children>
-      <AnchorPane fx:id="paneBackground" onMouseClicked="#clickEvent" prefHeight="78.0" prefWidth="501.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
-         <children>
-            <Rectangle fx:id="rectangleIconBackground" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="64.0" layoutX="9.0" layoutY="11.0" onMousePressed="#openSource" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="64.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="13.0">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Rectangle>
-            <Rectangle fx:id="rectangleIcon" arcHeight="5.0" arcWidth="5.0" disable="true" fill="DODGERBLUE" focusTraversable="true" height="64.0" layoutX="9.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="64.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="13.0" />
-            <Label fx:id="labelName" layoutX="90.0" layoutY="5.0" prefHeight="32.0" prefWidth="222.0" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="193.0" />
-            <Label fx:id="labelDescription" alignment="TOP_LEFT" layoutX="90.0" layoutY="40.0" prefHeight="43.0" prefWidth="324.0" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="91.0" />
-            <JFXCheckBox fx:id="checkBox" layoutX="401.0" layoutY="37.0" prefHeight="25.0" prefWidth="27.0" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="37.0" />
-            <Label fx:id="labelAuthor" alignment="CENTER_RIGHT" layoutX="348.0" layoutY="9.0" prefHeight="21.0" prefWidth="153.0" AnchorPane.leftAnchor="348.0" AnchorPane.rightAnchor="4.0" />
-         </children>
-      </AnchorPane>
-   </children>
+<AnchorPane fx:id="componentPanel" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="500.0"
+            stylesheets="@../style/component.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.ComponentController">
+   <AnchorPane fx:id="paneBackground" onMouseClicked="#clickEvent" prefHeight="78.0" prefWidth="501.0"
+               AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="20.0"
+               AnchorPane.topAnchor="5.0">
+      <Rectangle fx:id="rectangleIconBackground" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="64.0"
+                 layoutX="9.0" layoutY="11.0" onMousePressed="#openSource" stroke="BLACK" strokeType="INSIDE"
+                 strokeWidth="0.0" width="64.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0"
+                 AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="13.0">
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Rectangle>
+      <Rectangle fx:id="rectangleIcon" arcHeight="5.0" arcWidth="5.0" disable="true" fill="DODGERBLUE"
+                 focusTraversable="true" height="64.0" layoutX="9.0" layoutY="11.0" stroke="BLACK"
+                 strokeType="INSIDE" strokeWidth="0.0" visible="false" width="64.0" AnchorPane.bottomAnchor="13.0"
+                 AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="13.0"/>
+      <Label fx:id="labelName" layoutX="90.0" layoutY="5.0" prefHeight="32.0" prefWidth="222.0" wrapText="true"
+             AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="193.0"/>
+      <Label fx:id="labelDescription" alignment="TOP_LEFT" layoutX="90.0" layoutY="40.0" prefHeight="43.0"
+             prefWidth="324.0" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="91.0"/>
+      <JFXCheckBox fx:id="checkBox" layoutX="401.0" layoutY="37.0" prefHeight="25.0" prefWidth="27.0"
+                   AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="37.0"/>
+      <Label fx:id="labelAuthor" alignment="CENTER_RIGHT" layoutX="348.0" layoutY="9.0" prefHeight="21.0"
+             prefWidth="153.0" AnchorPane.leftAnchor="348.0" AnchorPane.rightAnchor="4.0"/>
+   </AnchorPane>
 </AnchorPane>
