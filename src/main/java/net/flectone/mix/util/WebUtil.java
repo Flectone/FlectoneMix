@@ -15,20 +15,26 @@ public class WebUtil {
         try {
             if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
                 Desktop.getDesktop().browse(new URI(url));
-            } else {
-                Runtime rt = Runtime.getRuntime();
-                if (FileManager.getOS().contains("win")) {
-                    rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
-                } else if (FileManager.getOS().contains("mac")) {
-                    rt.exec("open " + url);
-                } else {
-                    rt.exec("xdg-open " + url);
-                }
+                return;
             }
+
+            openUrlFallback(url);
 
         } catch (URISyntaxException | IOException e) {
             FAlert.showException(e, e.getLocalizedMessage());
         }
     }
 
+    private static void openUrlFallback(String url) throws IOException {
+        Runtime rt = Runtime.getRuntime();
+        String os = FileManager.getOS();
+
+        if (os.contains("win")) {
+            rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+        } else if (os.contains("mac")) {
+            rt.exec("open " + url);
+        } else {
+            rt.exec("xdg-open " + url);
+        }
+    }
 }
