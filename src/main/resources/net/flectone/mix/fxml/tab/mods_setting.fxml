@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="settingPanel" prefHeight="500.0" prefWidth="220.0" stylesheets="@../../style/optimization_setting.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.tab.ModsController">
    <children>
-      <Label fx:id="tabLabel" alignment="TOP_CENTER" layoutX="16.0" layoutY="6.0" prefHeight="46.0" prefWidth="188.0" stylesheets="@../style/optimization_setting.css" text="Вкладка Моды" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
+      <Label fx:id="tabLabel" alignment="TOP_CENTER" layoutX="16.0" layoutY="6.0" prefHeight="46.0" prefWidth="188.0" text="Вкладка Моды" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
       <Rectangle fx:id="tabRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="105.0" layoutX="17.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="186.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="35.0" />
       <Label fx:id="versionLabel" layoutX="17.0" layoutY="153.0" text="Версия майнкрафта" wrapText="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0">
          <font>
