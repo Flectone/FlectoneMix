@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -46,19 +47,28 @@ public class AuthHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
         handleExchange(exchange);
 
-        String uri = exchange.getRequestURI().getQuery();
-        if (uri.isEmpty()) {
+        String uriQuery = exchange.getRequestURI().getQuery();
+        if (uriQuery.isEmpty()) {
             showWarnGuild();
             return;
         }
 
-        Map<String, String> userMap = extractUserMap(uri);
+        Map<String, String> userMap = extractUserMap(uriQuery);
         DiscordUser discordUser = createDiscordUser(userMap);
         updateAppState(discordUser);
     }
 
     private void handleExchange(HttpExchange exchange) throws IOException {
-        byte[] bytes = FlectoneMix.class.getResource("/net/flectone/mix/auth.html").openStream().readAllBytes();
+        String uriPath = exchange.getRequestURI().getPath();
+        String filePath = uriPath.equals("/")
+                ? "auth.html"
+                : "images" + uriPath;
+
+        URL urlResource = FlectoneMix.class.getResource("/net/flectone/mix/" + filePath);
+        if (urlResource == null) {
+            return;
+        }
+        byte[] bytes = urlResource.openStream().readAllBytes();
 
         exchange.sendResponseHeaders(200, bytes.length);
         try (OutputStream os = exchange.getResponseBody()) {
