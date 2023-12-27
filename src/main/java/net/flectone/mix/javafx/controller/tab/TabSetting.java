@@ -1,6 +1,5 @@
 package net.flectone.mix.javafx.controller.tab;
 
-import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -216,10 +215,9 @@ public abstract class TabSetting implements Initializable {
 
                 System.out.println(loaderName);
 
-                Gson gson = new Gson();
                 Type type = new TypeToken<Map<String, Object>>() {}.getType();
                 FileReader reader = new FileReader(mcDir + "launcher_profiles.json");
-                Map<String, Object> json = gson.fromJson(reader, type);
+                Map<String, Object> json = FlectoneMix.getGson().fromJson(reader, type);
                 Map<String, Object> profiles = (Map<String, Object>) json.get("profiles");
                 Map<String, Object> customProfile = new LinkedHashMap<>();
                 customProfile.put("name", "FlectoneMix " + finalLoaderType + " " + minecraftVersion);
@@ -239,7 +237,7 @@ public abstract class TabSetting implements Initializable {
                 json.put("selectedProfile", "Flectone " + finalLoaderType + " " + minecraftVersion);
 
                 FileWriter writer = new FileWriter(Paths.get(mcDir + "launcher_profiles.json").toString());
-                gson.toJson(json, writer);
+                FlectoneMix.getGson().toJson(json, writer);
                 writer.close();
 
                 return null;

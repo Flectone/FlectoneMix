@@ -1,6 +1,5 @@
 package net.flectone.mix.server;
 
-import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
@@ -136,8 +135,7 @@ public class AuthHandler implements HttpHandler {
             return;
         }
 
-        Gson g = new Gson();
-        DiscordUser responseUser = g.fromJson(response.body(), DiscordUser.class);
+        DiscordUser responseUser = FlectoneMix.getGson().fromJson(response.body(), DiscordUser.class);
 
         if (responseUser == null) {
             Platform.runLater(() -> FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-user")));

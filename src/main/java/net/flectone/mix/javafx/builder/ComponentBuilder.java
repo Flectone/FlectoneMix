@@ -1,6 +1,5 @@
 package net.flectone.mix.javafx.builder;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import javafx.application.Platform;
@@ -220,9 +219,8 @@ public class ComponentBuilder {
 
     private List<Component> parseJsonResponse(String jsonResponse) {
         List<Component> components = new ArrayList<>();
-        Gson gson = new Gson();
         JsonArray jsonArray = JsonParser.parseString(jsonResponse).getAsJsonArray();
-        jsonArray.forEach(jsonElement -> components.add(gson.fromJson(jsonElement, Component.class)));
+        jsonArray.forEach(jsonElement -> components.add(FlectoneMix.getGson().fromJson(jsonElement, Component.class)));
         return components;
     }
 

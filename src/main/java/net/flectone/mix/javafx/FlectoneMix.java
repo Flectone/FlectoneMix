@@ -1,5 +1,6 @@
 package net.flectone.mix.javafx;
 
+import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.image.Image;
@@ -29,6 +30,8 @@ public class FlectoneMix extends Application {
 
     @Getter
     private static FlectoneMix app;
+    @Getter
+    private static final Gson gson = new Gson();
 
     public static void main(String[] args) {
         launch();

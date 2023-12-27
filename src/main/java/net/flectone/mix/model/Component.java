@@ -1,6 +1,5 @@
 package net.flectone.mix.model;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import com.google.gson.annotations.SerializedName;
@@ -109,9 +108,8 @@ public class Component {
                 response.append(line);
             }
 
-            Gson gson = new Gson();
             JsonArray jsonArray = JsonParser.parseString(response.toString()).getAsJsonArray();
-            return gson.fromJson(jsonArray.get(0), Rating.class);
+            return FlectoneMix.getGson().fromJson(jsonArray.get(0), Rating.class);
         }
     }
 
