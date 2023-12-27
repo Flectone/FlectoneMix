@@ -78,7 +78,10 @@ public class ComponentBuilder {
     }
 
     public void setApiUrl(@NonNull String apiUrl) {
-        this.apiUrl = apiUrl.toLowerCase();
+        apiUrl = apiUrl.toLowerCase();
+        if (apiUrl.equals(this.apiUrl)) return;
+
+        this.apiUrl = apiUrl;
         fill();
     }
 
