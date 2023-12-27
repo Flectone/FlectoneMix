@@ -96,6 +96,7 @@ public class SettingController extends TabSetting {
 
 
         tabRectangle.setFill(new ImagePattern(new Image("/net/flectone/mix/images/preview-setting.png")));
+        tabRectangle.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(0,128,255,0.3), 20, 0.4, 0, 0);");
 
         pathArea.setText(FlectoneMix.getApp().getConfig().getMinecraftFolder());
 

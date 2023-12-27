@@ -96,6 +96,8 @@ public class OptimizationController extends TabSetting {
         settingComboBox(modComboBox, "minecraft.mode-type.list");
 
         tabRectangle.setFill(new ImagePattern(new Image("/net/flectone/mix/images/preview-optimization.png")));
+        tabRectangle.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(0,255,0,0.3), 20, 0.4, 0, 0);");
+
         setFilterAction(() -> FlectoneMix.getApp().getThreadPool().execute(() -> {
             ComponentPanelController controller = FlectoneMix.getApp().getPaneManager().getLoader(PaneType.COMPONENTS).getController();
             controller.getComponentBuilder().build(loaderComboBox.getSelectionModel().getSelectedItem()

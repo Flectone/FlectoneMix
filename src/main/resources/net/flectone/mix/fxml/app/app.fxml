@@ -2,15 +2,9 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="1000.0" stylesheets="@../../style/app.css" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.AppController">
-   <AnchorPane fx:id="settingPanel" layoutX="70.0" prefHeight="500.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0"
-               AnchorPane.topAnchor="0.0"/>
-   <AnchorPane fx:id="leftPanel" prefHeight="500.0" prefWidth="70.0" AnchorPane.bottomAnchor="0.0"
-               AnchorPane.topAnchor="0.0"/>
-   <AnchorPane fx:id="searchPanel" layoutX="390.0" prefHeight="50.0" prefWidth="610.0" AnchorPane.leftAnchor="290.0"
-               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
-   <AnchorPane fx:id="componentPanel" layoutX="290.0" layoutY="50.0" prefHeight="408.0" prefWidth="710.0"
-               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="0.0"
-               AnchorPane.topAnchor="50.0"/>
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" stylesheets="@../../style/app.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.AppController">
+   <AnchorPane fx:id="componentPanel" layoutX="290.0" layoutY="50.0" prefHeight="408.0" prefWidth="710.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+   <AnchorPane fx:id="searchPanel" layoutX="390.0" prefHeight="50.0" prefWidth="610.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <AnchorPane fx:id="settingPanel" layoutX="70.0" prefHeight="500.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <AnchorPane fx:id="leftPanel" prefHeight="500.0" prefWidth="70.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
 </AnchorPane>

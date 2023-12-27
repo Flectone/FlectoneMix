@@ -55,6 +55,7 @@ public class ResourcepacksController extends TabSetting {
         settingComboBox(versionComboBox, "minecraft.version.list");
 
         tabRectangle.setFill(new ImagePattern(new Image("/net/flectone/mix/images/preview-resourcepacks.png")));
+        tabRectangle.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(255,0,166,0.3), 20, 0.4, 0, 0);");
 
         setFilterAction(() -> FlectoneMix.getApp().getThreadPool().execute(() -> {
             ComponentPanelController controller = FlectoneMix.getApp().getPaneManager().getLoader(PaneType.COMPONENTS).getController();

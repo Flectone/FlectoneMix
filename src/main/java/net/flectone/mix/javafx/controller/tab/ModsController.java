@@ -76,6 +76,7 @@ public class ModsController extends TabSetting {
         settingComboBox(loaderComboBox, "minecraft.loader.list");
 
         tabRectangle.setFill(new ImagePattern(new Image("/net/flectone/mix/images/preview-mods.png")));
+        tabRectangle.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(200,0,255,0.3), 20, 0.4, 0, 0);");
 
         setFilterAction(() -> FlectoneMix.getApp().getThreadPool().execute(() -> {
             ComponentPanelController controller = FlectoneMix.getApp().getPaneManager().getLoader(PaneType.COMPONENTS).getController();
