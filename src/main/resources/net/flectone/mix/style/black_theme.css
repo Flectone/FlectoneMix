@@ -30,4 +30,8 @@
     -fx-image-optimization: url("../images/black_optimization.png");
     -fx-image-search: url("../images/black_search.png");
     -fx-image-ad: url("../images/ad.png");
+    -fx-image-download: url("../images/black_download.png");
+    -fx-image-empty-star: url("../images/empty_star.png");
+    -fx-image-half-star: url("../images/half_star.png");
+    -fx-image-full-star: url("../images/full_star.png");
 }

@@ -29,4 +29,8 @@
     -fx-image-optimization: url("../images/white_optimization.png");
     -fx-image-search: url("../images/white_search.png");
     -fx-image-ad: url("../images/ad.png");
+    -fx-image-download: url("../images/white_download.png");
+    -fx-image-empty-start: url("../images/empty_star.png");
+    -fx-image-half-start: url("../images/half_star.png");
+    -fx-image-full-start: url("../images/full_star.png");
 }

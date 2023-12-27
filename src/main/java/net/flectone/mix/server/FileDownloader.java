@@ -23,6 +23,8 @@ public class FileDownloader extends Task<Void> {
     private final boolean unzip;
     private final boolean isFile;
 
+    private Component component;
+
     public FileDownloader(Component component, String outputDirectory) {
         this(component, outputDirectory, false);
     }
@@ -30,6 +32,7 @@ public class FileDownloader extends Task<Void> {
     public FileDownloader(Component component, String outputDirectory, boolean unzip) {
         this.unzip = unzip;
         this.isFile = true;
+        this.component = component;
 
         String fileExtension = "";
         int extensionIndex = component.link().lastIndexOf(".");
@@ -63,6 +66,10 @@ public class FileDownloader extends Task<Void> {
         if (unzip && outputFile.getName().toLowerCase().endsWith(".zip")) {
             unzipFile(outputFile, outputPath.getParent().toFile());
             Files.delete(outputFile.toPath());
+        }
+
+        if (component != null) {
+            component.increaseDownloads();
         }
 
         return null;

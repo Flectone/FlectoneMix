@@ -35,7 +35,7 @@ language.ru.search.prompt: "Поиск..."
 language.ru.search.checkbox.select-all: "Выбрать всё"
 language.ru.search.ad.title: "FlectoneChat плагин для сервера"
 
-language.ru.components.author: "Автор "
+language.ru.components.author: "от "
 
 language.ru.tab: "Вкладка "
 
@@ -141,7 +141,7 @@ language.en.search.prompt: "Search..."
 language.en.search.checkbox.select-all: "Select All"
 language.en.search.ad.title: "FlectoneChat plugin server!"
 
-language.en.components.author: "Author "
+language.en.components.author: "by "
 
 language.en.tab: "Tab "
 

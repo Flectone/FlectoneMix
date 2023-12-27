@@ -114,7 +114,7 @@ public abstract class TabSetting implements Initializable {
                         .stream()
                         .filter(entry -> {
                             Pane value = entry.getValue();
-                            return value.isVisible() && ((CheckBox) ((Pane) value.getChildren().get(0)).getChildren().get(4)).isSelected();
+                            return value.isVisible() && ((CheckBox) ((Pane) value.getChildren().get(0)).getChildren().get(3)).isSelected();
                         })
                         .map(entry -> {
                             int componentId = entry.getKey();

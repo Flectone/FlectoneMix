@@ -16,8 +16,10 @@ public class FileUpdater extends Task<Void> {
 
     private final String downloadUrl;
     private final File outputFile;
+    private Component component;
 
     public FileUpdater(Component component, String outputDirectory) {
+        this.component = component;
         String fileExtension = component.link().substring(component.link().lastIndexOf("."));
         this.downloadUrl = component.link();
         this.outputFile = new File(outputDirectory + component.key() + fileExtension);
@@ -41,6 +43,10 @@ public class FileUpdater extends Task<Void> {
             Files.copy(in, outputFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
             FAlert.showException(e, e.getLocalizedMessage());
+        }
+
+        if (component != null) {
+            component.increaseDownloads();
         }
 
 

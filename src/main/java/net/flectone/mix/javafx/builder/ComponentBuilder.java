@@ -201,23 +201,21 @@ public class ComponentBuilder {
 
     private boolean isCheckBoxSelected(int componentId) {
         Pane pane = paneMap.get(componentId);
-        return pane != null && pane.isVisible() && ((CheckBox) ((Pane) pane.getChildren().get(0)).getChildren().get(4)).isSelected();
+        return pane != null && pane.isVisible() && ((CheckBox) ((Pane) pane.getChildren().get(0)).getChildren().get(3)).isSelected();
     }
 
     private void selectAllPanes(boolean selected) {
         paneMap.values().stream()
                 .filter(Node::isVisible)
                 .forEach(pane ->
-                        ((CheckBox) ((Pane) pane.getChildren().get(0)).getChildren().get(4))
+                        ((CheckBox) ((Pane) pane.getChildren().get(0)).getChildren().get(3))
                                 .setSelected(selected));
     }
 
     private void selectFilteredPanes(List<String> filter, boolean selected) {
         componentList.stream()
                 .filter(component -> filter.contains(component.key()))
-                .forEach(component ->
-                        ((CheckBox) ((Pane) paneMap.get(component.id()).getChildren().get(0)).getChildren().get(4))
-                                .setSelected(selected));
+                .forEach(component -> component.getController().getCheckBox().setSelected(selected));
     }
 
     private List<Component> parseJsonResponse(String jsonResponse) {

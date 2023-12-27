@@ -40,3 +40,16 @@
 
     -fx-padding: 15
 }
+
+#downloadImage {
+    -fx-image: -fx-image-download;
+}
+
+#labelDownload, #labelRating {
+    -fx-font-size: 12;
+    -fx-text-fill: -fx-color-gray;
+}
+
+#star1Image, #star2Image, #star3Image, #star4Image, #star5Image {
+    -fx-image: -fx-image-empty-star;
+}
