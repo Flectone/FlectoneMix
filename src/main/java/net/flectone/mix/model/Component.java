@@ -69,10 +69,9 @@ public class Component {
         connection.setRequestMethod("POST");
 
         int responseCode = connection.getResponseCode();
+        if (responseCode != HttpURLConnection.HTTP_OK) return;
 
-        if (responseCode == HttpURLConnection.HTTP_OK) {
-            controller.updateDownloads(++downloads);
-        }
+        controller.updateDownloads(++downloads);
     }
 
     private void handleRatingRequest(String stringUrl) throws IOException {
