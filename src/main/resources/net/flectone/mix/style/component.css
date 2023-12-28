@@ -27,18 +27,19 @@
     -fx-text-fill: -fx-color-gray;
 }
 
-.jfx-check-box .box {
-
+.jfx-check-box .box,
+.jfx-check-box:indeterminate .box,
+.jfx-check-box:indeterminate:selected .box{
     -jfx-checked-color: rgba(0, 0, 0, 0);
     -jfx-unchecked-color: rgba(0, 0, 0, 0);
 
-    -fx-padding: 20
+    -fx-pref-width: 23;
+    -fx-pref-height: 23;
 }
 
 .jfx-check-box .mark {
     -fx-background-color: -fx-color-combobox;
-
-    -fx-padding: 15
+    -fx-padding: 8;
 }
 
 #downloadImage {

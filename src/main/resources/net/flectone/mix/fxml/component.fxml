@@ -19,8 +19,12 @@
          </cursor>
       </Rectangle>
       <Rectangle fx:id="rectangleIcon" arcHeight="5.0" arcWidth="5.0" disable="true" fill="DODGERBLUE" focusTraversable="true" height="64.0" layoutX="9.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="64.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="13.0" />
-      <Label fx:id="labelDescription" alignment="TOP_LEFT" layoutX="90.0" layoutY="40.0" prefHeight="43.0" prefWidth="310.0" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="105.0" />
-      <JFXCheckBox fx:id="checkBox" layoutX="421.0" layoutY="21.0" prefHeight="25.0" prefWidth="27.0" AnchorPane.bottomAnchor="44.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="21.0" />
+      <Label fx:id="labelDescription" alignment="TOP_LEFT" layoutX="90.0" layoutY="40.0" prefHeight="43.0" prefWidth="329.0" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="86.0" />
+      <JFXCheckBox fx:id="checkBox" layoutX="54.0" layoutY="54.0" prefHeight="23.0" prefWidth="8.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXCheckBox>
       <GridPane layoutX="88.0" layoutY="14.0" prefHeight="16.0" AnchorPane.leftAnchor="88.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" />
@@ -37,41 +41,49 @@
             </Label>
             <Label fx:id="labelAuthor" alignment="CENTER_RIGHT" prefHeight="21.0" GridPane.columnIndex="1">
                <padding>
-                  <Insets top="3.0" />
+                  <Insets top="4.0" />
                </padding>
             </Label>
          </children>
       </GridPane>
-      <AnchorPane fx:id="paneStatistic" layoutX="482.0" layoutY="51.0" prefHeight="11.0" AnchorPane.rightAnchor="7.0">
+      <AnchorPane fx:id="paneStatistic" layoutX="421.0" layoutY="42.0" prefHeight="11.0" />
+      <ImageView fx:id="star5Image" fitHeight="16.0" fitWidth="16.0" layoutX="485.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="4.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="star4Image" fitHeight="16.0" fitWidth="16.0" layoutX="469.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="star3Image" fitHeight="16.0" fitWidth="16.0" layoutX="453.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="36.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="star2Image" fitHeight="16.0" fitWidth="16.0" layoutX="437.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="52.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="star1Image" fitHeight="16.0" fitWidth="16.0" layoutX="421.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="68.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <GridPane layoutX="421.0" layoutY="40.0" prefHeight="24.0" prefWidth="58.0" AnchorPane.rightAnchor="26.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="16.666671752929688" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <Label fx:id="labelDownload" layoutX="17.0" layoutY="1.0" prefHeight="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="0.0" />
-            <ImageView fx:id="downloadImage" fitHeight="16.0" fitWidth="16.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" />
+            <ImageView fx:id="downloadImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="labelDownload" prefHeight="17.0" prefWidth="44.0" text="999.9M" GridPane.columnIndex="1" />
          </children>
-      </AnchorPane>
-      <ImageView fx:id="star5Image" fitHeight="16.0" fitWidth="16.0" layoutX="480.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="4.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-      <ImageView fx:id="star4Image" fitHeight="16.0" fitWidth="16.0" layoutX="464.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-      <ImageView fx:id="star3Image" fitHeight="16.0" fitWidth="16.0" layoutX="448.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="36.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-      <ImageView fx:id="star2Image" fitHeight="16.0" fitWidth="16.0" layoutX="458.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="52.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-      <ImageView fx:id="star1Image" fitHeight="16.0" fitWidth="16.0" layoutX="468.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="68.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
+      </GridPane>
    </AnchorPane>
 </AnchorPane>
