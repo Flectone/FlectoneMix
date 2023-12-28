@@ -22,8 +22,9 @@
     -fx-background-color: -fx-color-combobox;
     -fx-background-image: url("../images/black_search.png");
     -fx-background-repeat: no-repeat;
-    -fx-background-position: left center;
     -fx-padding: 0 0 0 20;
+    -fx-background-radius: 5;
+    -fx-background-position: 1px center;
     -fx-prompt-text-fill: -fx-color-gray;
     -fx-text-fill: -fx-color-font_;
     -fx-font-size: 15;

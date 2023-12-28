@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="searchPanel" prefHeight="50.0" prefWidth="600.0" stylesheets="@../../style/search_panel.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.SearchPanelController">
-   <TextField fx:id="searchField" layoutX="21.0" layoutY="13.0" prefHeight="25.0" prefWidth="270.0" promptText="Поиск..." />
-   <JFXCheckBox fx:id="selectAllCheckBox" layoutX="300.0" layoutY="16.0" prefHeight="18.0" prefWidth="98.0" text="Выбрать всё" />
+   <TextField fx:id="searchField" layoutX="7.0" layoutY="13.0" prefHeight="25.0" prefWidth="270.0" promptText="Поиск..." AnchorPane.leftAnchor="7.0" />
+   <JFXCheckBox fx:id="selectAllCheckBox" layoutX="284.0" layoutY="16.0" prefHeight="18.0" prefWidth="98.0" text="Выбрать всё" />
    <AnchorPane fx:id="adPanel" layoutX="408.0" layoutY="13.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="408.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="13.0" />
 </AnchorPane>
