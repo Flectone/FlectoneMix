@@ -26,6 +26,8 @@ public class FileManager {
 
     private String minecraftFolder;
 
+    private String runningPath;
+
     private String version;
 
     private String language;
@@ -43,6 +45,7 @@ public class FileManager {
 
     public void init() {
         initFlectonemixFolder();
+        initRunningPath();
         initVersion();
         loadConfig();
         initMinecraftFolder();
@@ -57,6 +60,14 @@ public class FileManager {
 
     private void initFlectonemixFolder() {
         flectonemixFolder = getDefaultFolderPath("flectonemix");
+    }
+
+    private void initRunningPath() {
+        try {
+            runningPath = new File(FlectoneMix.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).getAbsolutePath();
+        } catch (URISyntaxException e) {
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
+        }
     }
 
     private void loadConfig() {
