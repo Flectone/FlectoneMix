@@ -38,6 +38,7 @@ public class FAlert {
             case INFO -> configureInfo((String) object[0]);
             case CONFIRMATION -> configureConfirmation((String) object[0]);
             case EXCEPTION -> configureException((Throwable) object[0]);
+            case WARN -> configureWarn((String) object[0], null);
         }
     }
 
@@ -51,10 +52,12 @@ public class FAlert {
 
     public void show() {
         stage.customShow();
+        stage.setAlwaysOnTop(true);
     }
 
     public int showAndWait() {
         stage.makeUndecorated();
+        stage.setAlwaysOnTop(true);
         stage.showAndWait();
 
         return type == Type.CONFIRMATION
