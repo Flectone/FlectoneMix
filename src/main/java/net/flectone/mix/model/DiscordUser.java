@@ -7,6 +7,8 @@ public record DiscordUser(String id, String username, String avatar, String toke
     private static Image imageAvatar;
 
     public Image getNewAvatar() {
+        if (avatar == null || avatar.equals("null")) return new Image("/net/flectone/mix/images/flectone.png");
+
         return new Image("https://cdn.discordapp.com/avatars/" + id + "/" + avatar + ".png");
     }
 
