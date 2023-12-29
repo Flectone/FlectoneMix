@@ -204,7 +204,6 @@ public class ConfigManager {
             new FAlert(FAlert.Type.EXCEPTION, e).show();
         }
 
-        System.out.println("2");
         return null;
     }
 
