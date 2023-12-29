@@ -11,7 +11,7 @@ import javafx.scene.layout.Pane;
 import lombok.Getter;
 import lombok.NonNull;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
+import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.component.FAlert;
 import net.flectone.mix.javafx.controller.AppController;
 import net.flectone.mix.javafx.controller.ComponentController;

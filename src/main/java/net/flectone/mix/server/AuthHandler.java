@@ -5,7 +5,7 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import javafx.application.Platform;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
+import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.component.FAlert;
 import net.flectone.mix.javafx.controller.AuthController;
 import net.flectone.mix.model.DiscordUser;

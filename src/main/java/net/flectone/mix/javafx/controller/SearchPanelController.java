@@ -8,7 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import lombok.Getter;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
+import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.manager.ConfigManager;
 
 import java.net.URL;

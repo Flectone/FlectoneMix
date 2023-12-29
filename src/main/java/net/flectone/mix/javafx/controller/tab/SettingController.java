@@ -8,11 +8,11 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.DirectoryChooser;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
+import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.component.FAlert;
 import net.flectone.mix.javafx.controller.AuthController;
 import net.flectone.mix.javafx.controller.ComponentPanelController;
-import net.flectone.mix.javafx.transition.FFadeTransition;
+import net.flectone.mix.javafx.component.FFadeTransition;
 import net.flectone.mix.manager.ConfigManager;
 import net.flectone.mix.manager.PaneManager;
 

@@ -12,9 +12,9 @@ import javafx.scene.shape.Rectangle;
 import lombok.Getter;
 import lombok.NonNull;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
-import net.flectone.mix.javafx.transition.FColorTransition;
-import net.flectone.mix.javafx.transition.FToolTip;
+import net.flectone.mix.javafx.component.PaneType;
+import net.flectone.mix.javafx.component.FColorTransition;
+import net.flectone.mix.javafx.component.FToolTip;
 import net.flectone.mix.model.DiscordUser;
 
 import java.net.URL;

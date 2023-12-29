@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
+import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.controller.tab.TabSetting;
 
 import java.net.URL;

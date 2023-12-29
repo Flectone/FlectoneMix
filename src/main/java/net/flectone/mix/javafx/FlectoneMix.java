@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
 import net.flectone.mix.javafx.component.FStage;
+import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.controller.AuthController;
 import net.flectone.mix.manager.ConfigManager;
 import net.flectone.mix.manager.PaneManager;

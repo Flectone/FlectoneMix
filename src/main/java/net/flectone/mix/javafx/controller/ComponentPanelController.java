@@ -7,9 +7,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import lombok.Getter;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
+import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.builder.ComponentBuilder;
-import net.flectone.mix.javafx.transition.SmoothScrolling;
+import net.flectone.mix.javafx.component.SmoothScrolling;
 
 import java.net.URL;
 import java.util.ResourceBundle;

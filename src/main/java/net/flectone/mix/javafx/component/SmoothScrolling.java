@@ -1,4 +1,4 @@
-package net.flectone.mix.javafx.transition;
+package net.flectone.mix.javafx.component;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;

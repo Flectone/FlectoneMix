@@ -1,4 +1,4 @@
-package net.flectone.mix.javafx;
+package net.flectone.mix.javafx.component;
 
 import lombok.AllArgsConstructor;
 import lombok.NonNull;

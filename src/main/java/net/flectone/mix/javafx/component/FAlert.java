@@ -9,7 +9,6 @@ import javafx.scene.layout.Region;
 import javafx.stage.Modality;
 import lombok.Getter;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.javafx.PaneType;
 import net.flectone.mix.javafx.controller.alert.AlertConfirmationController;
 import net.flectone.mix.javafx.controller.alert.AlertExceptionController;
 import net.flectone.mix.javafx.controller.alert.AlertWarnController;
