@@ -113,10 +113,9 @@ public class WebUtil {
                     runningPath)
                     .inheritIO()
                     .start();
+            FlectoneMix.getApp().exit();
         } catch (IOException e) {
             new FAlert(FAlert.Type.EXCEPTION, e).show();
         }
-
-        FlectoneMix.getApp().exit();
     }
 }
