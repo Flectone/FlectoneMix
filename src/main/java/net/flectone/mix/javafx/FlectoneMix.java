@@ -58,7 +58,7 @@ public class FlectoneMix extends Application {
         stage.setMinHeight(500);
         stage.setScene(paneManager.getScene());
         stage.setOnCloseRequest(e -> exit());
-        stage.setTitle("FlectoneMix 3.0.0");
+        stage.setTitle("FlectoneMix " + config.getVersion());
         stage.getIcons().add(new Image("/net/flectone/mix/images/flectone.png"));
         stage.customShow();
     }
