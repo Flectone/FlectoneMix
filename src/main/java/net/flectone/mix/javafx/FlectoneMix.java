@@ -79,7 +79,8 @@ public class FlectoneMix extends Application {
 
     public void exit() {
         config.save();
-        System.exit(0);
         threadPool.shutdown();
+        stage.close();
+        System.exit(0);
     }
 }
