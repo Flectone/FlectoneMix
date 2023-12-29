@@ -2,8 +2,7 @@
 
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.*?>
 <AnchorPane fx:id="searchPanel" prefHeight="50.0" prefWidth="600.0" stylesheets="@../../style/search_panel.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.SearchPanelController">
    <TextField fx:id="searchField" layoutX="7.0" layoutY="13.0" prefHeight="25.0" prefWidth="270.0" promptText="Поиск..." AnchorPane.leftAnchor="7.0" />
    <JFXCheckBox fx:id="selectAllCheckBox" layoutX="284.0" layoutY="16.0" prefHeight="18.0" prefWidth="98.0" text="Выбрать всё" />

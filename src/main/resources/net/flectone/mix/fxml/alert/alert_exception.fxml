@@ -4,9 +4,8 @@
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
 <AnchorPane fx:id="windowPanel" prefHeight="350.0" prefWidth="600.0" styleClass="pane"
             stylesheets="@../../style/alert.css" xmlns="http://javafx.com/javafx/null"
             xmlns:fx="http://javafx.com/fxml/1"

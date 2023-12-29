@@ -10,9 +10,9 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import net.flectone.mix.javafx.FlectoneMix;
+import net.flectone.mix.javafx.component.FFadeTransition;
 import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.controller.ComponentPanelController;
-import net.flectone.mix.javafx.component.FFadeTransition;
 
 import java.io.File;
 import java.net.URL;

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
 
-
+<?import javafx.scene.layout.*?>
 <AnchorPane fx:id="windowPanel" prefHeight="605.0" prefWidth="1203.0" stylesheets="@../../style/app.css"
             xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="net.flectone.mix.javafx.controller.WindowController">

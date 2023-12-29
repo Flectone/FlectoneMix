@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.*?>
 <AnchorPane prefHeight="500.0" prefWidth="1000.0" stylesheets="@../../style/app.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.AppController">
    <AnchorPane fx:id="componentPanel" layoutX="290.0" layoutY="50.0" prefHeight="408.0" prefWidth="710.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
    <AnchorPane fx:id="searchPanel" layoutX="390.0" prefHeight="50.0" prefWidth="610.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
