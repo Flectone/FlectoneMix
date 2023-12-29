@@ -240,4 +240,39 @@ public class FileManager {
                 : OS.contains("nux") || OS.contains("nix") ? System.getProperty("user.home") + "/." + folder + "/"
                 : System.getProperty("user.dir") + "/" + folder + "/";
     }
+
+    public VersionComparison compareVersions(@NotNull String firstVersion, @NotNull String secondVersion) {
+        if (firstVersion.isEmpty()) return VersionComparison.OLDER;
+        if (secondVersion.isEmpty()) return VersionComparison.NEWER;
+
+        String[] parts1 = firstVersion.split("\\.");
+        String[] parts2 = secondVersion.split("\\.");
+
+        for (int x = 0; x < parts1.length; x++) {
+            int num1 = Integer.parseInt(parts1[x]);
+            int num2 = Integer.parseInt(parts2[x]);
+
+            if (num1 > num2) return VersionComparison.NEWER;
+            else if (num1 < num2) return VersionComparison.OLDER;
+        }
+
+        return VersionComparison.EQUAL;
+    }
+
+    public enum VersionComparison {
+        NEWER(1),
+        OLDER(-1),
+        EQUAL(0);
+
+        private final int value;
+
+        VersionComparison(int value) {
+            this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
+    }
 }
