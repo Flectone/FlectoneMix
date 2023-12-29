@@ -42,3 +42,10 @@ build/
 /out/artifacts/FlectoneMix_jar/
 /out/artifacts/FlectoneMix_jar/FlectoneMix.jar
 /.idea/
+/.idea/artifacts/
+/.idea/inspectionProfiles/
+/.idea/vcs.xml
+/.idea/uiDesigner.xml
+/.idea/misc.xml
+/.idea/encodings.xml
+/.idea/discord.xml
