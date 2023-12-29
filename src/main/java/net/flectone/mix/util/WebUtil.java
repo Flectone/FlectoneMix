@@ -5,6 +5,7 @@ import lombok.NonNull;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.component.FAlert;
 import net.flectone.mix.manager.ConfigManager;
+import net.flectone.mix.model.DiscordUser;
 import net.flectone.mix.server.FileDownloader;
 
 import java.awt.*;
@@ -51,8 +52,11 @@ public class WebUtil {
 
     public static String getLatestVersion() {
         try {
+            DiscordUser discordUser = FlectoneMix.getApp().getDiscordUser();
+            if (discordUser == null) return null;
+
             String stringUrl = String.format("https://mix.flectone.net/api/version?id=%s&token=%s",
-                    FlectoneMix.getApp().getDiscordUser().id(), FlectoneMix.getApp().getDiscordUser().token());
+                    discordUser.id(), discordUser.token());
 
             URL url = new URL(stringUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
