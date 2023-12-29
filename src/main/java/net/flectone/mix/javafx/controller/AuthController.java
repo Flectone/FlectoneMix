@@ -55,14 +55,18 @@ public class AuthController implements Initializable {
         authButton.setDisable(true);
         DiscordUser discordUser = FlectoneMix.getApp().getDiscordUser();
         FlectoneMix.getApp().getAuthHandler().authorize(discordUser.id(), discordUser.token(), () -> Platform.runLater(() -> {
+            authButton.setDisable(false);
+
+            if(!FlectoneMix.getApp().getAuthHandler().isCorrect()) {
+                return;
+            }
+
             PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
 
             if (paneManager.getLoader(PaneType.APP) == null) {
                 paneManager.addPane(PaneType.APP);
             }
             paneManager.activate(PaneType.APP);
-
-            authButton.setDisable(false);
         }));
     }
 
