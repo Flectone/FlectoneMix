@@ -27,7 +27,7 @@ language.ru.alert.warn.message.restart-for-decorations: "Чтобы измене
 language.ru.alert.warn.message.null-profiles: "В вашей папке майнкрафт не было найдено файла для настройки профилей запуска, поэтому установить его невозможно"
 language.ru.alert.warn.message.bad-response: "При авторизации возникла ошибка, попробуйте ещё раз"
 language.ru.alert.warn.message.bad-user: "Этот дискорд аккаунт вызвал ошибку, попробуйте ещё раз"
-language.ru.alert.warn.message.not-in-guild: "Этот дискорд аккаунт не состоит в Flectone https://discord.flectone.net/. Зайдите и попробуйте ещё раз"
+language.ru.alert.warn.message.not-in-guild: "Этот дискорд аккаунт не имеет роли участника Flectone. Присоединись, получи роль и попробуй ещё раз https://discord.flectone.net/"
 
 language.ru.auth.label.welcome: "Привет!"
 language.ru.auth.button.authorize: "Авторизация"
@@ -137,7 +137,7 @@ language.en.alert.warn.message.restart-for-decorations: "You must restart the ap
 language.en.alert.warn.message.null-profiles: "The file to customize startup profiles was not found in your minecraft folder, so it cannot be installed"
 language.en.alert.warn.message.bad-response: "An error occurred during authorization, try again"
 language.en.alert.warn.message.bad-user: "This discord account caused an error, try again"
-language.en.alert.warn.message.not-in-guild: "This discord account is not a member of Flectone https://discord.flectone.net/. Join and try again"
+language.en.alert.warn.message.not-in-guild: "This discord account has no role as a member of Flectone. Join, get a role and try again https://discord.flectone.net/"
 
 language.en.auth.label.welcome: "Hello!"
 language.en.auth.button.authorize: "Authorization"
