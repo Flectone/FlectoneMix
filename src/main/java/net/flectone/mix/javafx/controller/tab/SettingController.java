@@ -13,7 +13,7 @@ import net.flectone.mix.javafx.component.FAlert;
 import net.flectone.mix.javafx.controller.AuthController;
 import net.flectone.mix.javafx.controller.ComponentPanelController;
 import net.flectone.mix.javafx.transition.FFadeTransition;
-import net.flectone.mix.manager.FileManager;
+import net.flectone.mix.manager.ConfigManager;
 import net.flectone.mix.manager.PaneManager;
 
 import java.io.File;
@@ -115,7 +115,7 @@ public class SettingController extends TabSetting {
     }
 
     public void reloadApp() {
-        FileManager config = FlectoneMix.getApp().getConfig();
+        ConfigManager config = FlectoneMix.getApp().getConfig();
         String oldTheme = config.getTheme();
         String newTheme = String.valueOf(themeComboBox.getSelectionModel().getSelectedItem());
         if (!oldTheme.equals(newTheme)) {

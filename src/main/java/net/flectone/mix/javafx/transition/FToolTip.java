@@ -8,7 +8,7 @@ import javafx.util.Duration;
 import lombok.Getter;
 import lombok.NonNull;
 import net.flectone.mix.javafx.FlectoneMix;
-import net.flectone.mix.manager.FileManager;
+import net.flectone.mix.manager.ConfigManager;
 
 @Getter
 public class FToolTip {
@@ -16,9 +16,9 @@ public class FToolTip {
     private final Tooltip tooltip;
 
     public FToolTip(@NonNull ImageView node, @NonNull String localeString) {
-        FileManager fileManager = FlectoneMix.getApp().getConfig();
+        ConfigManager configManager = FlectoneMix.getApp().getConfig();
 
-        tooltip = new Tooltip(fileManager.getLocaleString("tooltip." + localeString));
+        tooltip = new Tooltip(configManager.getLocaleString("tooltip." + localeString));
         tooltip.setShowDelay(Duration.ZERO);
         tooltip.setStyle("-fx-font-size: 15");
 
@@ -32,9 +32,9 @@ public class FToolTip {
     }
 
     public FToolTip(@NonNull CheckBox node, @NonNull String localeString) {
-        FileManager fileManager = FlectoneMix.getApp().getConfig();
+        ConfigManager configManager = FlectoneMix.getApp().getConfig();
 
-        tooltip = new Tooltip(fileManager.getLocaleString("tooltip." + localeString));
+        tooltip = new Tooltip(configManager.getLocaleString("tooltip." + localeString));
         tooltip.setStyle("-fx-font-size: 12; -fx-background-color: -fx-color-blue");
         tooltip.setWrapText(true);
         tooltip.setMaxWidth(300);

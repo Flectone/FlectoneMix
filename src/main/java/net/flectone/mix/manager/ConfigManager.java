@@ -4,9 +4,11 @@ import lombok.Getter;
 import lombok.NonNull;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.component.FAlert;
+import org.jetbrains.annotations.NotNull;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Getter
-public class FileManager {
+public class ConfigManager {
 
     @Getter
     private static final String OS = System.getProperty("os.name").toLowerCase();
@@ -38,7 +40,7 @@ public class FileManager {
 
     private static final HashMap<String, Object> properties = new HashMap<>();
 
-    public FileManager() {
+    public ConfigManager() {
         init();
     }
 

@@ -10,7 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 import net.flectone.mix.javafx.component.FStage;
 import net.flectone.mix.javafx.controller.AuthController;
-import net.flectone.mix.manager.FileManager;
+import net.flectone.mix.manager.ConfigManager;
 import net.flectone.mix.manager.PaneManager;
 import net.flectone.mix.model.DiscordUser;
 import net.flectone.mix.server.AuthHandler;
@@ -21,7 +21,7 @@ import net.flectone.mix.util.JavaFXUtil;
 @Setter
 public class FlectoneMix extends Application {
     private AuthHandler authHandler;
-    private FileManager config;
+    private ConfigManager config;
     private DiscordUser discordUser;
     private PaneManager paneManager;
     private FStage stage;
@@ -42,7 +42,7 @@ public class FlectoneMix extends Application {
         app = this;
         threadPool = new CustomThreadPool(6);
 
-        config = new FileManager();
+        config = new ConfigManager();
         paneManager = new PaneManager(1000, 500);
         authHandler = new AuthHandler();
 

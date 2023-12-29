@@ -14,7 +14,7 @@ import lombok.Setter;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.PaneType;
 import net.flectone.mix.javafx.transition.FFadeTransition;
-import net.flectone.mix.manager.FileManager;
+import net.flectone.mix.manager.ConfigManager;
 import net.flectone.mix.manager.PaneManager;
 import net.flectone.mix.model.DiscordUser;
 import net.flectone.mix.util.WebUtil;
@@ -68,7 +68,7 @@ public class AuthController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        FileManager config = FlectoneMix.getApp().getConfig();
+        ConfigManager config = FlectoneMix.getApp().getConfig();
         userName.setText(config.getLocaleString("auth.label.welcome"));
         authButton.setText(config.getLocaleString("auth.button.authorize"));
 

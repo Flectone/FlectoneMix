@@ -10,7 +10,7 @@ import lombok.Setter;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.component.FStage;
 import net.flectone.mix.javafx.controller.UndecoratedWindow;
-import net.flectone.mix.manager.FileManager;
+import net.flectone.mix.manager.ConfigManager;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -50,7 +50,7 @@ public class AlertInfoController implements UndecoratedWindow, AlertWindow {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        FileManager config = FlectoneMix.getApp().getConfig();
+        ConfigManager config = FlectoneMix.getApp().getConfig();
         errorLabel.setText(config.getLocaleString("alert.info"));
         skipButton.setText(config.getLocaleString("alert.info.button.skip"));
 

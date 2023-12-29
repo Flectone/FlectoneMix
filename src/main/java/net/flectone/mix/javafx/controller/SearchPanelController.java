@@ -9,7 +9,7 @@ import javafx.scene.layout.Pane;
 import lombok.Getter;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.PaneType;
-import net.flectone.mix.manager.FileManager;
+import net.flectone.mix.manager.ConfigManager;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -36,7 +36,7 @@ public class SearchPanelController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        FileManager config = FlectoneMix.getApp().getConfig();
+        ConfigManager config = FlectoneMix.getApp().getConfig();
         searchField.setPromptText(config.getLocaleString("search.prompt"));
         selectAllCheckBox.setText(config.getLocaleString("search.checkbox.select-all"));
 
