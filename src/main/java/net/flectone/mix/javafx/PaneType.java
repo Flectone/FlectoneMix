@@ -24,6 +24,7 @@ public enum PaneType {
     SETTING("tab/setting_setting"),
     EXCEPTION("alert/alert_exception"),
     INFO("alert/alert_info"),
+    CONFIRMATION("alert/alert_confirmation"),
     WARN("alert/alert_warn"),
     LEFT("app/left_panel"),
     AD("app/ad");

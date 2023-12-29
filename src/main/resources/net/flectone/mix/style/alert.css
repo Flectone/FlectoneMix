@@ -33,7 +33,7 @@
     -fx-effect: -fx-effect-shadow;
 }
 
-#skipButton {
+#skipButton, #noButton, #yesButton {
     -fx-text-fill: white;
     -fx-font-size: 15;
     -fx-background-radius: 8;
