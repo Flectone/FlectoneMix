@@ -5,7 +5,6 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 import lombok.Getter;
 import lombok.Setter;
 import net.flectone.mix.javafx.component.FStage;
@@ -16,6 +15,7 @@ import net.flectone.mix.model.DiscordUser;
 import net.flectone.mix.server.AuthHandler;
 import net.flectone.mix.thread.CustomThreadPool;
 import net.flectone.mix.util.JavaFXUtil;
+import net.flectone.mix.util.WebUtil;
 
 @Getter
 @Setter
@@ -57,7 +57,7 @@ public class FlectoneMix extends Application {
         stage.setMinWidth(1000);
         stage.setMinHeight(500);
         stage.setScene(paneManager.getScene());
-        stage.setOnCloseRequest(this::exit);
+        stage.setOnCloseRequest(e -> exit());
         stage.setTitle("FlectoneMix 3.0.0");
         stage.getIcons().add(new Image("/net/flectone/mix/images/flectone.png"));
         stage.customShow();
@@ -70,12 +70,13 @@ public class FlectoneMix extends Application {
                 () -> Platform.runLater(() -> {
                     AuthController authController = paneManager.getLoader(PaneType.AUTH).getController();
                     authController.getAuthButton().setDisable(false);
+                    WebUtil.checkUpdate();
                 })
         );
     }
 
 
-    public void exit(WindowEvent event) {
+    public void exit() {
         config.save();
         System.exit(0);
         threadPool.shutdown();
