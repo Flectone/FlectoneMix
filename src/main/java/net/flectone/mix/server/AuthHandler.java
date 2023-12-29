@@ -9,7 +9,6 @@ import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.component.FAlert;
 import net.flectone.mix.javafx.controller.AuthController;
 import net.flectone.mix.model.DiscordUser;
-import net.flectone.mix.util.JavaFXUtil;
 import net.flectone.mix.util.WebUtil;
 
 import java.io.IOException;
@@ -100,8 +99,10 @@ public class AuthHandler implements HttpHandler {
         app.getConfig().put("id", discordUser.id());
         app.getConfig().put("token", discordUser.token());
         AuthController authController = app.getPaneManager().getLoader(PaneType.AUTH).getController();
-        Platform.runLater(() -> authController.updateData(true));
-        JavaFXUtil.focusApp();
+        Platform.runLater(() -> {
+            authController.updateData(true);
+            app.focus();
+        });
     }
 
     public void authorize(String id, String token, Runnable runnable) {

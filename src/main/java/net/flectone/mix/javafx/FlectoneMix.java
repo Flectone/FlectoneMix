@@ -15,7 +15,6 @@ import net.flectone.mix.manager.PaneManager;
 import net.flectone.mix.model.DiscordUser;
 import net.flectone.mix.server.AuthHandler;
 import net.flectone.mix.thread.CustomThreadPool;
-import net.flectone.mix.util.JavaFXUtil;
 import net.flectone.mix.util.WebUtil;
 
 @Getter
@@ -50,7 +49,7 @@ public class FlectoneMix extends Application {
         configureStage();
         configureAuthHandler();
 
-        JavaFXUtil.focusApp();
+        focus();
     }
 
     private void configureStage() {
@@ -76,6 +75,11 @@ public class FlectoneMix extends Application {
         );
     }
 
+    public void focus() {
+        stage.toFront();
+        stage.setAlwaysOnTop(true);
+        stage.setAlwaysOnTop(false);
+    }
 
     public void exit() {
         config.save();
