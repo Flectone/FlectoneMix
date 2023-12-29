@@ -26,6 +26,8 @@ public class FileManager {
 
     private String minecraftFolder;
 
+    private String version;
+
     private String language;
 
     private String theme;
@@ -41,11 +43,16 @@ public class FileManager {
 
     public void init() {
         initFlectonemixFolder();
+        initVersion();
         loadConfig();
         initMinecraftFolder();
         initTheme();
         initLanguage();
         initDecoratedFlag();
+    }
+
+    private void initVersion() {
+        this.version = getClass().getPackage().getImplementationVersion();
     }
 
     private void initFlectonemixFolder() {
