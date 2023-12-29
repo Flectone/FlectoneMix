@@ -12,7 +12,7 @@ public class Main {
         if (args.length < 2) return;
         System.out.println(args[0] + " " + args[1]);
 
-        Thread.sleep(Duration.ofSeconds(5));
+        Thread.sleep(Duration.ofSeconds(5).toMillis());
 
         Path fileToMovePath = Paths.get(args[0]);
         Path targetPath = Paths.get(args[1]);

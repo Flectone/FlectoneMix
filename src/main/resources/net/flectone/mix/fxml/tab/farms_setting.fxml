@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="settingPanel" prefHeight="500.0" prefWidth="220.0"
-            stylesheets="@../../style/optimization_setting.css" xmlns="http://javafx.com/javafx/21"
+            stylesheets="@../../style/optimization_setting.css" xmlns="http://javafx.com/javafx/16"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.tab.FarmsController">
    <Label fx:id="tabLabel" alignment="TOP_CENTER" layoutX="16.0" layoutY="6.0" prefHeight="46.0" prefWidth="188.0"
           text="Вкладка Фермы" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0"

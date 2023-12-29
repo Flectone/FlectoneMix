@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="componentPanel" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="500.0" stylesheets="@../style/component.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.ComponentController">
+<AnchorPane fx:id="componentPanel" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="500.0" stylesheets="@../style/component.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.ComponentController">
    <AnchorPane fx:id="paneBackground" prefHeight="78.0" prefWidth="501.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
       <Rectangle fx:id="rectangleIconBackground" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="64.0" layoutX="9.0" layoutY="11.0" onMousePressed="#openSource" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="64.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="13.0">
          <cursor>

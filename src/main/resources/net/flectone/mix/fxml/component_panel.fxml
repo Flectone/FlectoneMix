@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane fx:id="componentPanel" maxWidth="1.7976931348623157E308" prefHeight="390.0" prefWidth="728.0"
-            stylesheets="@../style/component_panel.css" xmlns="http://javafx.com/javafx/21"
+            stylesheets="@../style/component_panel.css" xmlns="http://javafx.com/javafx/16"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="net.flectone.mix.javafx.controller.ComponentPanelController">
    <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" pannable="true" prefHeight="200.0" prefWidth="200.0"

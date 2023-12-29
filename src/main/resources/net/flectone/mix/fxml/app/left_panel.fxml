@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="leftPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="500.0" prefWidth="70.0" style="-fx-background-color: -fx-color-main;"
-            stylesheets="@../../style/left_panel.css" xmlns="http://javafx.com/javafx/21"
+            stylesheets="@../../style/left_panel.css" xmlns="http://javafx.com/javafx/16"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.LeftPanelController">
    <Rectangle fx:id="settingRectangle" fill="DODGERBLUE" height="44.0" layoutX="13.0" layoutY="447.0" stroke="BLACK"
               strokeType="INSIDE" strokeWidth="0.0" width="44.0" AnchorPane.bottomAnchor="9.0"/>
