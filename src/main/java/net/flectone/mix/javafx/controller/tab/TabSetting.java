@@ -143,7 +143,7 @@ public abstract class TabSetting implements Initializable {
         );
 
         if (downloadTaskList.isEmpty()) {
-            FAlert.showWarn(getLocaleString("alert.warn.message.empty"));
+            new FAlert(FAlert.Type.WARN, getLocaleString("alert.warn.message.empty")).show();
             clearDownloadProgress();
             return;
         }
@@ -200,7 +200,7 @@ public abstract class TabSetting implements Initializable {
                 File file = new File(mcDir + "launcher_profiles.json");
                 if (!file.exists()) {
                     Platform.runLater(() ->
-                            FAlert.showWarn(getLocaleString("alert.warn.message.null-profiles")));
+                            new FAlert(FAlert.Type.WARN, getLocaleString("alert.warn.message.null-profiles")).show());
                     return null;
                 }
 
@@ -301,7 +301,7 @@ public abstract class TabSetting implements Initializable {
         if (completedTasks.get() == downloadTaskList.size()) {
             String successMessage = getLocaleString("alert.info.message.successful").replace("<installation_path>",
                     FlectoneMix.getApp().getConfig().getMinecraftFolder() + outputDirectory);
-            FAlert.showInfo(successMessage);
+            new FAlert(FAlert.Type.INFO, successMessage).show();
             clearDownloadProgress();
         }
     }

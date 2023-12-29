@@ -42,7 +42,7 @@ public class FileUpdater extends Task<Void> {
 
             Files.copy(in, outputFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {
-            FAlert.showException(e, e.getLocalizedMessage());
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
         }
 
         if (component != null) {

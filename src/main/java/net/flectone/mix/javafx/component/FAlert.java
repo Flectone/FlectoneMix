@@ -7,27 +7,66 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.stage.Modality;
+import lombok.Getter;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.PaneType;
+import net.flectone.mix.javafx.controller.alert.AlertConfirmationController;
 import net.flectone.mix.javafx.controller.alert.AlertExceptionController;
-import net.flectone.mix.javafx.controller.alert.AlertInfoController;
 import net.flectone.mix.javafx.controller.alert.AlertWarnController;
+import net.flectone.mix.javafx.controller.alert.AlertWindow;
 import net.flectone.mix.manager.PaneManager;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
 public class FAlert {
 
-    public static void showException(Throwable e, String title) {
+    private final Type type;
+    private final FStage stage;
+    private AlertWindow alertWindow;
+
+    public FAlert(@NotNull Type type) {
+        this.type = type;
+        this.stage = new FStage();
+    }
+
+    public FAlert(@NotNull Type type, Object... object) {
+        this(type);
+
+        switch (type) {
+            case INFO -> configureInfo((String) object[0]);
+            case CONFIRMATION -> configureConfirmation((String) object[0]);
+            case EXCEPTION -> configureException((Throwable) object[0]);
+        }
+    }
+
+    public FAlert(@NotNull Type type, @NotNull String text, @Nullable Runnable runnable) {
+        this(type);
+
+        if (type == Type.WARN) {
+            configureWarn(text, runnable);
+        }
+    }
+
+    public void show() {
+        stage.customShow();
+    }
+
+    public int showAndWait() {
+        stage.makeUndecorated();
+        stage.showAndWait();
+
+        return type == Type.CONFIRMATION
+                ? ((AlertConfirmationController) alertWindow).getResult()
+                : 0;
+    }
+
+    public void configureException(Throwable e) {
         e.printStackTrace();
 
-        PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
-
-        FXMLLoader fxmlLoader = paneManager.addPane(PaneType.EXCEPTION);
-        Pane pane = paneManager.loadPane(PaneType.EXCEPTION);
-
-        AlertExceptionController paneController = fxmlLoader.getController();
+        AlertExceptionController paneController = configureAlertWindow(Type.EXCEPTION, e.getLocalizedMessage());
 
         StringWriter stringWriter = new StringWriter();
         PrintWriter printWriter = new PrintWriter(stringWriter);
@@ -37,79 +76,62 @@ public class FAlert {
         textArea.setEditable(false);
         textArea.setWrapText(true);
         textArea.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-
-        paneController.getTitleLabel().setText(title);
-
-        Scene scene = new Scene(pane, 600, 350);
-        scene.getStylesheets().add(FlectoneMix.getApp().getConfig().getThemePath());
-        FStage stage = new FStage();
-        stage.setScene(scene);
-        stage.getIcons().add(new Image("/net/flectone/mix/images/error.png"));
-        stage.setTitle(FlectoneMix.getApp().getConfig().getLocaleString("alert.exception"));
-        stage.initModality(Modality.APPLICATION_MODAL);
-
-        paneController.setStage(stage);
-        stage.customShow();
     }
 
-    public static void showWarn(String text) {
-        showWarn(text, null);
+    public void configureWarn(String text, Runnable clickTextEvent) {
+        AlertWarnController paneController = configureAlertWindow(Type.WARN, text);
+        paneController.getTextLabel().setOnMouseClicked(e -> clickTextEvent.run());
     }
 
-    public static void showWarn(String text, Runnable clickTextEvent) {
+    public void configureInfo(String text) {
+        configureAlertWindow(Type.INFO, text);
+    }
+
+    public void configureConfirmation(String text) {
+        configureAlertWindow(Type.CONFIRMATION, text);
+    }
+
+    private <T extends AlertWindow> T configureAlertWindow(Type type, String text) {
         PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
 
-        FXMLLoader fxmlLoader = paneManager.addPane(PaneType.WARN);
-        Pane pane = paneManager.loadPane(PaneType.WARN);
+        FXMLLoader fxmlLoader = paneManager.addPane(type.getPaneType());
+        Pane pane = paneManager.loadPane(type.getPaneType());
 
-        AlertWarnController paneController = fxmlLoader.getController();
-        paneController.getTextLabel().setText(text);
-
-        if (clickTextEvent != null) paneController.getTextLabel().setOnMouseClicked(e -> clickTextEvent.run());
-
-        Scene scene = new Scene(pane, 420, Region.USE_COMPUTED_SIZE);
-        scene.getStylesheets().add(FlectoneMix.getApp().getConfig().getThemePath());
-        FStage stage = new FStage();
-        stage.setScene(scene);
-        stage.getIcons().add(new Image("/net/flectone/mix/images/warn.png"));
-        stage.setTitle(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn"));
-        stage.initModality(Modality.APPLICATION_MODAL);
-
-        paneController.setStage(stage);
-        stage.customShow();
-    }
-
-    public static void showInfo(String text) {
-        PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
-
-        FXMLLoader fxmlLoader = paneManager.addPane(PaneType.INFO);
-        Pane pane = paneManager.loadPane(PaneType.INFO);
-
-        AlertInfoController paneController = fxmlLoader.getController();
+        T paneController = fxmlLoader.getController();
+        this.alertWindow = paneController;
         paneController.getTextLabel().setText(text);
 
         Scene scene = new Scene(pane, 420, Region.USE_COMPUTED_SIZE);
         scene.getStylesheets().add(FlectoneMix.getApp().getConfig().getThemePath());
-        FStage stage = new FStage();
         stage.setScene(scene);
-        stage.getIcons().add(new Image("/net/flectone/mix/images/info.png"));
-        stage.setTitle(FlectoneMix.getApp().getConfig().getLocaleString("alert.info"));
+        stage.getIcons().add(new Image(type.getIconPath()));
+        stage.setTitle(FlectoneMix.getApp().getConfig().getLocaleString(type.getTitleKey()));
         stage.initModality(Modality.APPLICATION_MODAL);
 
         paneController.setStage(stage);
-        stage.customShow();
+
+        return paneController;
     }
 
-
-    public enum AlertType {
-        EXCEPTION("alert_exception"),
-        WARN("alert_warn"),
-        INFO("alert_info");
+    @Getter
+    public enum Type {
+        EXCEPTION("alert_exception", PaneType.EXCEPTION, "/net/flectone/mix/images/error.png"),
+        WARN("alert_warn", PaneType.WARN, "/net/flectone/mix/images/warn.png"),
+        INFO("alert_info", PaneType.INFO, "/net/flectone/mix/images/info.png"),
+        CONFIRMATION("alert_confirmation", PaneType.CONFIRMATION, "/net/flectone/mix/images/info.png");
 
         private final String type;
+        private final PaneType paneType;
+        private final String iconPath;
 
-        AlertType(String type) {
+        Type(String type, PaneType paneType, String iconPath) {
             this.type = type;
+            this.paneType = paneType;
+            this.iconPath = iconPath;
+        }
+
+        public String getTitleKey() {
+            return "alert." + type;
         }
 
         @Override

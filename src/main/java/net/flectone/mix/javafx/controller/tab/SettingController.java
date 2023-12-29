@@ -130,7 +130,7 @@ public class SettingController extends TabSetting {
         config.setMinecraftFolder(pathArea.getText());
 
         if (config.isPossiblyDecorated() != decorationCheckBox.isSelected()) {
-            FAlert.showWarn(getLocaleString("alert.warn.message.restart-for-decorations"));
+            new FAlert(FAlert.Type.WARN, getLocaleString("alert.warn.message.restart-for-decorations")).show();
         }
 
         config.setPossiblyDecorated(decorationCheckBox.isSelected());

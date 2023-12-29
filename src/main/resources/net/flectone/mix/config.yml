@@ -1,5 +1,3 @@
-version: 3.0.0
-
 minecraft-folder.selected: ""
 
 decorated: true
@@ -17,6 +15,10 @@ language.ru.alert.error.label.problem: "Сообщить о проблеме"
 language.ru.alert.info: "Информация"
 language.ru.alert.info.button.skip: "Окей"
 language.ru.alert.info.message.successful: "Всё готово! Файлы установлены в папке <installation_path>"
+language.ru.alert.confirmation: "Информация"
+language.ru.alert.confirmation.button.yes: "Да"
+language.ru.alert.confirmation.button.no: "Нет"
+language.ru.alert.confirmation.message.update: "Вышла новая версия приложения <version>, обновить?"
 language.ru.alert.warn: "Предупреждение"
 language.ru.alert.warn.button.skip: "Окей"
 language.ru.alert.warn.message.empty: "Для установки ничего не выбрано"
@@ -123,6 +125,10 @@ language.en.alert.error.label.problem: "Report Problem"
 language.en.alert.info: "Information"
 language.en.alert.info.button.skip: "Okay"
 language.en.alert.info.message.successful: "Everything is ready! Files installed in \"<installation_path>\" folder "
+language.en.alert.confirmation: "Information"
+language.en.alert.confirmation.button.yes: "Yes"
+language.en.alert.confirmation.button.no: "No"
+language.en.alert.confirmation.message.update: "A new version of the app <version> has been released. Update?"
 language.en.alert.warn: "Warning"
 language.en.alert.warn.button.skip: "Okay"
 language.en.alert.warn.message.empty: "Nothing is selected for installation"

@@ -99,7 +99,7 @@ public class ComponentBuilder {
                 clearNodes();
                 loadComponents();
             } catch (IOException e) {
-                FAlert.showException(e, e.getLocalizedMessage());
+                new FAlert(FAlert.Type.EXCEPTION, e).show();
             } catch (RuntimeException e) {
                 e.printStackTrace();
             }

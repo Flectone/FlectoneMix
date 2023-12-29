@@ -83,7 +83,7 @@ public class PaneManager {
             return pane;
 
         } catch (IOException e) {
-            FAlert.showException(e, e.getLocalizedMessage());
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
             return null;
         }
     }

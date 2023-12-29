@@ -188,7 +188,7 @@ public class FileManager {
             Files.copy(inputStream, path, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException e) {
-            FAlert.showException(e, e.getLocalizedMessage());
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
         }
     }
 
@@ -199,7 +199,7 @@ public class FileManager {
             Yaml yaml = new Yaml();
             return yaml.load(new FileInputStream(file));
         } catch (FileNotFoundException e) {
-            FAlert.showException(e, e.getLocalizedMessage());
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
         }
 
         System.out.println("2");
@@ -211,7 +211,7 @@ public class FileManager {
             Yaml yaml = new Yaml();
             return yaml.load(FlectoneMix.class.getResource("/net/flectone/mix/" + name).openStream());
         } catch (IOException e) {
-            FAlert.showException(e, e.getLocalizedMessage());
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
             return new HashMap<>();
         }
     }
@@ -222,7 +222,7 @@ public class FileManager {
             FileWriter writer = new FileWriter(getResource("config.yml"), StandardCharsets.UTF_8);
             yaml.dump(properties, writer);
         } catch (IOException e) {
-            FAlert.showException(e, e.getLocalizedMessage());
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
         }
     }
 

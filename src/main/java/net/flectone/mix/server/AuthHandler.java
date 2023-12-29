@@ -38,7 +38,7 @@ public class AuthHandler implements HttpHandler {
             server.setExecutor(null);
             server.start();
         } catch (IOException e) {
-            FAlert.showException(e, e.getLocalizedMessage());
+            new FAlert(FAlert.Type.EXCEPTION, e).show();
         }
     }
 
@@ -121,7 +121,7 @@ public class AuthHandler implements HttpHandler {
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
                 handleAuthorizeResponse(response, runnable);
             } catch (IOException | InterruptedException e) {
-                FAlert.showException(e, e.getLocalizedMessage());
+                new FAlert(FAlert.Type.EXCEPTION, e).show();
             }
 
             runnable.run();
@@ -130,7 +130,7 @@ public class AuthHandler implements HttpHandler {
 
     private void handleAuthorizeResponse(HttpResponse<String> response, Runnable runnable) {
         if (response.statusCode() != 200) {
-            Platform.runLater(() -> FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-response")));
+            Platform.runLater(() -> new FAlert(FAlert.Type.WARN, FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-response")).show());
             runnable.run();
             return;
         }
@@ -138,7 +138,7 @@ public class AuthHandler implements HttpHandler {
         DiscordUser responseUser = FlectoneMix.getGson().fromJson(response.body(), DiscordUser.class);
 
         if (responseUser == null) {
-            Platform.runLater(() -> FAlert.showWarn(FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-user")));
+            Platform.runLater(() -> new FAlert(FAlert.Type.WARN, FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.bad-user")).show());
             runnable.run();
             return;
         }
@@ -157,11 +157,8 @@ public class AuthHandler implements HttpHandler {
     }
 
     private void showWarnGuild() {
-        Platform.runLater(() ->
-                FAlert.showWarn(
-                        FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.not-in-guild"),
-                        () -> WebUtil.openUrl("https://discord.flectone.net")
-                )
-        );
+        Platform.runLater(() -> new FAlert(FAlert.Type.WARN,
+                FlectoneMix.getApp().getConfig().getLocaleString("alert.warn.message.not-in-guild"),
+                () -> WebUtil.openUrl("https://discord.flectone.net")).show());
     }
 }

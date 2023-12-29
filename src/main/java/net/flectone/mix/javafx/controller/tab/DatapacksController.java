@@ -74,7 +74,7 @@ public class DatapacksController extends TabSetting {
         installButton.setDisable(true);
         installButton.setOnAction(e -> {
             if (getOutputDirectory() == null || worldField.getText().isEmpty()) {
-                FAlert.showWarn(getLocaleString("alert.warn.message.null-world"));
+                new FAlert(FAlert.Type.WARN, getLocaleString("alert.warn.message.null-world")).show();
                 return;
             }
             downloadComponents(installButton);

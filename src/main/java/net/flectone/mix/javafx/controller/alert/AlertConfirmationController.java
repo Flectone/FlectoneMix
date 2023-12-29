@@ -3,7 +3,6 @@ package net.flectone.mix.javafx.controller.alert;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import lombok.Getter;
@@ -17,19 +16,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 @Getter
-public class AlertExceptionController implements UndecoratedWindow, AlertWindow {
+public class AlertConfirmationController implements UndecoratedWindow, AlertWindow {
 
     @FXML
     private Label errorLabel;
 
     @FXML
-    private Label problemLabel;
-
-    @FXML
-    private TextArea textArea;
-
-    @FXML
-    private Label titleLabel;
+    private Label textLabel;
 
     @FXML
     private Pane topBarPanel;
@@ -41,11 +34,17 @@ public class AlertExceptionController implements UndecoratedWindow, AlertWindow 
     private Pane contentPanel;
 
     @FXML
-    private Button skipButton;
+    private Button yesButton;
+
+    @FXML
+    private Button noButton;
 
     @Setter
     private FStage stage;
 
+    private int result;
+
+    @Override
     public void checkUndecoratedSupport() {
         if (FlectoneMix.getApp().getConfig().isUsedUndecoratedWindow()) return;
 
@@ -57,12 +56,18 @@ public class AlertExceptionController implements UndecoratedWindow, AlertWindow 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ConfigManager config = FlectoneMix.getApp().getConfig();
-        errorLabel.setText(config.getLocaleString("alert.error"));
-        titleLabel.setText(config.getLocaleString("alert.error.label.title"));
-        problemLabel.setText(config.getLocaleString("alert.error.label.problem"));
-        skipButton.setText(config.getLocaleString("alert.error.button.skip"));
+        errorLabel.setText(config.getLocaleString("alert.confirmation"));
+        yesButton.setText(config.getLocaleString("alert.confirmation.button.yes"));
+        noButton.setText(config.getLocaleString("alert.confirmation.button.no"));
 
         if (url == null) return;
+
+        yesButton.setOnMousePressed(e -> {
+            result = 1;
+            okButtonEvent();
+        });
+
+        noButton.setOnMousePressed(e -> okButtonEvent());
 
         checkUndecoratedSupport();
     }
@@ -70,10 +75,5 @@ public class AlertExceptionController implements UndecoratedWindow, AlertWindow 
     @Override
     public void okButtonEvent() {
         stage.close();
-    }
-
-    @Override
-    public Label getTextLabel() {
-        return titleLabel;
     }
 }
