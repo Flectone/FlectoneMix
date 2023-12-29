@@ -82,6 +82,8 @@ public class FAlert {
 
     public void configureWarn(String text, Runnable clickTextEvent) {
         AlertWarnController paneController = configureAlertWindow(Type.WARN, text);
+
+        if (clickTextEvent == null) return;
         paneController.getTextLabel().setOnMouseClicked(e -> clickTextEvent.run());
     }
 
