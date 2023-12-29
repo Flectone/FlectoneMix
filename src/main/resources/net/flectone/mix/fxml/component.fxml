@@ -82,7 +82,7 @@
         </rowConstraints>
          <children>
             <ImageView fx:id="downloadImage" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="labelDownload" prefHeight="17.0" prefWidth="44.0" text="999.9M" GridPane.columnIndex="1" />
+            <Label fx:id="labelDownload" prefHeight="17.0" prefWidth="44.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </AnchorPane>
