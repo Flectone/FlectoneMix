@@ -22,7 +22,7 @@ public class FileUpdater extends Task<Void> {
         this.component = component;
         String fileExtension = component.link().substring(component.link().lastIndexOf("."));
         this.downloadUrl = component.link();
-        this.outputFile = new File(outputDirectory + component.key() + fileExtension);
+        this.outputFile = new File(outputDirectory + "FlectoneMix " + component.key() + fileExtension);
     }
 
     public FileUpdater(String downloadUrl, File outputFile) {

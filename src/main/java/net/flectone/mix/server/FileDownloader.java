@@ -39,7 +39,7 @@ public class FileDownloader extends Task<Void> {
         if (extensionIndex != -1) fileExtension = component.link().substring(extensionIndex);
 
         this.downloadUrl = component.link();
-        this.outputFile = new File(outputDirectory + component.key() + fileExtension);
+        this.outputFile = new File(outputDirectory + "FlectoneMix " + component.key() + fileExtension);
     }
 
     public FileDownloader(String downloadUrl, File outputDir) {
