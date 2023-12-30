@@ -54,6 +54,9 @@ public class PluginsController extends TabSetting {
 
         if (url == null) return;
 
+        installServerSoftwareCheckBox.setDisable(true);
+        installServerSettingsCheckBox.setDisable(true);
+
         new FFadeTransition(versionComboBox);
         new FFadeTransition(installButton);
 
@@ -67,7 +70,7 @@ public class PluginsController extends TabSetting {
             controller.getComponentBuilder().build("plugin", String.valueOf(versionComboBox.getSelectionModel().getSelectedItem()));
         }));
 
-        setOutputDirectory("server" + File.separator);
+        setOutputDirectory("server" + File.separator + "plugins" + File.separator);
         setProgressBar(progressBar);
         setProgressLabel(progressLabel);
 
