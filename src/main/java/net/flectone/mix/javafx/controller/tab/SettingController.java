@@ -38,6 +38,9 @@ public class SettingController extends TabSetting {
     private CheckBox decorationCheckBox;
 
     @FXML
+    private CheckBox animationCheckBox;
+
+    @FXML
     private Rectangle tabRectangle;
 
     @FXML
@@ -64,13 +67,19 @@ public class SettingController extends TabSetting {
         languageLabel.setText(getLocaleString("tab.setting.label.language"));
         themeLabel.setText(getLocaleString("tab.setting.label.theme"));
         pathLabel.setText(getLocaleString("tab.setting.label.path"));
-        decorationCheckBox.setText(getLocaleString("tab.setting.checkbox.decoration"));
+
+        animationCheckBox.setText(getLocaleString("tab.setting.checkbox.animation"));
         saveButton.setText(getLocaleString("tab.setting.button.save"));
         quitButton.setText(getLocaleString("tab.setting.button.quit"));
 
+        settingCheckBox(animationCheckBox, "tab.setting.checkbox.animation");
+
         if (FlectoneMix.getApp().getConfig().isSupportUndecoratedWindow()) {
             settingCheckBox(decorationCheckBox, "tab.setting.checkbox.decoration");
-        } else decorationCheckBox.setDisable(!FlectoneMix.getApp().getConfig().isSupportUndecoratedWindow());
+        } else {
+            decorationCheckBox.setText(getLocaleString("tab.setting.checkbox.decoration"));
+            decorationCheckBox.setDisable(!FlectoneMix.getApp().getConfig().isSupportUndecoratedWindow());
+        }
 
         if (url == null) return;
 
@@ -82,6 +91,7 @@ public class SettingController extends TabSetting {
         settingComboBox(themeComboBox, "theme.list");
 
         decorationCheckBox.setSelected(FlectoneMix.getApp().getConfig().isPossiblyDecorated());
+        animationCheckBox.setSelected(FlectoneMix.getApp().getConfig().animated());
 
         setFilterAction(() -> {
             ComponentPanelController controller = FlectoneMix.getApp().getPaneManager().getLoader(PaneType.COMPONENTS).getController();
@@ -129,11 +139,21 @@ public class SettingController extends TabSetting {
         config.setLanguage(String.valueOf(languageComboBox.getSelectionModel().getSelectedItem()));
         config.setMinecraftFolder(pathArea.getText());
 
-        if (config.isPossiblyDecorated() != decorationCheckBox.isSelected()) {
-            new FAlert(FAlert.Type.WARN, getLocaleString("alert.warn.message.restart-for-decorations")).show();
+        boolean needWarn = false;
+
+        if (config.getBoolean("animated") != animationCheckBox.isSelected()) {
+            needWarn = true;
+            config.put("animated", animationCheckBox.isSelected());
         }
 
-        config.setPossiblyDecorated(decorationCheckBox.isSelected());
+        if (config.isPossiblyDecorated() != decorationCheckBox.isSelected()) {
+            needWarn = true;
+            config.setPossiblyDecorated(decorationCheckBox.isSelected());
+        }
+
+        if (needWarn) {
+            new FAlert(FAlert.Type.WARN, getLocaleString("alert.warn.message.restart-for-changes")).show();
+        }
 
         FlectoneMix.getApp().getPaneManager().reloadPanes();
     }

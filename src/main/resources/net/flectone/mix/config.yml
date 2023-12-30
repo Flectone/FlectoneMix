@@ -1,6 +1,7 @@
 minecraft-folder.selected: ""
 
 decorated: true
+animated: true
 
 language.support:
         - "en"
@@ -23,7 +24,7 @@ language.ru.alert.warn: "Предупреждение"
 language.ru.alert.warn.button.skip: "Окей"
 language.ru.alert.warn.message.empty: "Для установки ничего не выбрано"
 language.ru.alert.warn.message.null-world: "Название мира должно быть обязательно"
-language.ru.alert.warn.message.restart-for-decorations: "Чтобы изменения декорация вступили в силу, нужно перезапустить приложение"
+language.ru.alert.warn.message.restart-for-changes: "Чтобы изменения вступили в силу, нужно перезапустить приложение"
 language.ru.alert.warn.message.null-profiles: "В вашей папке майнкрафт не было найдено файла для настройки профилей запуска, поэтому установить его невозможно"
 language.ru.alert.warn.message.bad-response: "При авторизации возникла ошибка, попробуйте ещё раз"
 language.ru.alert.warn.message.bad-user: "Этот дискорд аккаунт вызвал ошибку, попробуйте ещё раз"
@@ -96,6 +97,7 @@ language.ru.tab.setting.label.language: "Язык приложения"
 language.ru.tab.setting.label.theme: "Тема приложения"
 language.ru.tab.setting.label.path: "Путь к .minecraft"
 language.ru.tab.setting.checkbox.decoration: "Использовать декорации"
+language.ru.tab.setting.checkbox.animation: "Использовать анимации"
 language.ru.tab.setting.button.save: "Сохранить"
 language.ru.tab.setting.button.quit: "Выйти"
 
@@ -115,8 +117,8 @@ language.ru.tooltip.tab.datapacks: "Датапаки"
 language.ru.tooltip.tab.resourcepacks: "Ресурспаки"
 language.ru.tooltip.tab.shaders: "Шейдеры"
 language.ru.tooltip.tab.setting: "Настройки"
-language.ru.tooltip.tab.setting.checkbox.decoration: "Декорации окон - это визуальное изменение верхней части окна приложения, для полной настройки темы приложения"
-
+language.ru.tooltip.tab.setting.checkbox.decoration: "это визуальное изменение верхней части окна приложения, для полной настройки темы приложения"
+language.ru.tooltip.tab.setting.checkbox.animation: "Это визуальное дополнение для выделения вкладок и кнопок"
 
 language.en.alert.error: "Application Error"
 language.en.alert.error.label.title: "Error Title"
@@ -133,7 +135,7 @@ language.en.alert.warn: "Warning"
 language.en.alert.warn.button.skip: "Okay"
 language.en.alert.warn.message.empty: "Nothing is selected for installation"
 language.en.alert.warn.message.null-world: "The name of the world is a must"
-language.en.alert.warn.message.restart-for-decorations: "You must restart the application for decorations changes to take effect"
+language.en.alert.warn.message.restart-for-changes: "You must restart the application for changes to take effect"
 language.en.alert.warn.message.null-profiles: "The file to customize startup profiles was not found in your minecraft folder, so it cannot be installed"
 language.en.alert.warn.message.bad-response: "An error occurred during authorization, try again"
 language.en.alert.warn.message.bad-user: "This discord account caused an error, try again"
@@ -205,6 +207,7 @@ language.en.tab.setting.label.language: "Application Language"
 language.en.tab.setting.label.theme: "Application Theme"
 language.en.tab.setting.label.path: ".minecraft Path"
 language.en.tab.setting.checkbox.decoration: "Use Decorations"
+language.en.tab.setting.checkbox.animation: "Use Animations"
 language.en.tab.setting.button.save: "Save"
 language.en.tab.setting.button.quit: "Quit"
 
@@ -225,7 +228,7 @@ language.en.tooltip.tab.resourcepacks: "ResourcePacks"
 language.en.tooltip.tab.shaders: "Shaders"
 language.en.tooltip.tab.setting: "Setting"
 language.en.tooltip.tab.setting.checkbox.decoration: "Window decorations are visual changes to the top of the app window, to fully customize the application's theme"
-
+language.en.tooltip.tab.setting.checkbox.animation: "This is a visual addition to highlight tabs and buttons"
 
 theme.list:
         - "black"

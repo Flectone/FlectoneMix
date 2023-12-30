@@ -4,7 +4,6 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.scene.control.ComboBox;
@@ -13,17 +12,16 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.util.Duration;
 import lombok.NonNull;
+import net.flectone.mix.javafx.FlectoneMix;
 
 import java.util.function.Function;
 
 public class SmoothScrolling {
 
     public SmoothScrolling(@NonNull ScrollPane scrollPane) {
-        customScrolling(scrollPane, scrollPane.vvalueProperty(), Bounds::getHeight);
-    }
+        if (!FlectoneMix.getApp().getConfig().animated()) return;
 
-    public SmoothScrolling(@NonNull ComboBox<String> comboBox) {
-        customScrolling(comboBox,  new SimpleDoubleProperty(comboBox, "vvalue"), Bounds::getHeight);
+        customScrolling(scrollPane, scrollPane.vvalueProperty(), Bounds::getHeight);
     }
 
     private void customScrolling(ScrollPane scrollPane, DoubleProperty scrollDriection, Function<Bounds, Double> sizeFunc) {

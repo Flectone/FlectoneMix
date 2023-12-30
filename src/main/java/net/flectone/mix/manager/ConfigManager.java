@@ -130,6 +130,10 @@ public class ConfigManager {
         put("decorated", possiblyDecorated);
     }
 
+    public boolean animated() {
+        return getBoolean("animated");
+    }
+
     public String getThemePath() {
         return "/net/flectone/mix/style/" + theme + "_theme.css";
     }

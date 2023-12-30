@@ -1,62 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.*?>
-<AnchorPane fx:id="settingPanel" prefHeight="500.0" prefWidth="220.0"
-            stylesheets="@../../style/optimization_setting.css" xmlns="http://javafx.com/javafx/16"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="net.flectone.mix.javafx.controller.tab.SettingController">
-   <Label fx:id="tabLabel" alignment="TOP_CENTER" layoutX="16.0" layoutY="6.0" prefHeight="46.0" prefWidth="188.0"
-          text="Вкладка Настроек" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0"
-          AnchorPane.topAnchor="16.0"/>
-   <Rectangle fx:id="tabRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="105.0" layoutX="17.0"
-              layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="186.0"
-              AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="35.0"/>
-   <Label fx:id="languageLabel" layoutX="17.0" layoutY="153.0" text="Язык приложения" wrapText="true"
-          AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0">
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="settingPanel" prefHeight="500.0" prefWidth="220.0" stylesheets="@../../style/optimization_setting.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.flectone.mix.javafx.controller.tab.SettingController">
+   <Label fx:id="tabLabel" alignment="TOP_CENTER" layoutX="16.0" layoutY="6.0" prefHeight="46.0" prefWidth="188.0" text="Вкладка Настроек" wrapText="true" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
+   <Rectangle fx:id="tabRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="105.0" layoutX="17.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="186.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="35.0" />
+   <Label fx:id="languageLabel" layoutX="17.0" layoutY="153.0" text="Язык приложения" wrapText="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <JFXComboBox fx:id="languageComboBox" focusColor="#405aa800" layoutX="17.0" layoutY="174.0" prefWidth="182.0"
-                unFocusColor="#a3a3a300" viewOrder="1.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0"/>
-   <JFXCheckBox fx:id="decorationCheckBox" checkedColor="#255bbf" layoutX="17.0" layoutY="328.0" prefHeight="24.0"
-                prefWidth="200.0" text="Использовать декорации" wrapText="true" AnchorPane.leftAnchor="17.0"
-                AnchorPane.rightAnchor="3.0"/>
-   <AnchorPane layoutX="29.0" layoutY="359.0" prefHeight="122.0" prefWidth="161.0" AnchorPane.bottomAnchor="19.0"
-               AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="359.0">
-      <JFXButton fx:id="saveButton" layoutX="8.0" layoutY="1.0" onMousePressed="#reloadApp" prefHeight="27.0"
-                 prefWidth="145.0" text="Сохранить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+   <JFXComboBox fx:id="languageComboBox" focusColor="#405aa800" layoutX="17.0" layoutY="174.0" prefWidth="182.0" unFocusColor="#a3a3a300" viewOrder="1.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0" />
+   <JFXCheckBox fx:id="decorationCheckBox" checkedColor="#255bbf" layoutX="17.0" layoutY="328.0" prefHeight="24.0" prefWidth="200.0" text="Использовать декорации" wrapText="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="3.0" />
+   <AnchorPane layoutX="29.0" layoutY="383.0" prefHeight="83.0" prefWidth="161.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="383.0">
+      <JFXButton fx:id="saveButton" layoutX="8.0" layoutY="1.0" onMousePressed="#reloadApp" prefHeight="27.0" prefWidth="145.0" text="Сохранить" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
          <font>
-            <Font size="15.0"/>
+            <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="quitButton" layoutX="8.0" layoutY="36.0" onMousePressed="#quitEvent" prefHeight="27.0"
-                 prefWidth="145.0" text="Выйти" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+      <JFXButton fx:id="quitButton" layoutX="8.0" layoutY="36.0" onMousePressed="#quitEvent" prefHeight="27.0" prefWidth="145.0" text="Выйти" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
          <font>
-            <Font size="15.0"/>
+            <Font size="15.0" />
          </font>
       </JFXButton>
    </AnchorPane>
-   <Label fx:id="pathLabel" layoutX="19.0" layoutY="249.0" text="Путь к .minecraft" wrapText="true"
-          AnchorPane.leftAnchor="17.0">
+   <Label fx:id="pathLabel" layoutX="19.0" layoutY="249.0" text="Путь к .minecraft" wrapText="true" AnchorPane.leftAnchor="17.0">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <TextArea fx:id="pathArea" layoutX="17.0" layoutY="271.0" prefHeight="55.0" prefWidth="182.0" wrapText="true"
-             AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0"/>
-   <JFXButton fx:id="pathButton" cacheShape="false" focusTraversable="false" layoutX="181.0" layoutY="308.0"
-              prefHeight="17.0" prefWidth="17.0" text="..."/>
-   <Label fx:id="themeLabel" layoutX="17.0" layoutY="202.0" text="Тема приложения" wrapText="true"
-          AnchorPane.leftAnchor="17.0">
+   <TextArea fx:id="pathArea" layoutX="17.0" layoutY="271.0" prefHeight="55.0" prefWidth="182.0" wrapText="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0" />
+   <JFXButton fx:id="pathButton" cacheShape="false" focusTraversable="false" layoutX="181.0" layoutY="308.0" prefHeight="17.0" prefWidth="17.0" text="..." />
+   <Label fx:id="themeLabel" layoutX="17.0" layoutY="202.0" text="Тема приложения" wrapText="true" AnchorPane.leftAnchor="17.0">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <JFXComboBox fx:id="themeComboBox" focusColor="#405aa800" layoutX="17.0" layoutY="222.0" prefWidth="182.0"
-                unFocusColor="#a3a3a300" viewOrder="1.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0"/>
+   <JFXComboBox fx:id="themeComboBox" focusColor="#405aa800" layoutX="17.0" layoutY="222.0" prefWidth="182.0" unFocusColor="#a3a3a300" viewOrder="1.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="21.0" />
+   <JFXCheckBox fx:id="animationCheckBox" checkedColor="#255bbf" layoutX="17.0" layoutY="352.0" prefHeight="24.0" prefWidth="200.0" text="Использовать анимации" wrapText="true" />
 </AnchorPane>

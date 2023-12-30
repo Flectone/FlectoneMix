@@ -8,6 +8,7 @@ import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
+import net.flectone.mix.javafx.FlectoneMix;
 
 public class FColorTransition {
 
@@ -21,6 +22,8 @@ public class FColorTransition {
 
         if (isSelected) {
             toSelectedColor();
+
+            if (!FlectoneMix.getApp().getConfig().animated()) return;
             Pulse pulse = new Pulse(imageView);
             pulse.setDelay(Duration.ZERO);
             pulse.play();
