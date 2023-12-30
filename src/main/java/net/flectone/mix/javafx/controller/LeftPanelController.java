@@ -52,12 +52,6 @@ public class LeftPanelController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (url == null) return;
-
-        DiscordUser discordUser = FlectoneMix.getApp().getDiscordUser();
-        discordLabel.setText(discordUser.username());
-        avatarRectangle.setFill(new ImagePattern(discordUser.getAvatar()));
-
         TABS.put(optimizationImage, new Options(optimizationImage, PaneType.OPTIMIZATION, "tab.optimization"));
         TABS.put(farmImage, new Options(farmImage, PaneType.FARMS, "tab.farms"));
         TABS.put(pluginImage, new Options(pluginImage, PaneType.PLUGINS, "tab.plugins"));
@@ -66,6 +60,12 @@ public class LeftPanelController implements Initializable {
         TABS.put(resourcepackImage, new Options(resourcepackImage, PaneType.RESOURCEPACKS, "tab.resourcepacks"));
         TABS.put(shaderImage, new Options(shaderImage, PaneType.SHADERS, "tab.shaders"));
         TABS.put(settingImage, new Options(settingImage, PaneType.SETTING, "tab.setting"));
+
+        if (url == null) return;
+
+        DiscordUser discordUser = FlectoneMix.getApp().getDiscordUser();
+        discordLabel.setText(discordUser.username());
+        avatarRectangle.setFill(new ImagePattern(discordUser.getAvatar()));
 
         TABS.get(optimizationImage).getFColorTransition().setSelected(true);
         selectedImage = optimizationImage;
