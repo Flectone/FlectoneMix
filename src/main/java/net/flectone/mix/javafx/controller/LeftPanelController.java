@@ -16,12 +16,15 @@ import net.flectone.mix.javafx.component.FColorTransition;
 import net.flectone.mix.javafx.component.FToolTip;
 import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.model.DiscordUser;
+import net.flectone.mix.util.WebUtil;
 
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class LeftPanelController implements Initializable {
+
+    private static final String DISCORD_URL = "https://discord.flectone.net";
 
     @FXML
     private ImageView optimizationImage;
@@ -66,6 +69,7 @@ public class LeftPanelController implements Initializable {
         DiscordUser discordUser = FlectoneMix.getApp().getDiscordUser();
         discordLabel.setText(discordUser.username());
         avatarRectangle.setFill(new ImagePattern(discordUser.getAvatar()));
+        avatarRectangle.setOnMousePressed(e -> WebUtil.openUrl(DISCORD_URL));
 
         TABS.get(optimizationImage).getFColorTransition().setSelected(true);
         selectedImage = optimizationImage;
