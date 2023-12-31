@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NonNull;
 import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.component.FAlert;
+import net.flectone.mix.javafx.loader.CachingClassLoader;
 import net.flectone.mix.javafx.component.PaneType;
 import net.flectone.mix.javafx.controller.WindowController;
 
@@ -17,6 +18,8 @@ import java.util.HashMap;
 public class PaneManager {
 
     private final HashMap<PaneType, FXMLLoader> fxmlLoaderHashMap = new HashMap<>();
+
+    public static ClassLoader cachingClassLoader = new CachingClassLoader(FXMLLoader.getDefaultClassLoader());
 
     @Getter
     private final Scene scene;
@@ -63,7 +66,10 @@ public class PaneManager {
     }
 
     protected FXMLLoader getFXMLLoader(String name) {
-        return new FXMLLoader(getClass().getResource(name));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setClassLoader(cachingClassLoader);
+        fxmlLoader.setLocation(getClass().getResource(name));
+        return fxmlLoader;
     }
 
     public Pane loadPane(PaneType paneType) {
