@@ -172,7 +172,7 @@ public class ComponentBuilder {
     }
 
     private void addPaneToNode(Component component) {
-        FXMLLoader fxmlLoader = FlectoneMix.getApp().getPaneManager().addPane(PaneType.COMPONENT);
+        FXMLLoader fxmlLoader = FlectoneMix.getApp().getPaneManager().addLoader(PaneType.COMPONENT);
         Pane pane = FlectoneMix.getApp().getPaneManager().loadPane(PaneType.COMPONENT);
         Platform.runLater(() -> node.add(pane));
 

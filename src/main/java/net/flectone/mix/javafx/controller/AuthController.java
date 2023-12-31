@@ -64,7 +64,7 @@ public class AuthController implements Initializable {
             PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
 
             if (paneManager.getLoader(PaneType.APP) == null) {
-                paneManager.addPane(PaneType.APP);
+                paneManager.addLoader(PaneType.APP);
             }
             paneManager.activate(PaneType.APP);
         }));

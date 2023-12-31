@@ -58,7 +58,7 @@ public class AppController implements Initializable {
     }
 
     public void setPane(Pane mainPane, PaneType paneType, boolean replace) {
-        FlectoneMix.getApp().getPaneManager().addPane(paneType, replace);
+        FlectoneMix.getApp().getPaneManager().addLoader(paneType, replace);
         mainPane.getChildren().clear();
 
         Pane pane = FlectoneMix.getApp().getPaneManager().loadPane(paneType, replace);

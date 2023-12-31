@@ -25,12 +25,12 @@ public class PaneManager {
     private final Scene scene;
 
     public PaneManager(int width, int height) {
-        addPane(PaneType.WINDOW);
+        addLoader(PaneType.WINDOW);
 
         scene = new Scene(loadPane(PaneType.WINDOW), width, height);
         scene.getStylesheets().add(FlectoneMix.getApp().getConfig().getThemePath());
 
-        addPane(PaneType.AUTH);
+        addLoader(PaneType.AUTH);
         activate(PaneType.AUTH);
     }
 
@@ -43,11 +43,11 @@ public class PaneManager {
         return fxmlLoaderHashMap.get(paneType);
     }
 
-    public FXMLLoader addPane(PaneType paneType){
-        return addPane(paneType, true);
+    public FXMLLoader addLoader(PaneType paneType){
+        return addLoader(paneType, true);
     }
 
-    public FXMLLoader addPane(@NonNull PaneType paneType, boolean replace) {
+    public FXMLLoader addLoader(@NonNull PaneType paneType, boolean replace) {
         if (!replace && fxmlLoaderHashMap.get(paneType) != null) return fxmlLoaderHashMap.get(paneType);
 
         FXMLLoader fxmlLoader = getFXMLLoader("/net/flectone/mix/fxml/" + paneType + ".fxml");
@@ -81,8 +81,7 @@ public class PaneManager {
             FXMLLoader fxmlLoader = fxmlLoaderHashMap.get(paneType);
 
             if (!replace && fxmlLoader.getRoot() != null) return fxmlLoader.getRoot();
-            if (fxmlLoader.getRoot() != null) fxmlLoader = addPane(paneType);
-
+            if (fxmlLoader.getRoot() != null) fxmlLoader = addLoader(paneType);
             Pane pane = fxmlLoader.load();
             pane.getStylesheets().add(FlectoneMix.getApp().getConfig().getThemePath());
 

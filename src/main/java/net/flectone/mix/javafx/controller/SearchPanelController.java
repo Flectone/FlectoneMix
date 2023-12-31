@@ -61,7 +61,7 @@ public class SearchPanelController implements Initializable {
     }
 
     private void configureAdPanel() {
-        FlectoneMix.getApp().getPaneManager().addPane(PaneType.AD);
+        FlectoneMix.getApp().getPaneManager().addLoader(PaneType.AD);
         adPanel.getChildren().clear();
 
         Pane pane = FlectoneMix.getApp().getPaneManager().loadPane(PaneType.AD);

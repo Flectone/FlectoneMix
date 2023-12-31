@@ -65,7 +65,6 @@ public class ComponentController implements Initializable {
 
     private static final ConcurrentHashMap<String, ImagePattern> IMAGES_MAP = new ConcurrentHashMap<>();
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if (url == null) return;
@@ -75,7 +74,7 @@ public class ComponentController implements Initializable {
         FlectoneMix.getApp().getThreadPool().execute(() -> {
             try {
                 ImagePattern imagePattern = IMAGES_MAP.computeIfAbsent(component.icon(), key -> {
-                    Image image = new Image(component.icon());
+                    Image image = new Image(component.icon(), 64, 64, true, true);
                     return (!image.isError()) ? new ImagePattern(image) : null;
                 });
 

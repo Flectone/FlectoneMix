@@ -98,7 +98,7 @@ public class FAlert {
     private <T extends AlertWindow> T configureAlertWindow(Type type, String text) {
         PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
 
-        FXMLLoader fxmlLoader = paneManager.addPane(type.getPaneType());
+        FXMLLoader fxmlLoader = paneManager.addLoader(type.getPaneType());
         Pane pane = paneManager.loadPane(type.getPaneType());
 
         T paneController = fxmlLoader.getController();

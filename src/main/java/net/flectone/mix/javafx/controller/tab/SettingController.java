@@ -161,7 +161,7 @@ public class SettingController extends TabSetting {
     public void quitEvent() {
         FlectoneMix.getApp().setDiscordUser(null);
         PaneManager paneManager = FlectoneMix.getApp().getPaneManager();
-        paneManager.addPane(PaneType.AUTH);
+        paneManager.addLoader(PaneType.AUTH);
         paneManager.activate(PaneType.AUTH);
         ((AuthController) paneManager.getLoader(PaneType.AUTH).getController()).getAuthButton().setDisable(false);
     }
