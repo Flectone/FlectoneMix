@@ -12,12 +12,15 @@ import net.flectone.mix.javafx.FlectoneMix;
 import net.flectone.mix.javafx.component.FStage;
 import net.flectone.mix.javafx.controller.UndecoratedWindow;
 import net.flectone.mix.manager.ConfigManager;
+import net.flectone.mix.util.WebUtil;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 @Getter
 public class AlertExceptionController implements UndecoratedWindow, AlertWindow {
+
+    private static final String DISCORD_FORUM = "https://discord.com/channels/861147957365964810/1125849064903286854";
 
     @FXML
     private Label errorLabel;
@@ -63,6 +66,8 @@ public class AlertExceptionController implements UndecoratedWindow, AlertWindow 
         skipButton.setText(config.getLocaleString("alert.error.button.skip"));
 
         if (url == null) return;
+
+        problemLabel.setOnMousePressed(e -> WebUtil.openUrl(DISCORD_FORUM));
 
         checkUndecoratedSupport();
     }
