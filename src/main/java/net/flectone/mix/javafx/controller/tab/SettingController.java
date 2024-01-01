@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.DirectoryChooser;
@@ -132,8 +133,12 @@ public class SettingController extends TabSetting {
             String oldThemePath = config.getThemePath();
             config.setTheme(String.valueOf(themeComboBox.getSelectionModel().getSelectedItem()));
 
-            FlectoneMix.getApp().getStage().getScene().getStylesheets().addAll(FlectoneMix.getApp().getConfig().getThemePath());
-            FlectoneMix.getApp().getStage().getScene().getStylesheets().removeAll(oldThemePath);
+            FlectoneMix.getApp().getPaneManager().getFxmlLoaderHashMap().values().forEach(fxmlLoader -> {
+                if (fxmlLoader.getRoot() == null) return;
+                ((Pane) fxmlLoader.getRoot()).getStylesheets().add(FlectoneMix.getApp().getConfig().getThemePath());
+                ((Pane) fxmlLoader.getRoot()).getStylesheets().remove(oldThemePath);
+            });
+
         }
 
         config.setLanguage(String.valueOf(languageComboBox.getSelectionModel().getSelectedItem()));

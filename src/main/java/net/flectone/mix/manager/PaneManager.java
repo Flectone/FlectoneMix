@@ -17,6 +17,7 @@ import java.util.HashMap;
 
 public class PaneManager {
 
+    @Getter
     private final HashMap<PaneType, FXMLLoader> fxmlLoaderHashMap = new HashMap<>();
 
     public static ClassLoader cachingClassLoader = new CachingClassLoader(FXMLLoader.getDefaultClassLoader());
