@@ -20,6 +20,16 @@ import net.flectone.mix.util.WebUtil;
 @Getter
 @Setter
 public class FlectoneMix extends Application {
+
+    private static final int WIDTH = 1000;
+    private static final int HEIGHT = 500;
+
+    @Getter
+    private static final Gson gson = new Gson();
+
+    @Getter
+    private static FlectoneMix app;
+
     private AuthHandler authHandler;
     private ConfigManager config;
     private DiscordUser discordUser;
@@ -27,11 +37,6 @@ public class FlectoneMix extends Application {
     private FStage stage;
 
     private CustomThreadPool threadPool;
-
-    @Getter
-    private static FlectoneMix app;
-    @Getter
-    private static final Gson gson = new Gson();
 
     public static void main(String[] args) {
         launch();
@@ -43,7 +48,7 @@ public class FlectoneMix extends Application {
         threadPool = new CustomThreadPool(6);
 
         config = new ConfigManager();
-        paneManager = new PaneManager(1000, 500);
+        paneManager = new PaneManager(WIDTH, HEIGHT);
         authHandler = new AuthHandler();
 
         configureStage();
@@ -54,8 +59,8 @@ public class FlectoneMix extends Application {
 
     private void configureStage() {
         stage = new FStage();
-        stage.setMinWidth(1000);
-        stage.setMinHeight(500);
+        stage.setMinWidth(WIDTH);
+        stage.setMinHeight(HEIGHT);
         stage.setScene(paneManager.getScene());
         stage.setOnCloseRequest(e -> exit());
         stage.setTitle("FlectoneMix " + config.getVersion());
